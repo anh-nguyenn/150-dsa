@@ -27,13 +27,32 @@ def main():
 
     for item in problems:
         problem_id = item["id"]
-        required = ["entry", "kind", "time", "space", "summary", "background", "hints", "starter", "solution", "idea", "why", "edge_cases", "tests"]
+        required = [
+            "entry",
+            "kind",
+            "time",
+            "space",
+            "summary",
+            "examples",
+            "constraints",
+            "background",
+            "hints",
+            "starter",
+            "solution",
+            "idea",
+            "why",
+            "edge_cases",
+            "tests",
+        ]
         missing = [key for key in required if key not in item]
         if missing:
             print(f"{problem_id}: missing fields {', '.join(missing)}")
             return 1
         if len(item["hints"]) < 3:
             print(f"{problem_id}: needs at least three hints")
+            return 1
+        if not item["examples"] or not item["constraints"]:
+            print(f"{problem_id}: needs examples and constraints")
             return 1
         cases = item["tests"].get("cases", [])
         if len(cases) < 5:
@@ -52,6 +71,8 @@ def main():
         approach_name = item.get("approach_name", "Optimal")
         meta["entry"] = item["entry"]
         meta["kind"] = item["kind"]
+        meta["examples"] = item["examples"]
+        meta["constraints"] = item["constraints"]
         meta["approaches"] = [
             {
                 "id": approach_id,

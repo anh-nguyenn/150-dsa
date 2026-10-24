@@ -12,5 +12,16 @@
     }
   ],
   "entry": "spiral_order",
-  "kind": "function"
+  "kind": "function",
+  "examples": [
+    {
+      "input": "[[1, 2, 3],\n [4, 5, 6],\n [7, 8, 9]]",
+      "output": "[1, 2, 3, 6, 9, 8, 7, 4, 5]"
+    }
+  ],
+  "constraints": [
+    "Between 1 and 10 rows, and between 1 and 10 columns.",
+    "Entries are ordinary integers.",
+    "Either dimension can be one, so the grid may be a single row or a single column."
+  ]
 }

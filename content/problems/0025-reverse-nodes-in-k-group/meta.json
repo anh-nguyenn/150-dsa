@@ -12,5 +12,21 @@
     }
   ],
   "entry": "reverse_k_group",
-  "kind": "function"
+  "kind": "function",
+  "examples": [
+    {
+      "input": "[1, 2, 3, 4, 5], k = 2",
+      "output": "[2, 1, 4, 3, 5]"
+    },
+    {
+      "input": "[1, 2, 3, 4, 5], k = 3",
+      "output": "[3, 2, 1, 4, 5]"
+    }
+  ],
+  "constraints": [
+    "The list holds between 1 and 5,000 nodes.",
+    "`k` is between 1 and the number of nodes.",
+    "Values are between 0 and 1,000.",
+    "A leftover group shorter than `k` is not reversed."
+  ]
 }

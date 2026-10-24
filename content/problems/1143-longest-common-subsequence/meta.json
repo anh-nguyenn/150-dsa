@@ -12,5 +12,16 @@
     }
   ],
   "entry": "longest_common_subsequence",
-  "kind": "function"
+  "kind": "function",
+  "examples": [
+    {
+      "input": "text1 = \"abcde\", text2 = \"ace\"",
+      "output": "3"
+    }
+  ],
+  "constraints": [
+    "Each string has between 0 and 1000 characters; the official inputs are non-empty, but empty strings are handled here.",
+    "Characters are lowercase English letters.",
+    "A subsequence does not need to be contiguous."
+  ]
 }

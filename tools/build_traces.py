@@ -153,8 +153,9 @@ def finish_trace(result, problem_id, case_index, tests, code, meta):
     result["code_hash"] = hashlib.sha256(code.encode()).hexdigest()
     with open(HARNESS_PATH, "rb") as handle:
         result["harness_hash"] = hashlib.sha256(handle.read()).hexdigest()
+    trace_meta = {"entry": meta.get("entry"), "kind": meta.get("kind", "function")}
     result["meta_hash"] = hashlib.sha256(
-        json.dumps(meta, sort_keys=True, separators=(",", ":")).encode()
+        json.dumps(trace_meta, sort_keys=True, separators=(",", ":")).encode()
     ).hexdigest()
     cases = tests.get("cases", [])
     if case_index < len(cases):

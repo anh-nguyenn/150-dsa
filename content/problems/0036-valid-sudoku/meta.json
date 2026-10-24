@@ -12,5 +12,15 @@
     }
   ],
   "entry": "is_valid_sudoku",
-  "kind": "function"
+  "kind": "function",
+  "examples": [
+    {
+      "body": "```text\nTwo 5s in the same row        ->  False\nEvery placed digit is unique\nin its row, column, and box   ->  True\n```"
+    }
+  ],
+  "constraints": [
+    "The board is exactly 9 by 9.",
+    "Every cell is a digit from `1` to `9` or a dot.",
+    "Only the digits currently placed matter."
+  ]
 }

@@ -12,5 +12,19 @@
     }
   ],
   "entry": "walls_and_gates",
-  "kind": "function"
+  "kind": "function",
+  "examples": [
+    {
+      "body": "```text\n[[2147483647, 0, 2147483647]]\n```"
+    },
+    {
+      "body": "```text\n[[1, 0, 1]]\n```\n\nbecomes"
+    }
+  ],
+  "constraints": [
+    "The grid has at least one row and one column.",
+    "Movement is only horizontal or vertical.",
+    "Walls cannot be crossed.",
+    "A gate has distance 0."
+  ]
 }

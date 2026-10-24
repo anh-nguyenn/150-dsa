@@ -12,5 +12,16 @@
     }
   ],
   "entry": "group_anagrams",
-  "kind": "function"
+  "kind": "function",
+  "examples": [
+    {
+      "input": "[\"eat\", \"tea\", \"tan\", \"ate\", \"nat\", \"bat\"]",
+      "output": "[[\"eat\", \"tea\", \"ate\"], [\"tan\", \"nat\"], [\"bat\"]]"
+    }
+  ],
+  "constraints": [
+    "Between 1 and 10,000 words.",
+    "Each word has at most 100 characters and uses lowercase English letters.",
+    "Anagrams contain the same letters with the same counts."
+  ]
 }

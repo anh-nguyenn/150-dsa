@@ -21,6 +21,13 @@ export interface ApproachMeta {
   space: string
 }
 
+export interface Example {
+  input?: string
+  output?: string
+  explanation?: string
+  body?: string
+}
+
 export interface ProblemMeta {
   id: string
   title: string
@@ -29,6 +36,8 @@ export interface ProblemMeta {
   entry?: string
   kind?: 'function' | 'class'
   approaches: ApproachMeta[]
+  examples?: Example[]
+  constraints?: string[]
 }
 
 export interface TestCase {
@@ -64,6 +73,8 @@ export interface Problem {
   starter?: string
   tests?: TestsFile
   approaches: LoadedApproach[]
+  examples: Example[]
+  constraints: string[]
   available: boolean
 }
 
@@ -170,6 +181,8 @@ catalog.topics.forEach((topic, topicIndex) => {
       starter,
       tests,
       approaches,
+      examples: meta.examples ?? [],
+      constraints: meta.constraints ?? [],
       available,
     }
     list.push(problem)

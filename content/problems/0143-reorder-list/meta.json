@@ -12,5 +12,20 @@
     }
   ],
   "entry": "reorder_list",
-  "kind": "function"
+  "kind": "function",
+  "examples": [
+    {
+      "input": "[1, 2, 3, 4]",
+      "output": "[1, 4, 2, 3]"
+    },
+    {
+      "input": "[1, 2, 3, 4, 5]",
+      "output": "[1, 5, 2, 4, 3]"
+    }
+  ],
+  "constraints": [
+    "The list holds between 1 and 50,000 nodes.",
+    "Values are between -1,000 and 1,000.",
+    "The reordering happens in place; only node links may change."
+  ]
 }

@@ -7,7 +7,7 @@ type Pyodide = {
   runPython: (code: string) => unknown
   globals: {
     get: (name: string) => {
-      (meta: string, tests: string, code: string): string
+      (meta: string, tests: string, code: string, caseIndex?: number | null): string
       destroy?: () => void
     }
   }
@@ -28,7 +28,7 @@ function getRuntime(): Promise<Pyodide> {
 }
 
 self.onmessage = async (event: MessageEvent) => {
-  const data = event.data as { type: string; id?: number; meta?: unknown; tests?: unknown; code?: string }
+  const data = event.data as { type: string; id?: number; meta?: unknown; tests?: unknown; code?: string; caseIndex?: number }
   if (data.type === 'init') {
     try {
       await getRuntime()
@@ -48,7 +48,7 @@ self.onmessage = async (event: MessageEvent) => {
       const pyodide = await getRuntime()
       const runner = pyodide.globals.get('run_payload')
       try {
-        const raw = runner(JSON.stringify(data.meta), JSON.stringify(data.tests), data.code ?? '')
+        const raw = runner(JSON.stringify(data.meta), JSON.stringify(data.tests), data.code ?? '', data.caseIndex ?? null)
         self.postMessage({ type: 'result', id: data.id, result: JSON.parse(raw) })
       } finally {
         runner.destroy?.()

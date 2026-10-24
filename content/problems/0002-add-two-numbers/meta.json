@@ -12,5 +12,17 @@
     }
   ],
   "entry": "add_two_numbers",
-  "kind": "function"
+  "kind": "function",
+  "examples": [
+    {
+      "input": "[2, 4, 3] represents 342\n[5, 6, 4] represents 465\nsum 807",
+      "output": "[7, 0, 8]"
+    }
+  ],
+  "constraints": [
+    "Each list holds between 1 and 100 digits.",
+    "Every digit is between 0 and 9.",
+    "Numbers have no leading zeros, except the number zero itself.",
+    "The result may have one more digit than either input."
+  ]
 }

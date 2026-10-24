@@ -12,5 +12,17 @@
     }
   ],
   "entry": "missing_number",
-  "kind": "function"
+  "kind": "function",
+  "examples": [
+    {
+      "input": "nums = [3, 0, 1]",
+      "output": "2",
+      "explanation": "The range for three numbers is 0 through 3, and 2 is the only value missing."
+    }
+  ],
+  "constraints": [
+    "The array length is between 1 and 10,000.",
+    "Values are distinct and lie in 0 through `n`, where `n` is the length.",
+    "Exactly one value from that range is missing."
+  ]
 }

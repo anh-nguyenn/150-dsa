@@ -12,5 +12,15 @@
     }
   ],
   "entry": "set_zeroes",
-  "kind": "function"
+  "kind": "function",
+  "examples": [
+    {
+      "body": "```text\n[[1, 1, 1],        [[1, 0, 1],\n [1, 0, 1],   ->   [0, 0, 0],\n [1, 1, 1]]        [1, 0, 1]]\n```"
+    }
+  ],
+  "constraints": [
+    "Between 1 and 200 rows, and between 1 and 200 columns.",
+    "Entries are ordinary integers, including zero and negative values.",
+    "Modify the grid in place, using only a constant amount of extra memory."
+  ]
 }

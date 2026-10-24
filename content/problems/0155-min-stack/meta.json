@@ -12,5 +12,16 @@
     }
   ],
   "entry": "MinStack",
-  "kind": "class"
+  "kind": "class",
+  "examples": [
+    {
+      "body": "```text\npush(-2), push(0), push(-3)\ngetMin()  ->  -3\npop()\ngetMin()  ->  -2\n```"
+    }
+  ],
+  "constraints": [
+    "Values fit in a signed 32-bit integer.",
+    "Between 1 and 30,000 method calls occur.",
+    "`pop`, `top`, and `getMin` are only called when the stack is non-empty.",
+    "Every operation should run in O(1) time."
+  ]
 }

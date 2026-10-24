@@ -12,5 +12,17 @@
     }
   ],
   "entry": "least_interval",
-  "kind": "function"
+  "kind": "function",
+  "examples": [
+    {
+      "input": "tasks = [A, A, A, B, B, B], n = 2",
+      "output": "8"
+    }
+  ],
+  "constraints": [
+    "Between 1 and 10,000 tasks.",
+    "Each label is an uppercase English letter.",
+    "The cooldown is between 0 and 100.",
+    "The answer is a count of time units, including idle slots."
+  ]
 }

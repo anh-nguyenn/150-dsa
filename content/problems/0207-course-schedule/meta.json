@@ -12,5 +12,21 @@
     }
   ],
   "entry": "can_finish",
-  "kind": "function"
+  "kind": "function",
+  "examples": [
+    {
+      "input": "num_courses = 2, prerequisites = [[1, 0]]",
+      "output": "true"
+    },
+    {
+      "input": "num_courses = 2, prerequisites = [[1, 0], [0, 1]]",
+      "output": "false"
+    }
+  ],
+  "constraints": [
+    "Between 1 and 2,000 courses, labeled `0` through `num_courses - 1`.",
+    "Up to 5,000 dependency pairs, with no pair repeated.",
+    "A pair names a course and one prerequisite of that course.",
+    "A course may have several prerequisites, and some courses may have none."
+  ]
 }

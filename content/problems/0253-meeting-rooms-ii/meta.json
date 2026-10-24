@@ -12,5 +12,18 @@
     }
   ],
   "entry": "min_meeting_rooms",
-  "kind": "function"
+  "kind": "function",
+  "examples": [
+    {
+      "input": "[[0,30],[5,10],[15,20]]",
+      "output": "2",
+      "explanation": "The long meeting needs its own room while the other two share one."
+    }
+  ],
+  "constraints": [
+    "Between 0 and 10,000 meetings.",
+    "Each interval is `[start, end]` with `start < end`.",
+    "A room becomes free exactly when a meeting ends, so touching endpoints can reuse it.",
+    "The input is not necessarily sorted."
+  ]
 }

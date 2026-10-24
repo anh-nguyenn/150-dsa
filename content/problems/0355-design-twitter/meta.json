@@ -12,5 +12,18 @@
     }
   ],
   "entry": "Twitter",
-  "kind": "class"
+  "kind": "class",
+  "examples": [
+    {
+      "input": "postTweet(1, 5)\nfollow(1, 2)\npostTweet(2, 6)\ngetNewsFeed(1)",
+      "output": "[6, 5]"
+    }
+  ],
+  "constraints": [
+    "User ids and tweet ids are positive integers up to 10,000.",
+    "At most 30,000 operations are performed.",
+    "A feed shows at most ten tweets.",
+    "Newest-first ordering is determined by when tweets were posted.",
+    "Following and unfollowing the same user repeatedly must behave predictably."
+  ]
 }

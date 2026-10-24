@@ -12,5 +12,20 @@
     }
   ],
   "entry": "kth_smallest",
-  "kind": "function"
+  "kind": "function",
+  "examples": [
+    {
+      "input": "tree = [3, 1, 4, null, 2], k = 1",
+      "output": "1"
+    },
+    {
+      "input": "tree = [3, 1, 4, null, 2], k = 3",
+      "output": "3"
+    }
+  ],
+  "constraints": [
+    "The tree has between 1 and 10,000 nodes.",
+    "`k` is between 1 and the number of nodes.",
+    "Node values are non-negative and fit in a signed 32-bit integer."
+  ]
 }

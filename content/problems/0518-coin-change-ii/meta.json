@@ -12,5 +12,17 @@
     }
   ],
   "entry": "change",
-  "kind": "function"
+  "kind": "function",
+  "examples": [
+    {
+      "input": "amount = 5, coins = [1, 2, 5]",
+      "output": "4"
+    }
+  ],
+  "constraints": [
+    "The amount is between 0 and 5000.",
+    "There are at most 300 denominations, each between 1 and 5000.",
+    "Coins are distinct, and a denomination can be reused without limit.",
+    "The count can be large; Python integers handle it safely."
+  ]
 }

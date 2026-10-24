@@ -12,5 +12,18 @@
     }
   ],
   "entry": "foreign_dictionary",
-  "kind": "function"
+  "kind": "function",
+  "examples": [
+    {
+      "input": "words = [\"wrt\",\"wrf\",\"er\",\"ett\",\"rftt\"]",
+      "output": "\"wertf\"",
+      "explanation": "The first differing letters give `w` before `e`, `e` before `r`, `r` before `t`, and `t` before `f`."
+    }
+  ],
+  "constraints": [
+    "Between 1 and 100 words.",
+    "Each word has between 1 and 100 lowercase letters.",
+    "A shorter word that is a prefix of a longer one is fine, but the reverse is impossible in a sorted list.",
+    "The answer must use every letter that appears."
+  ]
 }

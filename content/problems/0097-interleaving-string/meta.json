@@ -12,5 +12,17 @@
     }
   ],
   "entry": "is_interleave",
-  "kind": "function"
+  "kind": "function",
+  "examples": [
+    {
+      "input": "s1 = \"aabcc\", s2 = \"dbbca\", s3 = \"aadbbcbcac\"",
+      "output": "true"
+    }
+  ],
+  "constraints": [
+    "`s1` and `s2` have up to 100 characters each.",
+    "`s3` has up to 200 characters.",
+    "Empty strings are allowed.",
+    "Every character of both sources must be used exactly once."
+  ]
 }

@@ -12,5 +12,20 @@
     }
   ],
   "entry": "min_cost_climbing_stairs",
-  "kind": "function"
+  "kind": "function",
+  "examples": [
+    {
+      "input": "cost = [10, 15, 20]",
+      "output": "15     # start on step 1, pay 15, jump past the top"
+    },
+    {
+      "input": "cost = [1, 100, 1, 1, 1, 100, 1, 1, 100, 1]",
+      "output": "6"
+    }
+  ],
+  "constraints": [
+    "Between 2 and 1,000 steps.",
+    "Every toll is between 0 and 999.",
+    "The top is one position beyond the last step, so reaching it means leaving the last step you stood on."
+  ]
 }

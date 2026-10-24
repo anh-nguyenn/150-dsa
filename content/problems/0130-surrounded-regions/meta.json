@@ -12,5 +12,16 @@
     }
   ],
   "entry": "solve",
-  "kind": "function"
+  "kind": "function",
+  "examples": [
+    {
+      "body": "```text\n[[\"X\",\"X\",\"X\",\"X\"],\n [\"X\",\"O\",\"O\",\"X\"],\n [\"X\",\"X\",\"O\",\"X\"],\n [\"X\",\"O\",\"X\",\"X\"]]\n```\n\nkeeps the lone `\"O\"` on the bottom border, while the connected group in the middle is captured."
+    }
+  ],
+  "constraints": [
+    "The board has at least one row and one column.",
+    "Each cell is either `\"X\"` or `\"O\"`.",
+    "Connections are only up, down, left, and right.",
+    "The board must be changed in place."
+  ]
 }

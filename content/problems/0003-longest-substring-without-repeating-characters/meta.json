@@ -12,5 +12,25 @@
     }
   ],
   "entry": "length_of_longest_substring",
-  "kind": "function"
+  "kind": "function",
+  "examples": [
+    {
+      "input": "s = \"abcabcbb\"",
+      "output": "3   (\"abc\")"
+    },
+    {
+      "input": "s = \"bbbbb\"",
+      "output": "1   (\"b\")"
+    },
+    {
+      "input": "s = \"pwwkew\"",
+      "output": "3   (\"wke\")"
+    }
+  ],
+  "constraints": [
+    "The string has between 0 and 50,000 characters.",
+    "Characters may include letters, digits, symbols, and spaces.",
+    "The substring must be contiguous.",
+    "A substring of length zero is allowed when the string is empty."
+  ]
 }

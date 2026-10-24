@@ -12,5 +12,15 @@
     }
   ],
   "entry": "oranges_rotting",
-  "kind": "function"
+  "kind": "function",
+  "examples": [
+    {
+      "body": "```text\n[[2,1,1],\n [1,1,0],\n [0,1,1]]\n```\n\ntakes 4 minutes. A fresh orange sealed off from every rotten one would stay fresh forever."
+    }
+  ],
+  "constraints": [
+    "The grid is rectangular with at least one cell.",
+    "Each cell is empty, fresh, or rotten.",
+    "Rotting spreads one step per minute, only up, down, left, and right."
+  ]
 }

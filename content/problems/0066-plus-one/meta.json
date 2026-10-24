@@ -12,5 +12,21 @@
     }
   ],
   "entry": "plus_one",
-  "kind": "function"
+  "kind": "function",
+  "examples": [
+    {
+      "input": "[1, 2, 3]",
+      "output": "[1, 2, 4]"
+    },
+    {
+      "input": "[9, 9, 9]",
+      "output": "[1, 0, 0, 0]"
+    }
+  ],
+  "constraints": [
+    "Between 1 and 100 digits.",
+    "Each digit is from 0 through 9.",
+    "The first digit is nonzero unless the list is exactly `[0]`.",
+    "The number may be too large for a fixed-size integer, so work directly on the digits."
+  ]
 }

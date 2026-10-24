@@ -12,5 +12,17 @@
     }
   ],
   "entry": "count_bits",
-  "kind": "function"
+  "kind": "function",
+  "examples": [
+    {
+      "input": "n = 5",
+      "output": "[0, 1, 1, 2, 1, 2]",
+      "explanation": "Here index 3 has binary `11`, so its entry is 2."
+    }
+  ],
+  "constraints": [
+    "`n` is between 0 and 100,000.",
+    "The answer contains one entry for each value from 0 to `n`.",
+    "Entry `i` counts the 1 bits in `i`."
+  ]
 }

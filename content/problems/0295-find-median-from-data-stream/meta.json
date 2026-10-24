@@ -12,5 +12,16 @@
     }
   ],
   "entry": "MedianFinder",
-  "kind": "class"
+  "kind": "class",
+  "examples": [
+    {
+      "body": "```text\naddNum(1)\naddNum(2)\nfindMedian()  ->  1.5\naddNum(3)\nfindMedian()  ->  2.0\n```"
+    }
+  ],
+  "constraints": [
+    "Each number is between -100,000 and 100,000.",
+    "At most 50,000 operations are performed.",
+    "`findMedian` is only called after at least one number has been added.",
+    "Results are floating-point values with small tolerance for precision."
+  ]
 }

@@ -12,5 +12,17 @@
     }
   ],
   "entry": "merge_two_lists",
-  "kind": "function"
+  "kind": "function",
+  "examples": [
+    {
+      "input": "[1, 2, 4] and [1, 3, 4]",
+      "output": "[1, 1, 2, 3, 4, 4]"
+    }
+  ],
+  "constraints": [
+    "Each list holds between 0 and 50 nodes.",
+    "Values are between -100 and 100.",
+    "Each input is already in non-decreasing order.",
+    "Either or both inputs may be empty."
+  ]
 }

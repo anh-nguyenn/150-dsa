@@ -12,5 +12,16 @@
     }
   ],
   "entry": "level_order",
-  "kind": "function"
+  "kind": "function",
+  "examples": [
+    {
+      "input": "root = [3, 9, 20, null, null, 15, 7]",
+      "output": "[[3], [9, 20], [15, 7]]"
+    }
+  ],
+  "constraints": [
+    "The tree has between 0 and 2,000 nodes.",
+    "Node values are between -1,000 and 1,000.",
+    "Missing children appear as `null` in the level-order input."
+  ]
 }

@@ -12,5 +12,16 @@
     }
   ],
   "entry": "max_profit",
-  "kind": "function"
+  "kind": "function",
+  "examples": [
+    {
+      "input": "prices = [1, 2, 3, 0, 2]",
+      "output": "3"
+    }
+  ],
+  "constraints": [
+    "Up to 5000 days; the official inputs contain at least one price.",
+    "Each price is between 0 and 1000.",
+    "After selling, the following day cannot be used to buy."
+  ]
 }

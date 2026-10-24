@@ -12,5 +12,17 @@
     }
   ],
   "entry": "find_itinerary",
-  "kind": "function"
+  "kind": "function",
+  "examples": [
+    {
+      "input": "tickets = [[\"MUC\",\"LHR\"],[\"JFK\",\"MUC\"],[\"SFO\",\"SJC\"],[\"LHR\",\"SFO\"]]",
+      "output": "[\"JFK\",\"MUC\",\"LHR\",\"SFO\",\"SJC\"]"
+    }
+  ],
+  "constraints": [
+    "Between 1 and 300 tickets.",
+    "Airport codes are three uppercase letters.",
+    "A valid itinerary is guaranteed for the original problem.",
+    "Compare itineraries airport by airport, like words in a dictionary."
+  ]
 }

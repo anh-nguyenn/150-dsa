@@ -12,5 +12,22 @@
     }
   ],
   "entry": "can_jump",
-  "kind": "function"
+  "kind": "function",
+  "examples": [
+    {
+      "input": "nums = [2, 3, 1, 1, 4]",
+      "output": "true"
+    },
+    {
+      "input": "nums = [3, 2, 1, 0, 4]",
+      "output": "false",
+      "explanation": "In the first case you can step from index 0 to 1, then from 1 to 4. In the second, index 3 has a jump length of zero and blocks the way to index 4."
+    }
+  ],
+  "constraints": [
+    "Between 1 and 10,000 positions.",
+    "Each jump length is between 0 and 100,000.",
+    "You may jump fewer steps than the number allows, including zero.",
+    "Reaching the last index is the goal; you do not need to stop exactly on it from a jump that overshoots."
+  ]
 }

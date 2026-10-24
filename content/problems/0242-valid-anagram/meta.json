@@ -12,5 +12,20 @@
     }
   ],
   "entry": "is_anagram",
-  "kind": "function"
+  "kind": "function",
+  "examples": [
+    {
+      "input": "s = \"anagram\", t = \"nagaram\"",
+      "output": "True"
+    },
+    {
+      "input": "s = \"rat\",     t = \"car\"",
+      "output": "False"
+    }
+  ],
+  "constraints": [
+    "Both strings contain only lowercase English letters.",
+    "Each length is between 1 and 50,000.",
+    "Order does not matter, but the count of each letter does."
+  ]
 }

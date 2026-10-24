@@ -12,5 +12,21 @@
     }
   ],
   "entry": "multiply",
-  "kind": "function"
+  "kind": "function",
+  "examples": [
+    {
+      "input": "\"2\"   * \"3\"",
+      "output": "\"6\""
+    },
+    {
+      "input": "\"123\" * \"456\"",
+      "output": "\"56088\""
+    }
+  ],
+  "constraints": [
+    "Each string has between 1 and 200 digits.",
+    "The strings contain only digits and have no leading zeros unless the value is exactly `\"0\"`.",
+    "Do not convert either whole string to a built-in integer.",
+    "An `m`-digit number times an `n`-digit number has at most `m + n` digits."
+  ]
 }

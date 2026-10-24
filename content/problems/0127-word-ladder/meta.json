@@ -12,5 +12,22 @@
     }
   ],
   "entry": "ladder_length",
-  "kind": "function"
+  "kind": "function",
+  "examples": [
+    {
+      "input": "begin_word = \"hit\", end_word = \"cog\",\nword_list = [\"hot\",\"dot\",\"dog\",\"lot\",\"log\",\"cog\"]",
+      "output": "5"
+    },
+    {
+      "input": "begin_word = \"hit\", end_word = \"cog\",\nword_list = [\"hot\",\"dot\",\"dog\",\"lot\",\"log\"]",
+      "output": "0",
+      "explanation": "One shortest chain is `hit -> hot -> dot -> dog -> cog`."
+    }
+  ],
+  "constraints": [
+    "All words have the same length, between 1 and 10 letters.",
+    "Words use lowercase English letters only.",
+    "Up to 5,000 words are available, all distinct.",
+    "The start and target words are different, and the list need not contain every possible word."
+  ]
 }

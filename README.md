@@ -2,7 +2,7 @@
 
 A local-first study site for working through 150 algorithm problems, one lesson at a time.
 
-Each lesson has an own-words summary, a plain-language background, three progressive hints, an optimal solution with time and space, starter code, authored tests, and a step-through execution trace. Progress and code stay in the browser.
+Each lesson has a description with structured examples and constraints, a plain-language background, three progressive hints, an optimal solution, starter code, authored tests, and a step-through execution trace. The problem page is a practice-first split: description on the left, code and testcase runner on the right, with the background and solutions in a Learn section below. Progress and code stay in the browser.
 
 ## Run
 
@@ -28,6 +28,17 @@ npm run check    # catalog, metadata, and required files
 ```
 
 `tools/verify_solutions.py --all` is the gate: every lesson's solution must pass every authored case. The same Python harness runs in the browser worker.
+
+## Practice layout
+
+The problem page mirrors the useful parts of a LeetCode-style workbench:
+
+- The left pane is the description, with numbered examples, constraints, hints, and a source link.
+- The right pane is the workbench: Python editor, testcase tabs, `Run` for the selected authored case, and `Submit` for all cases. A successful submit marks the problem solved.
+- Background and Solutions, including the visualization player, live below in the Learn section.
+- On mobile, a sticky Statement / Code / Learn switch replaces the split.
+
+Testcases are authored and read-only. Custom inputs and additional languages are later work.
 
 ## Visualizations
 
@@ -59,8 +70,8 @@ Every problem directory follows the same shape:
 
 ```text
 content/problems/<id>/
-  meta.json
-  summary.md
+  meta.json                 # title, difficulty, entry, examples, constraints
+  summary.md                # description only
   background.md
   hints.md
   starter.py
@@ -73,7 +84,8 @@ content/problems/<id>/
 
 - All 150 lessons are written at the minimum viable tier and verified.
 - Home, topic, problem, progress, solved state, and the browser runner work.
-- All 150 problems have a generated step-through trace and player. Hand-authored per-problem captions and instrumentation are a possible future upgrade.
+- All 150 problems have structured examples/constraints, a practice-first split layout, and a generated step-through trace and player.
+- Hand-authored per-problem visualization captions and instrumentation are a possible future upgrade.
 - Search, progress export/import, and a light theme are later.
 
 The build plan and product truth live in [PLAN.md](PLAN.md) and [PRODUCT.md](PRODUCT.md).

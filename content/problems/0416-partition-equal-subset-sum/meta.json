@@ -12,5 +12,20 @@
     }
   ],
   "entry": "can_partition",
-  "kind": "function"
+  "kind": "function",
+  "examples": [
+    {
+      "input": "[1, 5, 11, 5]",
+      "output": "true    (11 and 1 + 5 + 5)"
+    },
+    {
+      "input": "[1, 2, 3, 5]",
+      "output": "false   (the total 11 is odd)"
+    }
+  ],
+  "constraints": [
+    "Between 1 and 200 numbers.",
+    "Each number is between 1 and 100.",
+    "Elements cannot be split between the two groups."
+  ]
 }

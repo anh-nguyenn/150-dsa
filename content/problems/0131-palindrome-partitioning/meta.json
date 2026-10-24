@@ -12,5 +12,18 @@
     }
   ],
   "entry": "partition",
-  "kind": "function"
+  "kind": "function",
+  "examples": [
+    {
+      "input": "s = \"aab\"",
+      "output": "[[\"a\", \"a\", \"b\"], [\"aa\", \"b\"]]",
+      "explanation": "`\"aab\"` as a single piece is not a palindrome, so it is not a valid partition."
+    }
+  ],
+  "constraints": [
+    "The string has between 1 and 16 lowercase English letters.",
+    "Every piece must be a palindrome and must be non-empty.",
+    "The pieces, in order, must spell the original string exactly.",
+    "Different cut positions count as different partitions."
+  ]
 }

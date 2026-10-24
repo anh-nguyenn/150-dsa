@@ -29,6 +29,7 @@ interface Payload {
   meta: unknown
   tests: unknown
   code: string
+  caseIndex?: number
 }
 
 const TIMEOUT_MS = 5000

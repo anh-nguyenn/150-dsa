@@ -12,5 +12,17 @@
     }
   ],
   "entry": "min_distance",
-  "kind": "function"
+  "kind": "function",
+  "examples": [
+    {
+      "input": "word1 = \"horse\", word2 = \"ros\"",
+      "output": "3",
+      "explanation": "One shortest sequence replaces `h` with `r`, removes `r`, and removes `e`."
+    }
+  ],
+  "constraints": [
+    "Both strings contain only lowercase English letters.",
+    "Each string has at most 500 characters.",
+    "The strings may be empty."
+  ]
 }

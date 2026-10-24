@@ -12,5 +12,17 @@
     }
   ],
   "entry": "KthLargest",
-  "kind": "class"
+  "kind": "class",
+  "examples": [
+    {
+      "body": "```text\nk = 3, nums = [4, 5, 8, 2]\nadd(3)  -> 4\nadd(5)  -> 5\n```"
+    }
+  ],
+  "constraints": [
+    "`k` is at least 1.",
+    "The initial list has at most 10,000 values.",
+    "There are at most 10,000 calls to `add`.",
+    "Values stay between -10,000 and 10,000.",
+    "Whenever `add` is called, the stream contains enough values to have a kth largest."
+  ]
 }

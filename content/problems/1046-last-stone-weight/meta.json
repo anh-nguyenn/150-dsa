@@ -12,5 +12,16 @@
     }
   ],
   "entry": "last_stone_weight",
-  "kind": "function"
+  "kind": "function",
+  "examples": [
+    {
+      "input": "[2, 7, 4, 1, 8, 1]",
+      "output": "1"
+    }
+  ],
+  "constraints": [
+    "Between 1 and 30 stones.",
+    "Each weight is between 1 and 1,000.",
+    "The process always waits for the two heaviest stones, so the order of the input does not matter."
+  ]
 }

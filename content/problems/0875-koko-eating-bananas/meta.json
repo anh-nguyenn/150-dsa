@@ -12,5 +12,21 @@
     }
   ],
   "entry": "min_eating_speed",
-  "kind": "function"
+  "kind": "function",
+  "examples": [
+    {
+      "input": "piles = [3,6,7,11], h = 8",
+      "output": "4"
+    },
+    {
+      "input": "piles = [30,11,23,4,20], h = 5",
+      "output": "30"
+    }
+  ],
+  "constraints": [
+    "Between 1 and 10,000 piles.",
+    "Each pile has between 1 and 10^9 bananas.",
+    "The deadline is at least the number of piles and at most 10^9 hours.",
+    "With `k` bananas per hour, finishing one pile takes `ceil(pile / k)` hours."
+  ]
 }

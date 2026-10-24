@@ -12,5 +12,25 @@
     }
   ],
   "entry": "min_window",
-  "kind": "function"
+  "kind": "function",
+  "examples": [
+    {
+      "input": "s = \"ADOBECODEBANC\", t = \"ABC\"",
+      "output": "\"BANC\""
+    },
+    {
+      "input": "s = \"a\", t = \"a\"",
+      "output": "\"a\""
+    },
+    {
+      "input": "s = \"a\", t = \"aa\"",
+      "output": "\"\""
+    }
+  ],
+  "constraints": [
+    "`s` and `t` have between 1 and 100,000 characters.",
+    "Characters are uppercase and lowercase English letters.",
+    "Multiplicity matters: two `A`s in `t` require two `A`s in the window.",
+    "The answer is unique when it exists."
+  ]
 }

@@ -12,5 +12,21 @@
     }
   ],
   "entry": "find_redundant_connection",
-  "kind": "function"
+  "kind": "function",
+  "examples": [
+    {
+      "input": "edges = [[1,2],[1,3],[2,3]]",
+      "output": "[2,3]"
+    },
+    {
+      "input": "edges = [[1,2],[2,3],[3,4],[4,1]]",
+      "output": "[4,1]"
+    }
+  ],
+  "constraints": [
+    "Between 3 and 1,000 nodes.",
+    "The number of edges equals the number of nodes.",
+    "Every edge joins two distinct labels within `1..n`.",
+    "No edge is repeated, and the graph is connected."
+  ]
 }

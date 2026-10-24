@@ -12,5 +12,21 @@
     }
   ],
   "entry": "valid_tree",
-  "kind": "function"
+  "kind": "function",
+  "examples": [
+    {
+      "input": "n = 5, edges = [[0,1],[0,2],[0,3],[1,4]]",
+      "output": "true"
+    },
+    {
+      "input": "n = 4, edges = [[0,1],[2,3]]",
+      "output": "false"
+    }
+  ],
+  "constraints": [
+    "Between 1 and 2,000 nodes.",
+    "Up to 5,000 undirected edges, with no repeated edge.",
+    "An edge never connects a node to itself.",
+    "Node labels are always inside the valid range."
+  ]
 }

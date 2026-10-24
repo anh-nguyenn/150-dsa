@@ -12,5 +12,20 @@
     }
   ],
   "entry": "build_tree",
-  "kind": "function"
+  "kind": "function",
+  "examples": [
+    {
+      "input": "preorder = [3, 9, 20, 15, 7]\ninorder  = [9, 3, 15, 20, 7]",
+      "output": "[3, 9, 20, null, null, 15, 7]"
+    },
+    {
+      "input": "preorder = [1, 2], inorder = [2, 1]",
+      "output": "[1, 2]"
+    }
+  ],
+  "constraints": [
+    "Between 1 and 3,000 nodes.",
+    "Every value in the tree is unique.",
+    "Both lists describe the same tree, and each has exactly the same length."
+  ]
 }

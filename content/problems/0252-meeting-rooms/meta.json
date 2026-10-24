@@ -12,5 +12,18 @@
     }
   ],
   "entry": "can_attend_meetings",
-  "kind": "function"
+  "kind": "function",
+  "examples": [
+    {
+      "input": "[[0,30],[5,10],[15,20]]",
+      "output": "false",
+      "explanation": "`[5,10]` overlaps `[0,30]`, so the person cannot attend both."
+    }
+  ],
+  "constraints": [
+    "Between 0 and 10,000 meetings.",
+    "Each interval is `[start, end]` with `start < end`.",
+    "A meeting may start at the same moment another ends.",
+    "The input is not necessarily sorted."
+  ]
 }

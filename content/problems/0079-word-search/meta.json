@@ -12,5 +12,17 @@
     }
   ],
   "entry": "exist",
-  "kind": "function"
+  "kind": "function",
+  "examples": [
+    {
+      "body": "```text\nboard = [[\"A\",\"B\",\"C\",\"E\"],\n         [\"S\",\"F\",\"C\",\"S\"],\n         [\"A\",\"D\",\"E\",\"E\"]]\nword = \"ABCCED\" -> true\nword = \"ABCB\"   -> false\n```"
+    }
+  ],
+  "constraints": [
+    "The grid has at least one cell and at most 6 rows by 6 columns.",
+    "Every cell contains one letter.",
+    "The word length is between 1 and 15 in the official input.",
+    "Moves are up, down, left, or right; diagonal moves are not allowed.",
+    "A path cannot revisit a cell."
+  ]
 }

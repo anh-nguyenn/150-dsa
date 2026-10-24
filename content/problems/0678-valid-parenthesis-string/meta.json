@@ -12,5 +12,16 @@
     }
   ],
   "entry": "check_valid_string",
-  "kind": "function"
+  "kind": "function",
+  "examples": [
+    {
+      "body": "```text\ns = \"(*)\"   ->  true\ns = \"(*))\"  ->  true\ns = \"(((*\"  ->  false\n```\n\nIn `\"(*)\"`, the star can act as a closing parenthesis."
+    }
+  ],
+  "constraints": [
+    "The string has between 1 and 100 characters.",
+    "Only `'('`, `')'`, and `'*'` appear.",
+    "Every star is chosen independently.",
+    "A valid sequence never has more closing than opening parentheses at any prefix, and ends with none left open."
+  ]
 }

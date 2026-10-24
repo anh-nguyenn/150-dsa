@@ -12,5 +12,16 @@
     }
   ],
   "entry": "LRUCache",
-  "kind": "class"
+  "kind": "class",
+  "examples": [
+    {
+      "body": "```text\nput(1, 1)   cache: [1]\nput(2, 2)   cache: [2, 1]\nget(1) -> 1 cache: [1, 2]\nput(3, 3)   evicts 2, cache: [3, 1]\nget(2) -> -1\n```"
+    }
+  ],
+  "constraints": [
+    "Capacity is between 1 and 3,000.",
+    "Keys and values are between 0 and 10,000.",
+    "Up to 200,000 calls may be made.",
+    "Every operation should run in constant time on average."
+  ]
 }

@@ -12,5 +12,16 @@
     }
   ],
   "entry": "pacific_atlantic",
-  "kind": "function"
+  "kind": "function",
+  "examples": [
+    {
+      "body": "```text\n[[1,2],\n [4,3]]\n```\n\nreturns `[[0,1],[1,0],[1,1]]`: the top-left cell is too low to escape toward the Atlantic."
+    }
+  ],
+  "constraints": [
+    "The grid has at least one row and one column.",
+    "Water moves only up, down, left, and right.",
+    "Water may move to an equal or lower height.",
+    "Coordinates may be returned in any order."
+  ]
 }

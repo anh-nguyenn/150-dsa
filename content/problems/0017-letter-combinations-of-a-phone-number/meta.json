@@ -12,5 +12,18 @@
     }
   ],
   "entry": "letter_combinations",
-  "kind": "function"
+  "kind": "function",
+  "examples": [
+    {
+      "input": "digits = \"23\"",
+      "output": "[\"ad\", \"ae\", \"af\", \"bd\", \"be\", \"bf\", \"cd\", \"ce\", \"cf\"]",
+      "explanation": "`2` maps to `abc`, `3` maps to `def`, and each digit contributes exactly one letter."
+    }
+  ],
+  "constraints": [
+    "The input contains between 0 and 4 digits in the official version.",
+    "Each digit is between 2 and 9; 0 and 1 are not used.",
+    "Every digit must contribute one letter to every result.",
+    "An empty input produces an empty answer, not a list containing the empty string."
+  ]
 }

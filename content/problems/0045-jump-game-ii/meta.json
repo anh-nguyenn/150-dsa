@@ -12,5 +12,23 @@
     }
   ],
   "entry": "jump",
-  "kind": "function"
+  "kind": "function",
+  "examples": [
+    {
+      "input": "nums = [2, 3, 1, 1, 4]",
+      "output": "2"
+    },
+    {
+      "input": "nums = [2, 3, 0, 1, 4]",
+      "output": "2",
+      "explanation": "In the first case, jump from 0 to 1, then from 1 to 4. Two jumps is the minimum."
+    }
+  ],
+  "constraints": [
+    "Between 1 and 10,000 positions.",
+    "Each jump length is between 0 and 1,000.",
+    "You may jump fewer steps than the number allows.",
+    "The last index can always be reached.",
+    "A one-element array needs zero jumps."
+  ]
 }

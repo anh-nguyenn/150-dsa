@@ -12,5 +12,16 @@
     }
   ],
   "entry": "Trie",
-  "kind": "class"
+  "kind": "class",
+  "examples": [
+    {
+      "body": "```text\ninsert(\"apple\")\nsearch(\"apple\")     -> true\nsearch(\"app\")       -> false\nstartsWith(\"app\")   -> true\n```"
+    }
+  ],
+  "constraints": [
+    "Words and prefixes contain lowercase English letters.",
+    "Each word or prefix has length between 1 and 2,000.",
+    "At most 30,000 operations are performed.",
+    "`search` requires the exact word, while `startsWith` only requires a matching beginning."
+  ]
 }

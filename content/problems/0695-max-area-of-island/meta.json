@@ -12,5 +12,15 @@
     }
   ],
   "entry": "max_area_of_island",
-  "kind": "function"
+  "kind": "function",
+  "examples": [
+    {
+      "body": "```text\n[[1,1,0],\n [0,0,1],\n [1,0,1]]\n```\n\nThe largest island has area 2: the pair in the top row and the vertical pair on the right edge both have two cells."
+    }
+  ],
+  "constraints": [
+    "The grid has at least one row and one column.",
+    "Each cell is either `0` or `1`.",
+    "Connections are only up, down, left, and right."
+  ]
 }

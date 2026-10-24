@@ -12,5 +12,20 @@
     }
   ],
   "entry": "contains_duplicate",
-  "kind": "function"
+  "kind": "function",
+  "examples": [
+    {
+      "input": "nums = [1, 2, 3, 1]",
+      "output": "True"
+    },
+    {
+      "input": "nums = [1, 2, 3, 4]",
+      "output": "False"
+    }
+  ],
+  "constraints": [
+    "The list has between 1 and 100,000 entries.",
+    "Values may be negative, zero, or positive.",
+    "Only a yes/no answer is required."
+  ]
 }

@@ -4,6 +4,7 @@ import { Difficulty } from '../components/Difficulty'
 import { Hints } from '../components/Hints'
 import { Markdown } from '../components/Markdown'
 import { Solutions } from '../components/Solutions'
+import { Statement } from '../components/Statement'
 import {
   getPreviousAndNext,
   getProblem,
@@ -15,14 +16,6 @@ import { useDocumentTitle } from '../lib/useDocumentTitle'
 import { NotFound } from './NotFound'
 
 const TryIt = lazy(() => import('../components/TryIt').then((module) => ({ default: module.TryIt })))
-
-const SECTIONS = [
-  { id: 'summary', label: 'Summary' },
-  { id: 'background', label: 'Background' },
-  { id: 'hints', label: 'Hints' },
-  { id: 'solutions', label: 'Solutions' },
-  { id: 'try-it', label: 'Try it' },
-]
 
 export function Problem() {
   const { problemId } = useParams()
@@ -65,40 +58,10 @@ function Lesson({ problem }: { problem: ProblemData }) {
   const progress = useProgress()
   const solved = Boolean(progress.problems[problem.meta.id]?.solved)
   const { previous, next } = getPreviousAndNext(problem.meta.id)
-  const [active, setActive] = useState('summary')
-  const [mobileView, setMobileView] = useState<'read' | 'solutions' | 'try'>('read')
+  const [mobileView, setMobileView] = useState<'statement' | 'code' | 'learn'>('statement')
 
   useEffect(() => {
-    setActive('summary')
-    setMobileView('read')
-  }, [problem.meta.id])
-
-  useEffect(() => {
-    let frame = 0
-    const update = () => {
-      frame = 0
-      const offset = 130
-      let current = SECTIONS[0].id
-      for (const section of SECTIONS) {
-        const element = document.getElementById(section.id)
-        if (element && element.getBoundingClientRect().top <= offset) current = section.id
-      }
-      const atBottom = window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 2
-      if (atBottom) current = SECTIONS[SECTIONS.length - 1].id
-      setActive(current)
-    }
-    const onScroll = () => {
-      if (frame) return
-      frame = window.requestAnimationFrame(update)
-    }
-    update()
-    window.addEventListener('scroll', onScroll, { passive: true })
-    window.addEventListener('resize', onScroll)
-    return () => {
-      window.removeEventListener('scroll', onScroll)
-      window.removeEventListener('resize', onScroll)
-      if (frame) window.cancelAnimationFrame(frame)
-    }
+    setMobileView('statement')
   }, [problem.meta.id])
 
   return (
@@ -143,9 +106,9 @@ function Lesson({ problem }: { problem: ProblemData }) {
       <div className="mobile-switch" role="group" aria-label="Problem view">
         {(
           [
-            ['read', 'Read'],
-            ['solutions', 'Solutions'],
-            ['try', 'Try it'],
+            ['statement', 'Statement'],
+            ['code', 'Code'],
+            ['learn', 'Learn'],
           ] as const
         ).map(([value, label]) => (
           <button
@@ -159,107 +122,91 @@ function Lesson({ problem }: { problem: ProblemData }) {
         ))}
       </div>
 
-      <div className="problem-layout">
-        <div className="problem-main">
-          <header className="problem-header">
-            <p className="kicker">
-              {problem.topicName} <span aria-hidden="true">·</span> problem {problem.order + 1} of{' '}
-              {getProblemsForTopic(problem.topicId).length}
-            </p>
-            <h1>{problem.meta.title}</h1>
-            <div className="problem-header-meta">
-              <Difficulty value={problem.meta.difficulty} />
-              <span>{problem.approaches.length} approach</span>
-              <span>{problem.tests?.cases.length ?? 0} tests</span>
+      <div className="practice-page">
+        <header className="problem-header">
+          <p className="kicker">
+            {problem.topicName} <span aria-hidden="true">·</span> problem {problem.order + 1} of{' '}
+            {getProblemsForTopic(problem.topicId).length}
+          </p>
+          <h1>{problem.meta.title}</h1>
+          <div className="problem-header-meta">
+            <Difficulty value={problem.meta.difficulty} />
+            <span>{problem.approaches.length} approach</span>
+            <span>{problem.tests?.cases.length ?? 0} tests</span>
+          </div>
+        </header>
+
+        <div className="practice-layout">
+          <div className="practice-left group-statement">
+            <div className="pane-head">
+              <h2 className="pane-title">Description</h2>
+              <span className="pane-meta">{problem.topicName}</span>
             </div>
-          </header>
-
-          <div className="group group-read">
-            <section className="section" id="summary" aria-labelledby="summary-title">
-              <SectionHead index="01" id="summary-title" title="Summary" />
-              {problem.summary && <Markdown>{problem.summary}</Markdown>}
+            <section className="statement-section" id="summary" aria-label="Problem description">
+              <Statement problem={problem} />
             </section>
-
-            <section className="section" id="background" aria-labelledby="background-title">
-              <SectionHead index="02" id="background-title" title="Background" />
-              {problem.background && <Markdown>{problem.background}</Markdown>}
-            </section>
-
-            <section className="section" id="hints" aria-labelledby="hints-title">
-              <SectionHead index="03" id="hints-title" title="Hints" />
+            <section className="practice-hints" id="hints" aria-labelledby="hints-title">
+              <h2 className="practice-subhead" id="hints-title">
+                Hints
+              </h2>
               {problem.hints && <Hints markdown={problem.hints} />}
             </section>
           </div>
 
-          <div className="group group-solutions">
-            <section className="section" id="solutions" aria-labelledby="solutions-title">
-              <SectionHead index="04" id="solutions-title" title="Solutions" />
-              <Solutions problem={problem} />
-            </section>
-          </div>
-
-          <div className="group group-try">
-            <section className="section" id="try-it" aria-labelledby="try-it-title">
-              <SectionHead index="05" id="try-it-title" title="Try it" />
-              {problem.starter && (
-                <Suspense fallback={<div className="editor-loading">Loading editor…</div>}>
-                  <TryIt key={problem.meta.id} problem={problem} />
-                </Suspense>
-              )}
-            </section>
-          </div>
-
-          <div className="lesson-end">
-            <button
-              type="button"
-              className="solved-toggle solved-toggle-large"
-              aria-pressed={solved}
-              onClick={() => {
-                toggleSolved(problem.meta.id)
-              }}
-            >
-              <span className="check" aria-hidden="true">
-                {solved ? '✓' : ''}
-              </span>
-              {solved ? 'Solved' : 'Mark solved'}
-            </button>
-            {next ? (
-              <Link className="text-link" to={`/problem/${next.meta.id}`}>
-                Next: {next.meta.title} <span aria-hidden="true">→</span>
-              </Link>
-            ) : (
-              <Link className="text-link" to="/">
-                Back to contents <span aria-hidden="true">→</span>
-              </Link>
+          <aside className="practice-right group-code" aria-labelledby="code-title">
+            <div className="pane-head">
+              <h2 className="pane-title" id="code-title">
+                Code
+              </h2>
+              <span className="pane-meta">Python 3</span>
+            </div>
+            {problem.starter && (
+              <Suspense fallback={<div className="editor-loading">Loading editor…</div>}>
+                <TryIt key={problem.meta.id} problem={problem} />
+              </Suspense>
             )}
-          </div>
+          </aside>
         </div>
 
-        <aside className="toc" aria-label="On this page">
-          <p className="toc-label">On this page</p>
-          {SECTIONS.map((section, index) => (
-            <a
-              key={section.id}
-              href={`#${section.id}`}
-              className={active === section.id ? 'is-active' : ''}
-              aria-current={active === section.id ? 'location' : undefined}
-              onClick={(event) => {
-                event.preventDefault()
-                const target = document.getElementById(section.id)
-                if (target) target.scrollIntoView()
-                const heading = document.getElementById(`${section.id}-title`)
-                if (heading) {
-                  heading.setAttribute('tabindex', '-1')
-                  heading.focus({ preventScroll: true })
-                }
-                setActive(section.id)
-              }}
-            >
-              <span className="toc-index">{String(index + 1).padStart(2, '0')}</span>
-              {section.label}
-            </a>
-          ))}
-        </aside>
+        <div className="learn group-learn">
+          <div className="learn-head">
+            <span className="kicker">Learn</span>
+            <span className="learn-rule" aria-hidden="true" />
+          </div>
+          <section className="learn-section" id="background" aria-labelledby="background-title">
+            <SectionHead index="01" id="background-title" title="Background" />
+            {problem.background && <Markdown>{problem.background}</Markdown>}
+          </section>
+          <section className="learn-section" id="solutions" aria-labelledby="solutions-title">
+            <SectionHead index="02" id="solutions-title" title="Solutions" />
+            <Solutions problem={problem} />
+          </section>
+        </div>
+
+        <div className="lesson-end">
+          <button
+            type="button"
+            className="solved-toggle solved-toggle-large"
+            aria-pressed={solved}
+            onClick={() => {
+              toggleSolved(problem.meta.id)
+            }}
+          >
+            <span className="check" aria-hidden="true">
+              {solved ? '✓' : ''}
+            </span>
+            {solved ? 'Solved' : 'Mark solved'}
+          </button>
+          {next ? (
+            <Link className="text-link" to={`/problem/${next.meta.id}`}>
+              Next: {next.meta.title} <span aria-hidden="true">→</span>
+            </Link>
+          ) : (
+            <Link className="text-link" to="/">
+              Back to contents <span aria-hidden="true">→</span>
+            </Link>
+          )}
+        </div>
       </div>
     </div>
   )

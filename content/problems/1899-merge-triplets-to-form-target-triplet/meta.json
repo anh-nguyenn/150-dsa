@@ -12,5 +12,19 @@
     }
   ],
   "entry": "merge_triplets",
-  "kind": "function"
+  "kind": "function",
+  "examples": [
+    {
+      "input": "triplets = [[2, 5, 3], [1, 8, 4], [1, 7, 5]]\ntarget   = [2, 7, 5]",
+      "output": "true",
+      "explanation": "Merging `[2, 5, 3]` with `[1, 7, 5]` gives `[2, 7, 5]`."
+    }
+  ],
+  "constraints": [
+    "Between 1 and 1,000 triplets.",
+    "Each value is between 1 and 1,000.",
+    "The target also has three positive values.",
+    "Merging takes the maximum in each coordinate.",
+    "Triplets that are not used simply remain in the list."
+  ]
 }

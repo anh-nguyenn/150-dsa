@@ -12,5 +12,18 @@
     }
   ],
   "entry": "network_delay_time",
-  "kind": "function"
+  "kind": "function",
+  "examples": [
+    {
+      "input": "times = [[2,1,1],[2,3,1],[3,4,1]], n = 4, k = 2",
+      "output": "2",
+      "explanation": "From node 2, nodes 1 and 3 are one second away and node 4 is two seconds away, so the last node hears the signal after 2 seconds."
+    }
+  ],
+  "constraints": [
+    "At most 100 nodes and about 6,000 directed edges.",
+    "Edge weights are positive.",
+    "The source is always a valid node.",
+    "A node can be reached only by following edges in their given direction."
+  ]
 }

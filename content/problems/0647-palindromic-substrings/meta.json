@@ -12,5 +12,20 @@
     }
   ],
   "entry": "count_substrings",
-  "kind": "function"
+  "kind": "function",
+  "examples": [
+    {
+      "input": "s = \"abc\"",
+      "output": "3     # \"a\", \"b\", \"c\""
+    },
+    {
+      "input": "s = \"aaa\"",
+      "output": "6     # three singles, two pairs, one triple"
+    }
+  ],
+  "constraints": [
+    "Between 1 and 1,000 characters.",
+    "The string contains only lowercase English letters.",
+    "A single character is a palindrome."
+  ]
 }

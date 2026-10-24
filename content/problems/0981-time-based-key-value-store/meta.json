@@ -12,5 +12,17 @@
     }
   ],
   "entry": "TimeMap",
-  "kind": "class"
+  "kind": "class",
+  "examples": [
+    {
+      "body": "```text\nset(\"foo\", \"bar\", 1)\nget(\"foo\", 1)  ->  \"bar\"\nget(\"foo\", 3)  ->  \"bar\"\nset(\"foo\", \"baz\", 4)\nget(\"foo\", 4)  ->  \"baz\"\n```"
+    }
+  ],
+  "constraints": [
+    "Between 1 and 200,000 calls to `set` and `get`.",
+    "Keys and values are lowercase strings of length 1 to 100.",
+    "Timestamps are between 1 and 10^7.",
+    "For a given key, timestamps passed to `set` strictly increase.",
+    "A lookup before a key's first timestamp returns an empty string."
+  ]
 }

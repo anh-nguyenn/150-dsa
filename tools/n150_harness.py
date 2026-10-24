@@ -553,7 +553,7 @@ def trace_payload(meta_json, tests_json, code, case_index=0):
     return json.dumps(trace_loaded(json.loads(meta_json), json.loads(tests_json), code, case_index))
 
 
-def run_loaded(meta, tests, code):
+def run_loaded(meta, tests, code, case_index=None):
     try:
         namespace = load_namespace(code)
     except Exception as error:
@@ -566,8 +566,15 @@ def run_loaded(meta, tests, code):
     mode = tests.get("compare", "exact")
     tolerance = tests.get("tolerance", 1e-6)
     is_class = meta.get("kind", "function") == "class"
+    all_cases = tests.get("cases", [])
+    if case_index is None:
+        cases = all_cases
+    elif 0 <= case_index < len(all_cases):
+        cases = [all_cases[case_index]]
+    else:
+        return {"ok": False, "error": "Case index out of range.", "cases": []}
     case_results = []
-    for case in tests.get("cases", []):
+    for case in cases:
         try:
             if is_class:
                 actual, expected, elapsed = run_class_case(namespace, entry, tests, case)
@@ -606,10 +613,10 @@ def run_loaded(meta, tests, code):
     }
 
 
-def run_payload(meta_json, tests_json, code):
+def run_payload(meta_json, tests_json, code, case_index=None):
     meta = json.loads(meta_json)
     tests = json.loads(tests_json)
-    return json.dumps(run_loaded(meta, tests, code))
+    return json.dumps(run_loaded(meta, tests, code, case_index))
 
 
 def run_problem(problem_dir, code=None):

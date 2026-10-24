@@ -12,5 +12,19 @@
     }
   ],
   "entry": "min_interval",
-  "kind": "function"
+  "kind": "function",
+  "examples": [
+    {
+      "input": "intervals = [[1,4],[2,4],[3,6],[4,4]], queries = [2,3,4,5]",
+      "output": "[3,3,1,4]",
+      "explanation": "At query 4, the single-point interval `[4,4]` has length 1 and wins."
+    }
+  ],
+  "constraints": [
+    "Up to 100,000 intervals and 100,000 queries.",
+    "Each interval has `start <= end`.",
+    "A query on an interval's endpoint counts as inside.",
+    "Answers must follow the original query order.",
+    "Length includes both endpoints."
+  ]
 }

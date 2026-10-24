@@ -12,5 +12,20 @@
     }
   ],
   "entry": "is_palindrome",
-  "kind": "function"
+  "kind": "function",
+  "examples": [
+    {
+      "input": "\"A man, a plan, a canal: Panama\"",
+      "output": "true"
+    },
+    {
+      "input": "\"race a car\"",
+      "output": "false"
+    }
+  ],
+  "constraints": [
+    "The string has between 1 and 200,000 characters.",
+    "It can contain letters, digits, spaces, and punctuation.",
+    "Only letters and digits count, and case does not matter."
+  ]
 }

@@ -12,5 +12,17 @@
     }
   ],
   "entry": "max_coins",
-  "kind": "function"
+  "kind": "function",
+  "examples": [
+    {
+      "input": "nums = [3, 1, 5, 8]",
+      "output": "167",
+      "explanation": "Bursting `1`, then `5`, then `3`, then `8` earns `15 + 120 + 24 + 8 = 167`, which is optimal."
+    }
+  ],
+  "constraints": [
+    "There are between 0 and 300 balloons.",
+    "Each balloon value is between 0 and 100.",
+    "Missing neighbors count as 1."
+  ]
 }

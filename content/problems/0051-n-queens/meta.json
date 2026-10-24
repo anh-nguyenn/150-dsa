@@ -12,5 +12,18 @@
     }
   ],
   "entry": "solve_n_queens",
-  "kind": "function"
+  "kind": "function",
+  "examples": [
+    {
+      "input": "n = 4",
+      "output": "[[\".Q..\", \"...Q\", \"Q...\", \"..Q.\"],\n    [\"..Q.\", \"Q...\", \"...Q\", \".Q..\"]]"
+    }
+  ],
+  "constraints": [
+    "`n` is between 1 and 9.",
+    "Exactly `n` queens must be placed, one per row and one per column.",
+    "No two queens may share a row, column, or diagonal.",
+    "Each board uses `'Q'` for a queen and `'.'` for an empty square.",
+    "Boards may be returned in any order."
+  ]
 }

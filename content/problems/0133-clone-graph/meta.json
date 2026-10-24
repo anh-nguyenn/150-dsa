@@ -12,5 +12,16 @@
     }
   ],
   "entry": "clone_graph",
-  "kind": "function"
+  "kind": "function",
+  "examples": [
+    {
+      "body": "```text\nadjacency: [[2,4],[1,3],[2,4],[1,3]]\n```\n\ndescribes four nodes arranged in a cycle. The returned graph should produce the same adjacency list."
+    }
+  ],
+  "constraints": [
+    "A non-empty graph has up to 100 nodes, numbered 1 through n.",
+    "The graph is connected, and a single node may have no neighbors.",
+    "There are no repeated edges and no self-loops.",
+    "An empty graph is passed as `None` and must be returned as `None`."
+  ]
 }

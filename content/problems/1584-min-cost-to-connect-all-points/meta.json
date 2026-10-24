@@ -12,5 +12,18 @@
     }
   ],
   "entry": "min_cost_connect_points",
-  "kind": "function"
+  "kind": "function",
+  "examples": [
+    {
+      "input": "points = [[0,0],[2,2],[3,10],[5,2],[7,0]]",
+      "output": "20",
+      "explanation": "One cheapest network uses edges of cost 4, 3, 4, and 9."
+    }
+  ],
+  "constraints": [
+    "Between 1 and 1,000 points.",
+    "Coordinates are between -10^6 and 10^6.",
+    "All points are distinct.",
+    "Connections may cross; only the total distance matters."
+  ]
 }

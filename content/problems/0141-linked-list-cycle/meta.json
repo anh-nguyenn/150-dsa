@@ -12,5 +12,16 @@
     }
   ],
   "entry": "has_cycle",
-  "kind": "function"
+  "kind": "function",
+  "examples": [
+    {
+      "body": "```text\n3 -> 2 -> 0 -> -4\n     ^         |\n     +---------+          has a cycle  ->  true\n\n1 -> 2 -> None            no cycle     ->  false\n```"
+    }
+  ],
+  "constraints": [
+    "The list holds between 0 and 10,000 nodes.",
+    "Values are between -100,000 and 100,000.",
+    "A cycle, if present, starts at some node position; otherwise the list ends normally.",
+    "The empty list has no cycle."
+  ]
 }

@@ -12,5 +12,18 @@
     }
   ],
   "entry": "combination_sum",
-  "kind": "function"
+  "kind": "function",
+  "examples": [
+    {
+      "input": "candidates = [2, 3, 6, 7], target = 7",
+      "output": "[[2, 2, 3], [7]]",
+      "explanation": "`[2, 2, 3]` works because `2` is reused, and `[3, 2, 2]` is the same combination, not a new one."
+    }
+  ],
+  "constraints": [
+    "Up to 30 distinct candidates.",
+    "Candidates and the target are positive.",
+    "The target is at most 40, so the search depth stays small.",
+    "Reuse is allowed; reordering a combination is not a new answer."
+  ]
 }

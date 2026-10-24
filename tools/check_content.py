@@ -36,6 +36,15 @@ def main():
                 errors.append(f"missing title for {problem_id}")
             if meta.get("difficulty") not in {"Easy", "Medium", "Hard"}:
                 errors.append(f"invalid difficulty for {problem_id}")
+            examples = meta.get("examples") or []
+            if not examples:
+                errors.append(f"missing structured examples for {problem_id}")
+            for example in examples:
+                if not (example.get("body") or ("input" in example and "output" in example)):
+                    errors.append(f"invalid example for {problem_id}")
+                    break
+            if not (meta.get("constraints") or []):
+                errors.append(f"missing constraints for {problem_id}")
 
             approaches = meta.get("approaches") or []
             if not approaches:
@@ -60,8 +69,9 @@ def main():
                     code_hash = hashlib.sha256(code.encode()).hexdigest()
                     with open(HARNESS_PATH, "rb") as handle:
                         harness_hash = hashlib.sha256(handle.read()).hexdigest()
+                    trace_meta = {"entry": meta.get("entry"), "kind": meta.get("kind", "function")}
                     meta_hash = hashlib.sha256(
-                        json.dumps(meta, sort_keys=True, separators=(",", ":")).encode()
+                        json.dumps(trace_meta, sort_keys=True, separators=(",", ":")).encode()
                     ).hexdigest()
                     if trace.get("schema") != SCHEMA:
                         errors.append(f"trace schema is old for {problem_id} (run npm run traces)")

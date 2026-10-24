@@ -12,5 +12,17 @@
     }
   ],
   "entry": "two_sum",
-  "kind": "function"
+  "kind": "function",
+  "examples": [
+    {
+      "input": "nums = [2, 7, 11, 15], target = 9",
+      "output": "[0, 1]"
+    }
+  ],
+  "constraints": [
+    "Between 2 and 10,000 numbers.",
+    "Each number is between -10^9 and 10^9.",
+    "Exactly one pair works.",
+    "Indices must be different."
+  ]
 }

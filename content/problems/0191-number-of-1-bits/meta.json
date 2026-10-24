@@ -12,5 +12,20 @@
     }
   ],
   "entry": "hamming_weight",
-  "kind": "function"
+  "kind": "function",
+  "examples": [
+    {
+      "input": "n = 11  (binary 1011)",
+      "output": "3"
+    },
+    {
+      "input": "n = 128 (binary 10000000)",
+      "output": "1"
+    }
+  ],
+  "constraints": [
+    "The input is between 0 and 2^32 - 1.",
+    "Only the 32-bit binary representation is considered.",
+    "Return a plain integer count."
+  ]
 }

@@ -12,5 +12,17 @@
     }
   ],
   "entry": "num_distinct",
-  "kind": "function"
+  "kind": "function",
+  "examples": [
+    {
+      "input": "s = \"rabbbit\", t = \"rabbit\"",
+      "output": "3",
+      "explanation": "The three choices differ in which of the three `b`s is skipped."
+    }
+  ],
+  "constraints": [
+    "Both strings contain only lowercase English letters.",
+    "Each string has at most 1,000 characters.",
+    "The final count fits in a 32-bit signed integer."
+  ]
 }

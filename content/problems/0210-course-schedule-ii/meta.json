@@ -12,5 +12,22 @@
     }
   ],
   "entry": "find_order",
-  "kind": "function"
+  "kind": "function",
+  "examples": [
+    {
+      "input": "num_courses = 2, prerequisites = [[1, 0]]",
+      "output": "[0, 1]"
+    },
+    {
+      "input": "num_courses = 2, prerequisites = [[0, 1], [1, 0]]",
+      "output": "[]",
+      "explanation": "The order is not necessarily unique in general; any valid one is acceptable."
+    }
+  ],
+  "constraints": [
+    "Between 1 and 2,000 courses, labeled `0` through `num_courses - 1`.",
+    "Up to 5,000 prerequisite pairs, with no pair repeated.",
+    "Each pair names a course and one of its prerequisites.",
+    "Return every course exactly once, or return nothing if the requirements conflict."
+  ]
 }

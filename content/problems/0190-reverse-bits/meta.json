@@ -12,5 +12,17 @@
     }
   ],
   "entry": "reverse_bits",
-  "kind": "function"
+  "kind": "function",
+  "examples": [
+    {
+      "input": "n = 43261596",
+      "output": "964176192",
+      "explanation": "The input's 32-bit form ends in `...0011100`, and those bits become the leading bits of the answer."
+    }
+  ],
+  "constraints": [
+    "The input is a non-negative integer below 2^32.",
+    "Exactly 32 bit positions are reversed, including leading zeros.",
+    "Return an integer, not a binary string."
+  ]
 }

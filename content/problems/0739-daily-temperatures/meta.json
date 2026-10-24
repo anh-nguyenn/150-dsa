@@ -12,5 +12,21 @@
     }
   ],
   "entry": "daily_temperatures",
-  "kind": "function"
+  "kind": "function",
+  "examples": [
+    {
+      "input": "[73,74,75,71,69,72,76,73]",
+      "output": "[1,1,4,2,1,1,0,0]"
+    },
+    {
+      "input": "[30,60,90]",
+      "output": "[1,1,0]"
+    }
+  ],
+  "constraints": [
+    "Between 1 and 100,000 days.",
+    "Temperatures are between 30 and 100.",
+    "Only a strictly higher temperature counts as warmer.",
+    "The answer for a day with no warmer future day is 0."
+  ]
 }

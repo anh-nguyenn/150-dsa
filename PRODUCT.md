@@ -29,11 +29,13 @@ Long desktop study sessions, with occasional phone-width review. Authoring happe
 ## Capabilities and Constraints
 
 - 150 problems in 18 topics, in NeetCode order.
-- All 150 lessons exist at the minimum viable tier: summary, background, three hints, one optimal solution, starter code, and authored tests.
+- All 150 lessons exist at the minimum viable tier: description with structured examples and constraints, background, three hints, one optimal solution, starter code, and authored tests.
+- The problem page is a practice-first split: description left, editor and authored testcase runner right, Learn material below.
 - One optimal approach per problem at the minimum tier, with time and space. Brute-force contrasts are later upgrades.
 - Python execution in the browser through Pyodide, loaded lazily.
 - A test runner with per-problem comparison modes and adapters for linked lists, trees, and graphs.
 - Visualizations are precomputed execution traces generated from each reference solution and played in a shared step-through player. They do not visualize custom inputs or the learner's own code; hand-authored captions are a later upgrade.
+- Testcases are authored and read-only; Run uses one selected case, Submit uses all cases.
 - Progress is stored locally; the site must work when storage is unavailable.
 - Problem text is written in original words; LeetCode is linked, never copied.
 - Static hosting only.

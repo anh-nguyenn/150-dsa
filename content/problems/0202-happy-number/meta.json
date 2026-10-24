@@ -12,5 +12,15 @@
     }
   ],
   "entry": "is_happy",
-  "kind": "function"
+  "kind": "function",
+  "examples": [
+    {
+      "body": "```text\n19 -> 1^2 + 9^2 = 82 -> 8^2 + 2^2 = 68 -> ... -> 100 -> 1   (happy)\n2  -> 4 -> 16 -> 37 -> ... -> 4                              (unhappy)\n```"
+    }
+  ],
+  "constraints": [
+    "The input is a positive integer up to about 2.1 billion.",
+    "The process either reaches 1 or falls into a repeating cycle.",
+    "A constant amount of extra memory is enough."
+  ]
 }

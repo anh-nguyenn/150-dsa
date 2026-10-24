@@ -12,5 +12,21 @@
     }
   ],
   "entry": "count_components",
-  "kind": "function"
+  "kind": "function",
+  "examples": [
+    {
+      "input": "n = 5, edges = [[0,1],[1,2],[3,4]]",
+      "output": "2"
+    },
+    {
+      "input": "n = 5, edges = []",
+      "output": "5"
+    }
+  ],
+  "constraints": [
+    "Between 1 and 2,000 nodes.",
+    "Up to 5,000 undirected edges.",
+    "Edges connect two different nodes and are not repeated.",
+    "A component may consist of a single node with no edges."
+  ]
 }

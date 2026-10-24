@@ -12,5 +12,16 @@
     }
   ],
   "entry": "diameter_of_binary_tree",
-  "kind": "function"
+  "kind": "function",
+  "examples": [
+    {
+      "input": "root = [1, 2, 3, 4, 5]",
+      "output": "3"
+    }
+  ],
+  "constraints": [
+    "The tree has between 1 and 10,000 nodes.",
+    "Node values are between -100 and 100.",
+    "Missing children are written as `null` in the level-order input."
+  ]
 }

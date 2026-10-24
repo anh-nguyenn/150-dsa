@@ -12,5 +12,17 @@
     }
   ],
   "entry": "generate_parenthesis",
-  "kind": "function"
+  "kind": "function",
+  "examples": [
+    {
+      "input": "n = 3",
+      "output": "[\"((()))\", \"(()())\", \"(())()\", \"()(())\", \"()()()\"]"
+    }
+  ],
+  "constraints": [
+    "`n` is between 1 and 8 in the official input.",
+    "Every result uses exactly `n` pairs.",
+    "At no point may a closing parenthesis appear before its matching opening parenthesis.",
+    "The number of valid strings is the nth Catalan number."
+  ]
 }

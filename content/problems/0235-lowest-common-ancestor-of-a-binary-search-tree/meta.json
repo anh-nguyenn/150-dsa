@@ -12,5 +12,16 @@
     }
   ],
   "entry": "lowest_common_ancestor",
-  "kind": "function"
+  "kind": "function",
+  "examples": [
+    {
+      "input": "root = [6, 2, 8, 0, 4, 7, 9, null, null, 3, 5], p = 2, q = 8",
+      "output": "6"
+    }
+  ],
+  "constraints": [
+    "The tree has between 2 and 100,000 nodes and is a valid binary search tree.",
+    "All node values are unique and between -10^9 and 10^9.",
+    "`p` and `q` are different values and both exist in the tree."
+  ]
 }

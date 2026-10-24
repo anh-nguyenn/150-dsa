@@ -12,5 +12,17 @@
     }
   ],
   "entry": "single_number",
-  "kind": "function"
+  "kind": "function",
+  "examples": [
+    {
+      "input": "nums = [4, 1, 2, 1, 2]",
+      "output": "4"
+    }
+  ],
+  "constraints": [
+    "Between 1 and 30,000 numbers.",
+    "Values are between -30,000 and 30,000.",
+    "Every value occurs twice except one, which occurs once.",
+    "The array is not necessarily sorted."
+  ]
 }

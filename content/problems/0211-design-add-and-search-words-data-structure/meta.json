@@ -12,5 +12,17 @@
     }
   ],
   "entry": "WordDictionary",
-  "kind": "class"
+  "kind": "class",
+  "examples": [
+    {
+      "body": "```text\naddWord(\"bad\")\nsearch(\"bad\")   -> true\nsearch(\".ad\")   -> true\nsearch(\"b..\")   -> true\n```"
+    }
+  ],
+  "constraints": [
+    "Stored words contain lowercase English letters.",
+    "Search patterns contain lowercase letters and dots.",
+    "A word or pattern has length between 1 and 25.",
+    "At most 30,000 operations are performed.",
+    "A dot matches exactly one character, never zero characters."
+  ]
 }

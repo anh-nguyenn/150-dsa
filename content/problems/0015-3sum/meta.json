@@ -12,5 +12,17 @@
     }
   ],
   "entry": "three_sum",
-  "kind": "function"
+  "kind": "function",
+  "examples": [
+    {
+      "input": "nums = [-1, 0, 1, 2, -1, -4]",
+      "output": "[-1, -1, 2] and [-1, 0, 1]"
+    }
+  ],
+  "constraints": [
+    "Between 3 and 3,000 numbers.",
+    "Values are between -100,000 and 100,000.",
+    "Each position may be used only once per triplet.",
+    "The output must not contain duplicate triplets."
+  ]
 }

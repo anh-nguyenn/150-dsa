@@ -12,5 +12,20 @@
     }
   ],
   "entry": "rob",
-  "kind": "function"
+  "kind": "function",
+  "examples": [
+    {
+      "input": "nums = [1, 2, 3, 1]",
+      "output": "4      # houses 0 and 2"
+    },
+    {
+      "input": "nums = [2, 7, 9, 3, 1]",
+      "output": "12     # houses 0, 2, and 4"
+    }
+  ],
+  "constraints": [
+    "Between 1 and 100 houses.",
+    "Each house holds between 0 and 400.",
+    "Houses sit in a straight line, and adjacent houses cannot both be chosen."
+  ]
 }

@@ -12,5 +12,16 @@
     }
   ],
   "entry": "Codec",
-  "kind": "class"
+  "kind": "class",
+  "examples": [
+    {
+      "input": "[\"lint\", \"code\", \"love\", \"you\"]",
+      "output": "encode -> some string -> decode -> [\"lint\", \"code\", \"love\", \"you\"]"
+    }
+  ],
+  "constraints": [
+    "Between 0 and 200 strings.",
+    "Each string has length 0 to 200 and may contain any character, including digits, colons, and non-ASCII text.",
+    "The round trip must preserve order, duplicates, and empty strings."
+  ]
 }

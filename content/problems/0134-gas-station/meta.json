@@ -12,5 +12,19 @@
     }
   ],
   "entry": "can_complete_circuit",
-  "kind": "function"
+  "kind": "function",
+  "examples": [
+    {
+      "input": "gas  = [1, 2, 3, 4, 5]\ncost = [3, 4, 5, 1, 2]",
+      "output": "3",
+      "explanation": "Starting at station 3 gives enough fuel to travel around and return to station 3."
+    }
+  ],
+  "constraints": [
+    "Both arrays have the same length, between 1 and 100,000.",
+    "Fuel amounts and costs are non-negative.",
+    "The tank starts empty.",
+    "You must complete the loop in order, without running dry.",
+    "If a solution exists, only one starting station works."
+  ]
 }

@@ -12,5 +12,18 @@
     }
   ],
   "entry": "find_words",
-  "kind": "function"
+  "kind": "function",
+  "examples": [
+    {
+      "input": "board = [[o, a, a, n],\n         [e, t, a, e],\n         [i, h, k, r],\n         [i, f, l, v]]\nwords = [oath, pea, eat, rain]",
+      "output": "[oath, eat]"
+    }
+  ],
+  "constraints": [
+    "The board has between 1 and 12 rows and columns.",
+    "Every board cell is a lowercase English letter.",
+    "There are between 1 and 30,000 words, each of length 1 to 10.",
+    "A word must use adjacent cells without reusing any cell.",
+    "Duplicate words in the input should appear only once in the answer."
+  ]
 }

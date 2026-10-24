@@ -6,7 +6,7 @@ This plan is optimized for a solo build. It prioritizes a working pilot topic ov
 
 ## Status
 
-The build has moved past the pilot-first scope. All 150 lessons exist at the minimum viable tier and pass the verifier; home, topic, problem, progress, the in-browser Pyodide runner, and a step-through visualization player are live. The visualizations are execution traces generated from each reference solution (`tools/build_traces.py`), not the hand-authored `viz.*` instrumentation described below. Hand-authored captions and instrumentation remain a future upgrade; the player and state renderers already exist.
+The build has moved past the pilot-first scope. All 150 lessons exist at the minimum viable tier and pass the verifier; home, topic, problem, progress, the in-browser Pyodide runner, and a step-through visualization player are live. The problem page now uses a practice-first split: description and structured examples left, editor with authored testcase tabs and Run/Submit right, Learn material below. The visualizations are execution traces generated from each reference solution (`tools/build_traces.py`), not the hand-authored `viz.*` instrumentation described below. Hand-authored captions and instrumentation remain a future upgrade; the player and state renderers already exist.
 
 ## 1. Decisions
 
@@ -138,8 +138,8 @@ content/
   catalog.json                 # topics, order, problem ids
   topics/<topic-id>.md         # topic intro
   problems/<problem-id>/
-    meta.json
-    summary.md
+    meta.json                 # title, entry, examples, constraints, approaches
+    summary.md                # description only
     background.md
     hints.md
     starter.py
@@ -200,22 +200,26 @@ Topic order is array order. Problem order within a topic is array order. One fil
   "slug": "two-sum",
   "difficulty": "Easy",
   "entry": "two_sum",
+  "kind": "function",
+  "examples": [
+    { "input": "nums = [2, 7, 11, 15], target = 9", "output": "[0, 1]" }
+  ],
+  "constraints": [
+    "Between 2 and 10,000 numbers.",
+    "Indices must be different."
+  ],
   "approaches": [
     {
-      "id": "brute",
-      "name": "Brute force",
-      "time": "O(n^2)",
-      "space": "O(1)",
-      "viz_examples": [
-        { "name": "typical", "args": [[2, 7, 11, 15], 9] },
-        { "name": "edge", "args": [[3, 3], 6] }
-      ]
+      "id": "optimal",
+      "name": "One-pass hash map",
+      "time": "O(n)",
+      "space": "O(n)"
     }
   ]
 }
 ```
 
-The approach id maps to `approaches/<order>-<id>.py` and `.md`; the order comes from the array. `viz_examples` are small, fixed inputs used to build frames; custom inputs are not supported in v1.
+The description lives in `summary.md`; examples and constraints are structured here so the practice layout can render them consistently. A multi-step design example may use `{"body": "markdown"}` instead of `input`/`output`. The approach id maps to `approaches/<order>-<id>.py` and `.md`; the order comes from the array.
 
 ### 5.4 `tests.json`
 

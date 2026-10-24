@@ -12,5 +12,20 @@
     }
   ],
   "entry": "max_product",
-  "kind": "function"
+  "kind": "function",
+  "examples": [
+    {
+      "input": "[2, 3, -2, 4]",
+      "output": "6    (the subarray [2, 3])"
+    },
+    {
+      "input": "[-2, 0, -1]",
+      "output": "0"
+    }
+  ],
+  "constraints": [
+    "Between 1 and 20,000 numbers.",
+    "Each number is between -10 and 10.",
+    "The answer fits in a 32-bit integer."
+  ]
 }

@@ -12,5 +12,18 @@
     }
   ],
   "entry": "partition_labels",
-  "kind": "function"
+  "kind": "function",
+  "examples": [
+    {
+      "input": "s = \"ababcbacadefegdehijhklij\"",
+      "output": "[9, 7, 8]",
+      "explanation": "The parts are `\"ababcbaca\"`, `\"defegde\"`, and `\"hijhklij\"`. Each letter appears in only one of them."
+    }
+  ],
+  "constraints": [
+    "The string has between 1 and 500 lowercase letters.",
+    "Parts must be contiguous and cover the whole string.",
+    "Once a letter appears in a part, it may not appear in any other part.",
+    "More parts are better, as long as the rule holds."
+  ]
 }

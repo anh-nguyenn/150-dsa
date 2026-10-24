@@ -12,5 +12,17 @@
     }
   ],
   "entry": "top_k_frequent",
-  "kind": "function"
+  "kind": "function",
+  "examples": [
+    {
+      "input": "nums = [1, 1, 1, 2, 2, 3], k = 2",
+      "output": "[1, 2]"
+    }
+  ],
+  "constraints": [
+    "Between 1 and 100,000 numbers.",
+    "`k` is between 1 and the number of distinct values.",
+    "Values may be negative.",
+    "The set of top `k` values is guaranteed to be unique."
+  ]
 }

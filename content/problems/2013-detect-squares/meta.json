@@ -12,5 +12,16 @@
     }
   ],
   "entry": "DetectSquares",
-  "kind": "class"
+  "kind": "class",
+  "examples": [
+    {
+      "body": "```text\nadd [3, 10], add [11, 2], add [3, 2], add [11, 2]\ncount [11, 10] -> 2\n```\n\nThe repeated `[11, 2]` can pair with the other corners in two different ways."
+    }
+  ],
+  "constraints": [
+    "Coordinates are between 0 and 1000.",
+    "A typical run has up to 3,000 operations.",
+    "Points may repeat, and each stored copy can participate in a square.",
+    "A square's sides must be parallel to the axes."
+  ]
 }

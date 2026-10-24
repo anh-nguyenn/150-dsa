@@ -23,7 +23,12 @@ python3 tools/verify_solutions.py --problem <id> --problem <id2>
       "approach_name": "One-pass hash map",
       "time": "O(n)",
       "space": "O(n)",
-      "summary": "Markdown. Own words, one or two examples, constraints in plain language, LeetCode link.",
+      "summary": "Markdown. The description only: own words, no examples or constraints.",
+      "examples": [
+        {"input": "nums = [2, 7, 11, 15], target = 9", "output": "[0, 1]"},
+        {"body": "Markdown fallback for a multi-step or design example."}
+      ],
+      "constraints": ["Between 2 and 10,000 numbers.", "Indices must be different."],
       "background": "Markdown. Concept first, two everyday examples, how it appears here.",
       "hints": ["No code.", "A narrower question.", "The key insight, still no code."],
       "starter": "def two_sum(nums: list[int], target: int) -> list[int]:\n    # Return the indices of the two numbers that add up to target.\n    pass",
@@ -41,7 +46,9 @@ The approach note is generated from `Idea`, `Why it works`, and `Edge cases`. Ke
 ## Writing
 
 - Explain in your own words. Never copy LeetCode statements or editorial text.
-- Summary: task, one or two tiny examples, constraints in plain language, link to `https://leetcode.com/problems/<slug>/`.
+- Summary: the task and description only. Examples and constraints live in `meta.json` so the practice layout can render them as structured blocks.
+- Examples: one or two `input`/`output` objects, or a `body` markdown block for design/multi-step examples.
+- Constraints: a list of plain-language strings. Inline code may use backticks.
 - Background: the general concept first, then two everyday examples, then the role it plays here.
 - Hints: exactly three, progressive, no code in the last two.
 - Solution: optimal, clean, typed where it helps, no instrumentation, no `viz`.
@@ -150,6 +157,7 @@ Keep LeetCode names but adapt node-reference problems for a testable signature:
 - Run the verifier for every problem in your batch.
 - Fix code/tests until every case passes.
 - Regenerate the execution traces after changing a solution or its selected case: `python3 tools/build_traces.py --problem <id>`.
+- The summary file is the description only; examples and constraints are in `meta.json`.
 - Run `python3 tools/check_content.py` to confirm the trace is current.
 - Do not add instrumentation or visualization calls; traces are generated from the clean solution.
 - Do not touch files outside your assigned problem directories.

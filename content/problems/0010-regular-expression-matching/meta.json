@@ -12,5 +12,18 @@
     }
   ],
   "entry": "is_match",
-  "kind": "function"
+  "kind": "function",
+  "examples": [
+    {
+      "input": "s = \"aab\", pattern = \"c*a*b\"",
+      "output": "true",
+      "explanation": "`c*` matches the empty string, `a*` matches `aa`, and `b` matches `b`."
+    }
+  ],
+  "constraints": [
+    "The input and pattern contain lowercase English letters, dots, and stars.",
+    "Each is at most 20 characters long.",
+    "Every star has a valid preceding character.",
+    "Matching covers the entire input, not just a prefix."
+  ]
 }

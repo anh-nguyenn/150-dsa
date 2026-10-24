@@ -12,5 +12,15 @@
     }
   ],
   "entry": "num_islands",
-  "kind": "function"
+  "kind": "function",
+  "examples": [
+    {
+      "body": "```text\n[[\"1\",\"1\",\"0\"],\n [\"1\",\"1\",\"0\"],\n [\"0\",\"0\",\"1\"]]\n```\n\nhas two islands: the 2-by-2 block in the upper left and the lone cell in the lower right."
+    }
+  ],
+  "constraints": [
+    "The grid has between 1 and 300 rows and between 1 and 300 columns.",
+    "Every cell is either `\"0\"` (water) or `\"1\"` (land).",
+    "Cells connect only up, down, left, and right."
+  ]
 }

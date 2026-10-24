@@ -12,5 +12,20 @@
     }
   ],
   "entry": "coin_change",
-  "kind": "function"
+  "kind": "function",
+  "examples": [
+    {
+      "input": "coins = [1, 2, 5], amount = 11",
+      "output": "3   (5 + 5 + 1)"
+    },
+    {
+      "input": "coins = [2],       amount = 3",
+      "output": "-1"
+    }
+  ],
+  "constraints": [
+    "Between 1 and 12 coin denominations.",
+    "Each denomination is a positive integer.",
+    "The amount is between 0 and 10,000."
+  ]
 }

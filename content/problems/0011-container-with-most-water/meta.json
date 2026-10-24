@@ -12,5 +12,17 @@
     }
   ],
   "entry": "max_area",
-  "kind": "function"
+  "kind": "function",
+  "examples": [
+    {
+      "input": "height = [1, 8, 6, 2, 5, 4, 8, 3, 7]",
+      "output": "49"
+    }
+  ],
+  "constraints": [
+    "Between 2 and 100,000 lines.",
+    "Heights are between 0 and 10,000.",
+    "You must choose two different positions.",
+    "The water level is limited by the shorter line."
+  ]
 }

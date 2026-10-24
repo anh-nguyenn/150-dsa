@@ -12,5 +12,21 @@
     }
   ],
   "entry": "is_valid",
-  "kind": "function"
+  "kind": "function",
+  "examples": [
+    {
+      "input": "\"()[]{}\"",
+      "output": "true"
+    },
+    {
+      "input": "\"([)]\"",
+      "output": "false"
+    }
+  ],
+  "constraints": [
+    "The string has between 1 and 10,000 characters.",
+    "Only `()[]{}` appear.",
+    "A closing bracket must match the most recent unclosed opener.",
+    "Pairs may nest, but they may not cross."
+  ]
 }

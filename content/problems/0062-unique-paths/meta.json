@@ -12,5 +12,16 @@
     }
   ],
   "entry": "unique_paths",
-  "kind": "function"
+  "kind": "function",
+  "examples": [
+    {
+      "input": "m = 3, n = 7",
+      "output": "28"
+    }
+  ],
+  "constraints": [
+    "Between 1 and 100 rows and columns.",
+    "Moves are only right and down; no left or up moves.",
+    "The count grows quickly, but Python integers handle it without overflow."
+  ]
 }

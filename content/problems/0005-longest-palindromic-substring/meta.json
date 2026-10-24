@@ -12,5 +12,20 @@
     }
   ],
   "entry": "longest_palindrome",
-  "kind": "function"
+  "kind": "function",
+  "examples": [
+    {
+      "input": "s = \"cbbd\"",
+      "output": "\"bb\""
+    },
+    {
+      "input": "s = \"racecar\"",
+      "output": "\"racecar\""
+    }
+  ],
+  "constraints": [
+    "Between 1 and 1,000 characters.",
+    "The string contains only lowercase English letters.",
+    "Single characters count as palindromes."
+  ]
 }

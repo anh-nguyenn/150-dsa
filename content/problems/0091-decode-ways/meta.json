@@ -12,5 +12,20 @@
     }
   ],
   "entry": "num_decodings",
-  "kind": "function"
+  "kind": "function",
+  "examples": [
+    {
+      "input": "\"12\"",
+      "output": "2   (1|2 or 12)"
+    },
+    {
+      "input": "\"226\"",
+      "output": "3   (2|2|6, 22|6, 2|26)"
+    }
+  ],
+  "constraints": [
+    "Between 1 and 100 digits.",
+    "Only digit characters appear.",
+    "The string may contain zeros."
+  ]
 }

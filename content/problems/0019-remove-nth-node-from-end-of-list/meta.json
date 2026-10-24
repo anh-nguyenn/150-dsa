@@ -12,5 +12,21 @@
     }
   ],
   "entry": "remove_nth_from_end",
-  "kind": "function"
+  "kind": "function",
+  "examples": [
+    {
+      "input": "[1, 2, 3, 4, 5], n = 2",
+      "output": "[1, 2, 3, 5]"
+    },
+    {
+      "input": "[1],             n = 1",
+      "output": "[]"
+    }
+  ],
+  "constraints": [
+    "The list holds between 1 and 30 nodes.",
+    "`n` is at least 1 and at most the list length.",
+    "Values are between 0 and 100.",
+    "The removed node may be the head or the tail."
+  ]
 }

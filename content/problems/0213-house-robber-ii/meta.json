@@ -12,5 +12,20 @@
     }
   ],
   "entry": "rob",
-  "kind": "function"
+  "kind": "function",
+  "examples": [
+    {
+      "input": "nums = [2, 3, 2]",
+      "output": "3      # the two 2s are adjacent through the wrap-around"
+    },
+    {
+      "input": "nums = [1, 2, 3, 1]",
+      "output": "4"
+    }
+  ],
+  "constraints": [
+    "Between 1 and 100 houses.",
+    "Each house holds between 0 and 1,000.",
+    "The row is circular: house `0` and house `n - 1` are adjacent."
+  ]
 }

@@ -12,5 +12,15 @@
     }
   ],
   "entry": "rotate",
-  "kind": "function"
+  "kind": "function",
+  "examples": [
+    {
+      "body": "```text\n[[1, 2, 3],        [[7, 4, 1],\n [4, 5, 6],   ->   [8, 5, 2],\n [7, 8, 9]]        [9, 6, 3]]\n```\n\nThe top row becomes the right column, and the left column becomes the top row read backwards."
+    }
+  ],
+  "constraints": [
+    "The grid is square, with a side length between 1 and 20.",
+    "Entries are ordinary integers.",
+    "Rotate in place; building a replacement grid is not the intended approach."
+  ]
 }

@@ -12,5 +12,21 @@
     }
   ],
   "entry": "product_except_self",
-  "kind": "function"
+  "kind": "function",
+  "examples": [
+    {
+      "input": "nums = [1, 2, 3, 4]",
+      "output": "[24, 12, 8, 6]"
+    },
+    {
+      "input": "nums = [0, 2, 3]",
+      "output": "[6, 0, 0]"
+    }
+  ],
+  "constraints": [
+    "Between 2 and 100,000 numbers.",
+    "Each value is between -30 and 30.",
+    "Products can be large, but Python integers handle them.",
+    "Division is not part of the intended solution, and zeros make it unreliable anyway."
+  ]
 }

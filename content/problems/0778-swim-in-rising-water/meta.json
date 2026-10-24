@@ -12,5 +12,18 @@
     }
   ],
   "entry": "swim_in_water",
-  "kind": "function"
+  "kind": "function",
+  "examples": [
+    {
+      "input": "grid = [[0,2],\n        [1,3]]",
+      "output": "3",
+      "explanation": "The route through heights 0, 1, 3 needs water level 3."
+    }
+  ],
+  "constraints": [
+    "The grid is square, at most 50 by 50.",
+    "Every height is distinct and lies between 0 and n^2 - 1.",
+    "Movement is only to edge-sharing neighbors.",
+    "You may wait for the water to rise."
+  ]
 }
