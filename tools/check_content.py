@@ -5,6 +5,8 @@ import os
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 CONTENT = os.path.join(ROOT, "content")
+SCHEMA = 2
+HARNESS_PATH = os.path.join(ROOT, "tools", "n150_harness.py")
 
 
 def main():
@@ -56,11 +58,26 @@ def main():
                     with open(trace_path) as handle:
                         trace = json.load(handle)
                     code_hash = hashlib.sha256(code.encode()).hexdigest()
+                    with open(HARNESS_PATH, "rb") as handle:
+                        harness_hash = hashlib.sha256(handle.read()).hexdigest()
+                    meta_hash = hashlib.sha256(
+                        json.dumps(meta, sort_keys=True, separators=(",", ":")).encode()
+                    ).hexdigest()
+                    if trace.get("schema") != SCHEMA:
+                        errors.append(f"trace schema is old for {problem_id} (run npm run traces)")
+                    if trace.get("problem") != problem_id:
+                        errors.append(f"trace problem mismatch for {problem_id}")
+                    if not trace.get("ok"):
+                        errors.append(f"trace failed for {problem_id}: {trace.get('error')}")
                     if trace.get("code_hash") != code_hash:
                         errors.append(f"stale trace for {problem_id} (run npm run traces)")
+                    if trace.get("harness_hash") != harness_hash:
+                        errors.append(f"trace harness is stale for {problem_id} (run npm run traces)")
+                    if trace.get("meta_hash") != meta_hash:
+                        errors.append(f"trace metadata is stale for {problem_id} (run npm run traces)")
                     case_index = trace.get("case_index", 0)
                     cases = tests.get("cases", [])
-                    if case_index >= len(cases):
+                    if case_index < 0 or case_index >= len(cases):
                         errors.append(f"trace case index out of range for {problem_id}")
                     else:
                         case_hash = hashlib.sha256(

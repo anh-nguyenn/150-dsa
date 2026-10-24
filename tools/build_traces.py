@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 import argparse
+import ast
 import hashlib
 import json
 import os
@@ -11,6 +12,68 @@ from n150_harness import TRACE_FRAME_CAP, trace_loaded
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 CONTENT = os.path.join(ROOT, "content")
 TRACES = os.path.join(CONTENT, "traces")
+
+
+SCHEMA = 2
+HARNESS_PATH = os.path.join(os.path.dirname(os.path.abspath(__file__)), "n150_harness.py")
+
+
+def base_name(node):
+    while isinstance(node, ast.Subscript):
+        node = node.value
+    if isinstance(node, ast.Name):
+        return node.id
+    if isinstance(node, ast.Attribute):
+        return node.attr
+    return None
+
+
+def index_names(code):
+    try:
+        tree = ast.parse(code)
+    except SyntaxError:
+        return {}
+    mapping = {}
+
+    def add(container, names):
+        if container:
+            mapping.setdefault(container, set()).update(names)
+
+    def collect_slices(node):
+        names = set()
+        if isinstance(node, ast.Subscript):
+            for child in ast.walk(node.slice):
+                if isinstance(child, ast.Name):
+                    names.add(child.id)
+            names.update(collect_slices(node.value))
+        return names
+
+    for node in ast.walk(tree):
+        if isinstance(node, ast.Subscript):
+            add(base_name(node), collect_slices(node))
+        elif isinstance(node, ast.For):
+            target = node.target
+            target_names = []
+            if isinstance(target, ast.Name):
+                target_names = [target.id]
+            elif isinstance(target, ast.Tuple):
+                target_names = [item.id for item in target.elts if isinstance(item, ast.Name)]
+            if not target_names:
+                continue
+            iterator = node.iter
+            if isinstance(iterator, ast.Call) and isinstance(iterator.func, ast.Name):
+                if iterator.func.id == "enumerate" and iterator.args:
+                    add(base_name(iterator.args[0]), {target_names[0]})
+                elif iterator.func.id == "range" and iterator.args:
+                    first = iterator.args[0]
+                    if (
+                        isinstance(first, ast.Call)
+                        and isinstance(first.func, ast.Name)
+                        and first.func.id == "len"
+                        and first.args
+                    ):
+                        add(base_name(first.args[0]), {target_names[0]})
+    return {name: sorted(names) for name, names in mapping.items()}
 
 
 def catalog_ids():
@@ -82,6 +145,28 @@ def choose_case(meta, tests, code):
     selected = min(candidates, key=lambda candidate: candidate["frames"])
     return selected["index"], selected["result"]
 
+def finish_trace(result, problem_id, case_index, tests, code, meta):
+    result["version"] = 1
+    result["schema"] = SCHEMA
+    result["problem"] = problem_id
+    result["case_index"] = case_index
+    result["code_hash"] = hashlib.sha256(code.encode()).hexdigest()
+    with open(HARNESS_PATH, "rb") as handle:
+        result["harness_hash"] = hashlib.sha256(handle.read()).hexdigest()
+    result["meta_hash"] = hashlib.sha256(
+        json.dumps(meta, sort_keys=True, separators=(",", ":")).encode()
+    ).hexdigest()
+    cases = tests.get("cases", [])
+    if case_index < len(cases):
+        result["case_hash"] = hashlib.sha256(
+            json.dumps(cases[case_index], sort_keys=True, separators=(",", ":")).encode()
+        ).hexdigest()
+    else:
+        result["case_hash"] = None
+    result["index_names"] = index_names(code)
+    return result
+
+
 def build(problem_id, force=False):
     directory = os.path.join(CONTENT, "problems", problem_id)
     meta_path = os.path.join(directory, "meta.json")
@@ -96,13 +181,7 @@ def build(problem_id, force=False):
 
     case_index, result = choose_case(meta, tests, code)
     if result.get("ok") and len(result.get("frames", [])) >= 2:
-        result["version"] = 1
-        result["problem"] = problem_id
-        result["case_index"] = case_index
-        result["code_hash"] = hashlib.sha256(code.encode()).hexdigest()
-        result["case_hash"] = hashlib.sha256(
-            json.dumps(tests["cases"][case_index], sort_keys=True, separators=(",", ":")).encode()
-        ).hexdigest()
+        result = finish_trace(result, problem_id, case_index, tests, code, meta)
         os.makedirs(TRACES, exist_ok=True)
         path = os.path.join(TRACES, problem_id + ".json")
         with open(path, "w") as handle:
@@ -111,13 +190,7 @@ def build(problem_id, force=False):
         return result, os.path.getsize(path)
 
     result = trace_loaded(meta, tests, code, 0)
-    result["version"] = 1
-    result["problem"] = problem_id
-    result["case_index"] = 0
-    result["code_hash"] = hashlib.sha256(code.encode()).hexdigest()
-    result["case_hash"] = hashlib.sha256(
-        json.dumps(tests["cases"][0], sort_keys=True, separators=(",", ":")).encode()
-    ).hexdigest()
+    result = finish_trace(result, problem_id, 0, tests, code, meta)
     os.makedirs(TRACES, exist_ok=True)
     path = os.path.join(TRACES, problem_id + ".json")
     with open(path, "w") as handle:

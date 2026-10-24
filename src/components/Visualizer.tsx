@@ -3,37 +3,7 @@ import { CodeBlock } from './CodeBlock'
 import { highlightLine } from '../lib/highlight'
 import { loadTrace, type TraceFile, type TraceValue } from '../lib/trace'
 
-const POINTER_NAMES = new Set([
-  'i',
-  'j',
-  'left',
-  'right',
-  'l',
-  'r',
-  'c',
-  'mid',
-  'lo',
-  'hi',
-  'low',
-  'high',
-  'middle',
-  'first',
-  'last',
-  'top',
-  'bottom',
-  'start',
-  'end',
-  'slow',
-  'fast',
-  'index',
-  'idx',
-  'cur',
-  'curr',
-  'row',
-  'col',
-  'position',
-  'pos',
-])
+
 
 interface VisualizerProps {
   problemId: string
@@ -434,18 +404,7 @@ function TraceCode({ code, activeLine, filename }: { code: string; activeLine: n
   )
 }
 
-function PointerRow({ pointers }: { pointers: { name: string; value: number }[] }) {
-  if (pointers.length === 0) return null
-  return (
-    <div className="viz-pointer-row">
-      {pointers.map((pointer) => (
-        <span className="viz-pointer-chip" key={pointer.name}>
-          {pointer.name} <strong>{pointer.value}</strong>
-        </span>
-      ))}
-    </div>
-  )
-}
+
 
 export function Visualizer({ problemId, code, filename }: VisualizerProps) {
   const [trace, setTrace] = useState<TraceFile | null>(null)
@@ -515,26 +474,31 @@ export function Visualizer({ problemId, code, filename }: VisualizerProps) {
   )
   const scalarVars = frame.vars.filter((item) => item.kind === 'scalar')
   const panelVars = frame.vars.filter((item) => item.kind !== 'scalar')
-  const pointerValues = frame.vars
-    .filter((item) => item.kind === 'scalar' && typeof item.value === 'number' && item.name && POINTER_NAMES.has(item.name.toLowerCase()))
-    .map((item) => ({ name: item.name as string, value: item.value as number }))
-  const arrayPanels = frame.vars.filter((item) => item.kind === 'array' || item.kind === 'string')
   const gridPanels = frame.vars.filter((item) => item.kind === 'grid')
-  const showPointerRow = pointerValues.length > 0 && arrayPanels.length !== 1
-  const pointerMap = new Map<number, string[]>()
-  if (arrayPanels.length === 1) {
-    for (const pointer of pointerValues) {
-      if (pointer.value < 0) continue
-      const labels = pointerMap.get(pointer.value) ?? []
-      labels.push(pointer.name)
-      pointerMap.set(pointer.value, labels)
-    }
-  }
+  const numericScalars = scalarVars.filter(
+    (item): item is TraceValue & { name: string; value: number } =>
+      typeof item.value === 'number' && typeof item.name === 'string',
+  )
+  const indexNames = trace.index_names ?? {}
   let activeCell: [number, number] | undefined
-  if (gridPanels.length === 1 && arrayPanels.length === 0) {
-    const byName = new Map(pointerValues.map((pointer) => [pointer.name.toLowerCase(), pointer.value]))
-    const row = byName.get('r') ?? byName.get('row') ?? byName.get('i')
-    const col = byName.get('c') ?? byName.get('col') ?? byName.get('j')
+  if (gridPanels.length === 1) {
+    const grid = gridPanels[0]
+    const allowed = new Set(indexNames[grid.name ?? ''] ?? [])
+    const byName = new Map(numericScalars.map((pointer) => [pointer.name, pointer.value]))
+    let row: number | undefined
+    let col: number | undefined
+    for (const name of ['r', 'row', 'i', 'nr']) {
+      if (allowed.has(name) && byName.has(name)) {
+        row = byName.get(name)
+        break
+      }
+    }
+    for (const name of ['c', 'col', 'j', 'nc']) {
+      if (allowed.has(name) && byName.has(name)) {
+        col = byName.get(name)
+        break
+      }
+    }
     if (row !== undefined && col !== undefined) activeCell = [row, col]
   }
 
@@ -637,24 +601,33 @@ export function Visualizer({ problemId, code, filename }: VisualizerProps) {
                 ))}
               </div>
             )}
-            {showPointerRow && <PointerRow pointers={pointerValues} />}
             <div className="viz-vars">
-              {panelVars.map((variable, variableIndex) => (
-                <div
-                  className={changed.has(variable.name ?? '') ? 'viz-var is-changed' : 'viz-var'}
-                  key={`${variable.name}-${variableIndex}`}
-                >
-                  <div className="viz-var-head">
-                    <span className="viz-var-name">{variable.name}</span>
-                    <span className="viz-var-kind">{variable.kind.replace('_', ' ')}</span>
+              {panelVars.map((variable, variableIndex) => {
+                const allowed = new Set(indexNames[variable.name ?? ''] ?? [])
+                const pointers = new Map<number, string[]>()
+                for (const pointer of numericScalars) {
+                  if (!allowed.has(pointer.name) || pointer.value < 0) continue
+                  const labels = pointers.get(pointer.value) ?? []
+                  labels.push(pointer.name)
+                  pointers.set(pointer.value, labels)
+                }
+                return (
+                  <div
+                    className={changed.has(variable.name ?? '') ? 'viz-var is-changed' : 'viz-var'}
+                    key={`${variable.name}-${variableIndex}`}
+                  >
+                    <div className="viz-var-head">
+                      <span className="viz-var-name">{variable.name}</span>
+                      <span className="viz-var-kind">{variable.kind.replace('_', ' ')}</span>
+                    </div>
+                    <ValueView
+                      value={variable}
+                      pointers={pointers}
+                      activeCell={gridPanels.length === 1 && variable.kind === 'grid' ? activeCell : undefined}
+                    />
                   </div>
-                  <ValueView
-                    value={variable}
-                    pointers={pointerMap}
-                    activeCell={gridPanels.length === 1 && variable.kind === 'grid' ? activeCell : undefined}
-                  />
-                </div>
-              ))}
+                )
+              })}
             </div>
             {trace.output && index === last && !trace.truncated && (
               <div className="viz-output">
@@ -666,7 +639,7 @@ export function Visualizer({ problemId, code, filename }: VisualizerProps) {
         </div>
       </div>
 
-      <div className="viz-caption" aria-live="polite">
+      <div className="viz-caption" aria-live={playing ? 'off' : 'polite'}>
         <div className="viz-caption-code">
           <span>line {frame.line}</span>
           <code>{sourceLine || '—'}</code>

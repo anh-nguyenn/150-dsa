@@ -51,6 +51,8 @@ export interface TraceFile {
   frames: TraceFrame[]
   truncated: boolean
   case_index: number
+  schema?: number
+  index_names?: Record<string, string[]>
 }
 
 const traceFiles = import.meta.glob('../../content/traces/*.json', {
