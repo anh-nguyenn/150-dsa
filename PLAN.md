@@ -6,7 +6,7 @@ This plan is optimized for a solo build. It prioritizes a working pilot topic ov
 
 ## Status
 
-The build has moved past the pilot-first scope. All 150 lessons exist at the minimum viable tier and pass the verifier; home, topic, problem, progress, and the in-browser Pyodide runner are live. What remains is the visualization layer: instrumentation, frame building, the player, and renderers. The M4 gate now applies to that layer, not to content coverage.
+The build has moved past the pilot-first scope. All 150 lessons exist at the minimum viable tier and pass the verifier; home, topic, problem, progress, the in-browser Pyodide runner, and a step-through visualization player are live. The visualizations are execution traces generated from each reference solution (`tools/build_traces.py`), not the hand-authored `viz.*` instrumentation described below. Hand-authored captions and instrumentation remain a future upgrade; the player and state renderers already exist.
 
 ## 1. Decisions
 

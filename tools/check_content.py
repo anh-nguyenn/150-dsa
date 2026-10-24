@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
+import hashlib
 import json
 import os
-import sys
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 CONTENT = os.path.join(ROOT, "content")
@@ -34,6 +34,47 @@ def main():
                 errors.append(f"missing title for {problem_id}")
             if meta.get("difficulty") not in {"Easy", "Medium", "Hard"}:
                 errors.append(f"invalid difficulty for {problem_id}")
+
+            approaches = meta.get("approaches") or []
+            if not approaches:
+                errors.append(f"no approaches for {problem_id}")
+            else:
+                code_path = os.path.join(
+                    CONTENT, "problems", problem_id, "approaches", f"01-{approaches[0]['id']}.py"
+                )
+                tests_path = os.path.join(CONTENT, "problems", problem_id, "tests.json")
+                trace_path = os.path.join(CONTENT, "traces", problem_id + ".json")
+                if not os.path.isfile(trace_path):
+                    errors.append(f"missing trace for {problem_id} (run npm run traces)")
+                elif not os.path.isfile(code_path) or not os.path.isfile(tests_path):
+                    errors.append(f"missing solution or tests for {problem_id}")
+                else:
+                    with open(code_path) as handle:
+                        code = handle.read()
+                    with open(tests_path) as handle:
+                        tests = json.load(handle)
+                    with open(trace_path) as handle:
+                        trace = json.load(handle)
+                    code_hash = hashlib.sha256(code.encode()).hexdigest()
+                    if trace.get("code_hash") != code_hash:
+                        errors.append(f"stale trace for {problem_id} (run npm run traces)")
+                    case_index = trace.get("case_index", 0)
+                    cases = tests.get("cases", [])
+                    if case_index >= len(cases):
+                        errors.append(f"trace case index out of range for {problem_id}")
+                    else:
+                        case_hash = hashlib.sha256(
+                            json.dumps(cases[case_index], sort_keys=True, separators=(",", ":")).encode()
+                        ).hexdigest()
+                        if trace.get("case_hash") != case_hash:
+                            errors.append(f"stale trace case for {problem_id} (run npm run traces)")
+                    if not trace.get("frames"):
+                        errors.append(f"empty trace for {problem_id}")
+                    line_count = len(code.splitlines())
+                    for frame in trace.get("frames", []):
+                        if not 1 <= frame.get("line", 0) <= line_count:
+                            errors.append(f"trace line out of range for {problem_id}")
+                            break
 
     if total != 150:
         errors.append(f"catalog has {total} problems, expected 150")

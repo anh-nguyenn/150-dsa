@@ -335,7 +335,12 @@ def summarize_value(value, depth=0):
         return {"kind": "scalar", "value": value.val}
     if is_scalar(value):
         if isinstance(value, str):
-            return {"kind": "string", "value": value[:160], "length": len(value)}
+            return {
+                "kind": "string",
+                "value": value[:160],
+                "length": len(value),
+                "truncated": len(value) > 160,
+            }
         return {"kind": "scalar", "value": scalar_value(value)}
     if isinstance(value, (types.ModuleType, types.FunctionType, types.BuiltinFunctionType, types.MethodType, type)):
         return None

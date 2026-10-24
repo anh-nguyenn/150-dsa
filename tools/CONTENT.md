@@ -149,7 +149,9 @@ Keep LeetCode names but adapt node-reference problems for a testable signature:
 
 - Run the verifier for every problem in your batch.
 - Fix code/tests until every case passes.
-- Do not add instrumentation or visualization calls.
+- Regenerate the execution traces after changing a solution or its selected case: `python3 tools/build_traces.py --problem <id>`.
+- Run `python3 tools/check_content.py` to confirm the trace is current.
+- Do not add instrumentation or visualization calls; traces are generated from the clean solution.
 - Do not touch files outside your assigned problem directories.
 - Delete temporary payload files.
 - Report the problem ids you completed and any case you could not verify.

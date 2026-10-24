@@ -2,7 +2,7 @@
 
 A local-first study site for working through 150 algorithm problems, one lesson at a time.
 
-Each lesson has an own-words summary, a plain-language background, three progressive hints, an optimal solution with time and space, starter code, and authored tests. Progress and code stay in the browser.
+Each lesson has an own-words summary, a plain-language background, three progressive hints, an optimal solution with time and space, starter code, authored tests, and a step-through execution trace. Progress and code stay in the browser.
 
 ## Run
 
@@ -28,6 +28,19 @@ npm run check    # catalog, metadata, and required files
 ```
 
 `tools/verify_solutions.py --all` is the gate: every lesson's solution must pass every authored case. The same Python harness runs in the browser worker.
+
+## Visualizations
+
+Every problem has a step-through player in the Solutions panel. The player shows the reference code with the current line highlighted, the live local state (arrays, maps, sets, grids, trees, linked lists, objects, and scalars), a caption for the line, and first/previous/play/next/last controls. The keyboard works when the player is focused: left/right steps, space plays or pauses, home/end jump.
+
+Traces are generated at build time from each reference solution, not hand-written. `content/traces/<id>.json` contains the frames. If you change a solution or its selected test case, regenerate traces:
+
+```sh
+npm run traces
+npm run check
+```
+
+`npm run check` fails when a trace is stale or missing. Traces are capped at 120 frames; the player labels a truncated trace instead of pretending it reached the end. Custom inputs and tracing your own code are not part of this layer.
 
 ## Runner
 
@@ -60,7 +73,7 @@ content/problems/<id>/
 
 - All 150 lessons are written at the minimum viable tier and verified.
 - Home, topic, problem, progress, solved state, and the browser runner work.
-- Frame-by-frame visualizations are not authored yet. The approach panel says so rather than showing a fake player.
+- All 150 problems have a generated step-through trace and player. Hand-authored per-problem captions and instrumentation are a possible future upgrade.
 - Search, progress export/import, and a light theme are later.
 
 The build plan and product truth live in [PLAN.md](PLAN.md) and [PRODUCT.md](PRODUCT.md).

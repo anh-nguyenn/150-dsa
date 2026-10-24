@@ -14,6 +14,13 @@ const POINTER_NAMES = new Set([
   'mid',
   'lo',
   'hi',
+  'low',
+  'high',
+  'middle',
+  'first',
+  'last',
+  'top',
+  'bottom',
   'start',
   'end',
   'slow',
@@ -124,7 +131,17 @@ function ArrayView({ value, pointers }: { value: TraceValue; pointers: Map<numbe
     <div className="viz-row">
       {items.map((item, index) => (
         <div className="viz-cell-wrap" key={index}>
-          {pointers.get(index)?.length ? <span className="viz-pointer">{pointers.get(index)?.join(',')}</span> : <span className="viz-pointer" />}
+          {pointers.get(index)?.length ? (
+            <span className="viz-pointer-stack">
+              {pointers.get(index)?.map((pointer) => (
+                <span className="viz-pointer" key={pointer}>
+                  {pointer}
+                </span>
+              ))}
+            </span>
+          ) : (
+            <span className="viz-pointer" />
+          )}
           <span className="viz-cell">{formatScalar(item)}</span>
           <span className="viz-index">{index}</span>
         </div>
@@ -141,7 +158,17 @@ function StringView({ value, pointers }: { value: TraceValue; pointers: Map<numb
     <div className="viz-row">
       {text.split('').map((char, index) => (
         <div className="viz-cell-wrap" key={index}>
-          {pointers.get(index)?.length ? <span className="viz-pointer">{pointers.get(index)?.join(',')}</span> : <span className="viz-pointer" />}
+          {pointers.get(index)?.length ? (
+            <span className="viz-pointer-stack">
+              {pointers.get(index)?.map((pointer) => (
+                <span className="viz-pointer" key={pointer}>
+                  {pointer}
+                </span>
+              ))}
+            </span>
+          ) : (
+            <span className="viz-pointer" />
+          )}
           <span className="viz-cell viz-char">{char === ' ' ? '·' : char}</span>
           <span className="viz-index">{index}</span>
         </div>
@@ -629,7 +656,7 @@ export function Visualizer({ problemId, code, filename }: VisualizerProps) {
                 </div>
               ))}
             </div>
-            {trace.output && index === last && (
+            {trace.output && index === last && !trace.truncated && (
               <div className="viz-output">
                 <span>Returned</span>
                 <code>{formatCompact(trace.output)}</code>
@@ -639,7 +666,7 @@ export function Visualizer({ problemId, code, filename }: VisualizerProps) {
         </div>
       </div>
 
-      <div className="viz-caption">
+      <div className="viz-caption" aria-live="polite">
         <div className="viz-caption-code">
           <span>line {frame.line}</span>
           <code>{sourceLine || '—'}</code>
@@ -693,7 +720,7 @@ export function Visualizer({ problemId, code, filename }: VisualizerProps) {
           </select>
         </label>
       </div>
-      <p className="viz-hint">← → step · space play · click the player, then use the keyboard</p>
+      <p className="viz-hint">Trace generated from the reference solution · ← → step · space play</p>
     </div>
   )
 }

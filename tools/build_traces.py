@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 import argparse
+import hashlib
 import json
 import os
 import sys
@@ -27,7 +28,6 @@ TRIVIAL_WORDS = (
     "none",
     "impossible",
     "single",
-    "zero",
     "missing",
     "all water",
     "all walls",
@@ -99,6 +99,10 @@ def build(problem_id, force=False):
         result["version"] = 1
         result["problem"] = problem_id
         result["case_index"] = case_index
+        result["code_hash"] = hashlib.sha256(code.encode()).hexdigest()
+        result["case_hash"] = hashlib.sha256(
+            json.dumps(tests["cases"][case_index], sort_keys=True, separators=(",", ":")).encode()
+        ).hexdigest()
         os.makedirs(TRACES, exist_ok=True)
         path = os.path.join(TRACES, problem_id + ".json")
         with open(path, "w") as handle:
@@ -110,6 +114,10 @@ def build(problem_id, force=False):
     result["version"] = 1
     result["problem"] = problem_id
     result["case_index"] = 0
+    result["code_hash"] = hashlib.sha256(code.encode()).hexdigest()
+    result["case_hash"] = hashlib.sha256(
+        json.dumps(tests["cases"][0], sort_keys=True, separators=(",", ":")).encode()
+    ).hexdigest()
     os.makedirs(TRACES, exist_ok=True)
     path = os.path.join(TRACES, problem_id + ".json")
     with open(path, "w") as handle:
