@@ -1,9 +1,12 @@
+import ast
 import copy
 import json
 import math
 import os
+import sys
 import time
 import traceback
+import types
 from collections import deque
 
 
@@ -290,6 +293,259 @@ def run_class_case(namespace, entry, tests, case):
         adapter = adapters[index] if index < len(adapters) else None
         results.append(serialize(value, adapter))
     return results, expected, elapsed
+
+
+FILENAME = "<solution>"
+TRACE_FRAME_CAP = 120
+
+
+def scalar_value(value):
+    if isinstance(value, float) and (math.isinf(value) or math.isnan(value)):
+        return str(value)
+    if isinstance(value, str):
+        return value if len(value) <= 60 else value[:57] + "..."
+    if isinstance(value, (bool, int, float)) or value is None:
+        return value
+    return None
+
+
+def is_scalar(value):
+    return isinstance(value, (bool, int, float, str)) or value is None
+
+
+def safe_text(value, limit=100):
+    text = repr(value)
+    return text if len(text) <= limit else text[: limit - 1] + "..."
+
+
+def summarize_value(value, depth=0):
+    if depth > 3:
+        return {"kind": "text", "value": safe_text(value)}
+    if isinstance(value, TreeNode):
+        values = tree_values(value)
+        return {"kind": "tree", "value": values[:63], "truncated": len(values) > 63}
+    if isinstance(value, ListNode):
+        values = list_values(value)
+        return {"kind": "linked_list", "value": values[:40], "truncated": len(values) > 40}
+    if isinstance(value, Node):
+        if value.neighbors:
+            return {"kind": "graph", "value": graph_values(value)}
+        if value.next is not None or value.random is not None:
+            return {"kind": "random_list", "value": random_list_values(value)[:40]}
+        return {"kind": "scalar", "value": value.val}
+    if is_scalar(value):
+        if isinstance(value, str):
+            return {"kind": "string", "value": value[:160], "length": len(value)}
+        return {"kind": "scalar", "value": scalar_value(value)}
+    if isinstance(value, (types.ModuleType, types.FunctionType, types.BuiltinFunctionType, types.MethodType, type)):
+        return None
+    if isinstance(value, deque):
+        items = list(value)
+        return {
+            "kind": "queue",
+            "value": [scalar_value(item) if is_scalar(item) else summarize_value(item, depth + 1) for item in items[:30]],
+            "length": len(items),
+            "truncated": len(items) > 30,
+        }
+    if isinstance(value, dict):
+        entries = []
+        for key, item in list(value.items())[:20]:
+            entries.append({"key": safe_text(key, 40), "value": summarize_value(item, depth + 1)})
+        return {"kind": "map", "entries": entries, "length": len(value), "truncated": len(value) > 20}
+    if isinstance(value, (set, frozenset)):
+        items = sorted(value, key=lambda item: safe_text(item, 80))
+        return {
+            "kind": "set",
+            "value": [scalar_value(item) if is_scalar(item) else summarize_value(item, depth + 1) for item in items[:24]],
+            "length": len(items),
+            "truncated": len(items) > 24,
+        }
+    if isinstance(value, (list, tuple)):
+        items = list(value)
+        if all(is_scalar(item) for item in items):
+            return {
+                "kind": "array",
+                "value": [scalar_value(item) for item in items[:40]],
+                "length": len(items),
+                "truncated": len(items) > 40,
+            }
+        if items and all(isinstance(item, (list, tuple)) for item in items):
+            rows = [list(row) for row in items]
+            if all(all(is_scalar(cell) for cell in row) for row in rows):
+                width = max((len(row) for row in rows), default=0)
+                return {
+                    "kind": "grid",
+                    "value": [[scalar_value(cell) for cell in row[:14]] for row in rows[:12]],
+                    "rows": len(rows),
+                    "cols": width,
+                    "truncated": len(rows) > 12 or width > 14,
+                }
+        return {
+            "kind": "list",
+            "value": [summarize_value(item, depth + 1) for item in items[:16]],
+            "length": len(items),
+            "truncated": len(items) > 16,
+        }
+    if hasattr(value, "__dict__"):
+        attributes = []
+        for name, item in list(vars(value).items())[:16]:
+            if name.startswith("__"):
+                continue
+            summary = summarize_value(item, depth + 1)
+            if summary is not None:
+                attributes.append({"name": name, **summary})
+        return {
+            "kind": "object",
+            "class": value.__class__.__name__,
+            "attributes": attributes,
+            "truncated": len(vars(value)) > 16,
+        }
+    return {"kind": "text", "value": safe_text(value)}
+
+
+def summarize_locals(frame):
+    variables = []
+    for name, value in frame.f_locals.items():
+        if name.startswith("__"):
+            continue
+        summary = summarize_value(value)
+        if summary is None:
+            continue
+        variables.append({"name": name, **summary})
+    return variables
+
+
+def trace_depth(frame):
+    depth = 0
+    parent = frame.f_back
+    while parent is not None and parent.f_code.co_filename == FILENAME:
+        depth += 1
+        parent = parent.f_back
+    return depth
+
+
+def statement_lines(code):
+    try:
+        tree = ast.parse(code)
+    except SyntaxError:
+        return None
+    lines = set()
+    for node in ast.walk(tree):
+        if isinstance(node, ast.stmt):
+            lines.add(node.lineno)
+    return lines
+
+
+class TraceRecorder:
+    def __init__(self, max_frames=TRACE_FRAME_CAP, lines=None):
+        self.max_frames = max_frames
+        self.frames = []
+        self.truncated = False
+        self.last_signature = None
+        self.lines = lines
+
+    def global_trace(self, frame, event, arg):
+        if frame.f_code.co_filename != FILENAME:
+            return None
+        if self.truncated:
+            return None
+        return self.local_trace
+
+    def local_trace(self, frame, event, arg):
+        if self.truncated:
+            return None
+        if event == "line":
+            if self.lines is not None and frame.f_lineno not in self.lines:
+                return self.local_trace
+            if len(self.frames) >= self.max_frames:
+                self.truncated = True
+                return None
+            variables = summarize_locals(frame)
+            signature = (frame.f_lineno, frame.f_code.co_name, json.dumps(variables, sort_keys=True))
+            if signature != self.last_signature:
+                self.last_signature = signature
+                self.frames.append(
+                    {
+                        "line": frame.f_lineno,
+                        "function": frame.f_code.co_name,
+                        "depth": trace_depth(frame),
+                        "vars": variables,
+                    }
+                )
+        return self.local_trace
+
+
+def execute_class_case(namespace, entry, case):
+    ops = case.get("ops") or []
+    args = case.get("args") or []
+    results = []
+    instance = None
+    for index, op in enumerate(ops):
+        raw_args = args[index] if index < len(args) else []
+        call_args = []
+        for arg in raw_args:
+            if isinstance(arg, dict) and "from_op" in arg:
+                call_args.append(results[arg["from_op"]])
+            else:
+                call_args.append(build_arg(arg))
+        if index == 0:
+            instance = namespace[entry](*call_args)
+            results.append(None)
+        else:
+            results.append(getattr(instance, op)(*call_args))
+    return instance, results
+
+
+def trace_loaded(meta, tests, code, case_index=0):
+    cases = tests.get("cases", [])
+    if not cases:
+        return {"ok": False, "error": "No test cases to visualize.", "frames": [], "truncated": False}
+    case_index = max(0, min(case_index, len(cases) - 1))
+    case = cases[case_index]
+    try:
+        namespace = load_namespace(code)
+    except Exception as error:
+        return {
+            "ok": False,
+            "error": describe_error(error),
+            "case": {"name": case.get("name", "case"), "args": case.get("args", []), "ops": case.get("ops")},
+            "frames": [],
+            "truncated": False,
+        }
+
+    recorder = TraceRecorder(lines=statement_lines(code))
+    error = None
+    output = None
+    is_class = meta.get("kind", "function") == "class"
+    sys.settrace(recorder.global_trace)
+    try:
+        if is_class:
+            execute_class_case(namespace, meta["entry"], case)
+        else:
+            args = [build_arg(arg) for arg in case.get("args", [])]
+            output = namespace[meta["entry"]](*args)
+    except Exception as caught:
+        error = describe_error(caught)
+    finally:
+        sys.settrace(None)
+
+    return {
+        "ok": error is None,
+        "error": error,
+        "kind": meta.get("kind", "function"),
+        "case": {
+            "name": case.get("name", "case"),
+            "args": case.get("args", []),
+            "ops": case.get("ops"),
+        },
+        "output": summarize_value(output) if output is not None else None,
+        "frames": recorder.frames,
+        "truncated": recorder.truncated,
+    }
+
+
+def trace_payload(meta_json, tests_json, code, case_index=0):
+    return json.dumps(trace_loaded(json.loads(meta_json), json.loads(tests_json), code, case_index))
 
 
 def run_loaded(meta, tests, code):
