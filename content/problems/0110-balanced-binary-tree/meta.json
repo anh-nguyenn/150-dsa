@@ -1,0 +1,16 @@
+{
+  "id": "0110-balanced-binary-tree",
+  "title": "Balanced Binary Tree",
+  "slug": "balanced-binary-tree",
+  "difficulty": "Easy",
+  "approaches": [
+    {
+      "id": "optimal",
+      "name": "Bottom-up height check",
+      "time": "O(n)",
+      "space": "O(n)"
+    }
+  ],
+  "entry": "is_balanced",
+  "kind": "function"
+}

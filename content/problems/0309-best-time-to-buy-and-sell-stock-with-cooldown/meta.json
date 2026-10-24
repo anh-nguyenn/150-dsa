@@ -1,0 +1,16 @@
+{
+  "id": "0309-best-time-to-buy-and-sell-stock-with-cooldown",
+  "title": "Best Time to Buy And Sell Stock With Cooldown",
+  "slug": "best-time-to-buy-and-sell-stock-with-cooldown",
+  "difficulty": "Medium",
+  "approaches": [
+    {
+      "id": "optimal",
+      "name": "Three-state rolling dynamic programming",
+      "time": "O(n)",
+      "space": "O(1)"
+    }
+  ],
+  "entry": "max_profit",
+  "kind": "function"
+}

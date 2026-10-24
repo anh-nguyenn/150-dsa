@@ -1,0 +1,69 @@
+{
+  "compare": "exact",
+  "cases": [
+    {
+      "name": "positive pair",
+      "args": [
+        1,
+        2
+      ],
+      "expected": 3
+    },
+    {
+      "name": "another positive pair",
+      "args": [
+        2,
+        3
+      ],
+      "expected": 5
+    },
+    {
+      "name": "cancel to zero",
+      "args": [
+        -1,
+        1
+      ],
+      "expected": 0
+    },
+    {
+      "name": "negative plus positive",
+      "args": [
+        -2,
+        3
+      ],
+      "expected": 1
+    },
+    {
+      "name": "two negatives",
+      "args": [
+        -12,
+        -8
+      ],
+      "expected": -20
+    },
+    {
+      "name": "both zero",
+      "args": [
+        0,
+        0
+      ],
+      "expected": 0
+    },
+    {
+      "name": "positive boundary",
+      "args": [
+        1000,
+        1000
+      ],
+      "expected": 2000
+    },
+    {
+      "name": "negative boundary",
+      "args": [
+        -1000,
+        -1000
+      ],
+      "expected": -2000
+    }
+  ]
+}

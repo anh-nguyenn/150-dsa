@@ -1,0 +1,110 @@
+{
+  "compare": "exact",
+  "cases": [
+    {
+      "name": "classic run",
+      "args": [
+        [
+          100,
+          4,
+          200,
+          1,
+          3,
+          2
+        ]
+      ],
+      "expected": 4
+    },
+    {
+      "name": "long run with duplicate",
+      "args": [
+        [
+          0,
+          3,
+          7,
+          2,
+          5,
+          8,
+          4,
+          6,
+          0,
+          1
+        ]
+      ],
+      "expected": 9
+    },
+    {
+      "name": "empty list",
+      "args": [
+        []
+      ],
+      "expected": 0
+    },
+    {
+      "name": "all duplicates",
+      "args": [
+        [
+          1,
+          1,
+          1
+        ]
+      ],
+      "expected": 1
+    },
+    {
+      "name": "gaps and negatives",
+      "args": [
+        [
+          9,
+          1,
+          4,
+          7,
+          3,
+          -1,
+          0,
+          5,
+          8,
+          -1,
+          6
+        ]
+      ],
+      "expected": 7
+    },
+    {
+      "name": "negative run",
+      "args": [
+        [
+          -3,
+          -2,
+          -1,
+          0,
+          1
+        ]
+      ],
+      "expected": 5
+    },
+    {
+      "name": "no consecutive values",
+      "args": [
+        [
+          10,
+          5,
+          20
+        ]
+      ],
+      "expected": 1
+    },
+    {
+      "name": "unsorted small run",
+      "args": [
+        [
+          1,
+          2,
+          0,
+          1
+        ]
+      ],
+      "expected": 3
+    }
+  ]
+}

@@ -1,0 +1,61 @@
+{
+  "compare": "exact",
+  "cases": [
+    {
+      "name": "positive",
+      "args": [
+        123
+      ],
+      "expected": 321
+    },
+    {
+      "name": "negative",
+      "args": [
+        -123
+      ],
+      "expected": -321
+    },
+    {
+      "name": "trailing zero",
+      "args": [
+        120
+      ],
+      "expected": 21
+    },
+    {
+      "name": "zero",
+      "args": [
+        0
+      ],
+      "expected": 0
+    },
+    {
+      "name": "overflow positive",
+      "args": [
+        1534236469
+      ],
+      "expected": 0
+    },
+    {
+      "name": "smallest input",
+      "args": [
+        -2147483648
+      ],
+      "expected": 0
+    },
+    {
+      "name": "near limit valid",
+      "args": [
+        1463847412
+      ],
+      "expected": 2147483641
+    },
+    {
+      "name": "largest input",
+      "args": [
+        2147483647
+      ],
+      "expected": 0
+    }
+  ]
+}

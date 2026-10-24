@@ -1,0 +1,120 @@
+{
+  "compare": "exact",
+  "cases": [
+    {
+      "name": "two rooms",
+      "args": [
+        [
+          [
+            0,
+            30
+          ],
+          [
+            5,
+            10
+          ],
+          [
+            15,
+            20
+          ]
+        ]
+      ],
+      "expected": 2
+    },
+    {
+      "name": "one room",
+      "args": [
+        [
+          [
+            7,
+            10
+          ],
+          [
+            2,
+            4
+          ]
+        ]
+      ],
+      "expected": 1
+    },
+    {
+      "name": "touching meetings",
+      "args": [
+        [
+          [
+            1,
+            5
+          ],
+          [
+            5,
+            10
+          ]
+        ]
+      ],
+      "expected": 1
+    },
+    {
+      "name": "empty schedule",
+      "args": [
+        []
+      ],
+      "expected": 0
+    },
+    {
+      "name": "single meeting",
+      "args": [
+        [
+          [
+            1,
+            2
+          ]
+        ]
+      ],
+      "expected": 1
+    },
+    {
+      "name": "three simultaneous",
+      "args": [
+        [
+          [
+            1,
+            5
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            1,
+            5
+          ]
+        ]
+      ],
+      "expected": 3
+    },
+    {
+      "name": "peak of two",
+      "args": [
+        [
+          [
+            0,
+            30
+          ],
+          [
+            5,
+            10
+          ],
+          [
+            15,
+            20
+          ],
+          [
+            25,
+            35
+          ]
+        ]
+      ],
+      "expected": 2
+    }
+  ]
+}

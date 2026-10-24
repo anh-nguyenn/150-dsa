@@ -1,0 +1,16 @@
+{
+  "id": "0090-subsets-ii",
+  "title": "Subsets II",
+  "slug": "subsets-ii",
+  "difficulty": "Medium",
+  "approaches": [
+    {
+      "id": "optimal",
+      "name": "Backtracking with duplicate pruning",
+      "time": "O(n * 2^n)",
+      "space": "O(n) auxiliary"
+    }
+  ],
+  "entry": "subsets_with_dup",
+  "kind": "function"
+}

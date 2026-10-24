@@ -1,0 +1,97 @@
+{
+  "compare": "exact",
+  "cases": [
+    {
+      "name": "typical",
+      "args": [
+        [
+          1,
+          8,
+          6,
+          2,
+          5,
+          4,
+          8,
+          3,
+          7
+        ]
+      ],
+      "expected": 49
+    },
+    {
+      "name": "two equal lines",
+      "args": [
+        [
+          1,
+          1
+        ]
+      ],
+      "expected": 1
+    },
+    {
+      "name": "tall outer lines",
+      "args": [
+        [
+          4,
+          3,
+          2,
+          1,
+          4
+        ]
+      ],
+      "expected": 16
+    },
+    {
+      "name": "short middle",
+      "args": [
+        [
+          1,
+          2,
+          1
+        ]
+      ],
+      "expected": 2
+    },
+    {
+      "name": "uneven heights",
+      "args": [
+        [
+          2,
+          3,
+          4,
+          5,
+          18,
+          17,
+          6
+        ]
+      ],
+      "expected": 17
+    },
+    {
+      "name": "increasing heights",
+      "args": [
+        [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ]
+      ],
+      "expected": 9
+    },
+    {
+      "name": "zero height",
+      "args": [
+        [
+          0,
+          5,
+          0,
+          5
+        ]
+      ],
+      "expected": 10
+    }
+  ]
+}

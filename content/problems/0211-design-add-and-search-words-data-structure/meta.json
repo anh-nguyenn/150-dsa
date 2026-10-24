@@ -1,0 +1,16 @@
+{
+  "id": "0211-design-add-and-search-words-data-structure",
+  "title": "Design Add And Search Words Data Structure",
+  "slug": "design-add-and-search-words-data-structure",
+  "difficulty": "Medium",
+  "approaches": [
+    {
+      "id": "optimal",
+      "name": "Trie with wildcard DFS",
+      "time": "O(L) add, O(26^d * L) search worst case",
+      "space": "O(total characters)"
+    }
+  ],
+  "entry": "WordDictionary",
+  "kind": "class"
+}

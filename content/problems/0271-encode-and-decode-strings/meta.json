@@ -1,0 +1,16 @@
+{
+  "id": "0271-encode-and-decode-strings",
+  "title": "Encode and Decode Strings",
+  "slug": "encode-and-decode-strings",
+  "difficulty": "Medium",
+  "approaches": [
+    {
+      "id": "optimal",
+      "name": "Length-prefixed framing",
+      "time": "O(n)",
+      "space": "O(n)"
+    }
+  ],
+  "entry": "Codec",
+  "kind": "class"
+}

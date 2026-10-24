@@ -1,0 +1,16 @@
+{
+  "id": "0100-same-tree",
+  "title": "Same Tree",
+  "slug": "same-tree",
+  "difficulty": "Easy",
+  "approaches": [
+    {
+      "id": "optimal",
+      "name": "Pairwise recursion",
+      "time": "O(n)",
+      "space": "O(n)"
+    }
+  ],
+  "entry": "is_same_tree",
+  "kind": "function"
+}

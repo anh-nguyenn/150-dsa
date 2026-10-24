@@ -1,0 +1,61 @@
+{
+  "compare": "exact",
+  "cases": [
+    {
+      "name": "typical",
+      "args": [
+        "ADOBECODEBANC",
+        "ABC"
+      ],
+      "expected": "BANC"
+    },
+    {
+      "name": "single match",
+      "args": [
+        "a",
+        "a"
+      ],
+      "expected": "a"
+    },
+    {
+      "name": "too few repeats",
+      "args": [
+        "a",
+        "aa"
+      ],
+      "expected": ""
+    },
+    {
+      "name": "exact repeats",
+      "args": [
+        "aa",
+        "aa"
+      ],
+      "expected": "aa"
+    },
+    {
+      "name": "one letter window",
+      "args": [
+        "ab",
+        "b"
+      ],
+      "expected": "b"
+    },
+    {
+      "name": "order reversed",
+      "args": [
+        "bba",
+        "ab"
+      ],
+      "expected": "ba"
+    },
+    {
+      "name": "must include whole string",
+      "args": [
+        "abc",
+        "ac"
+      ],
+      "expected": "abc"
+    }
+  ]
+}

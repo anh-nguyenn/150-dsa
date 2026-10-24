@@ -1,0 +1,16 @@
+{
+  "id": "0076-minimum-window-substring",
+  "title": "Minimum Window Substring",
+  "slug": "minimum-window-substring",
+  "difficulty": "Hard",
+  "approaches": [
+    {
+      "id": "optimal",
+      "name": "Expand and shrink sliding window",
+      "time": "O(n + m)",
+      "space": "O(k)"
+    }
+  ],
+  "entry": "min_window",
+  "kind": "function"
+}

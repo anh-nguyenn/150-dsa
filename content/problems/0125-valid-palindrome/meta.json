@@ -1,0 +1,16 @@
+{
+  "id": "0125-valid-palindrome",
+  "title": "Valid Palindrome",
+  "slug": "valid-palindrome",
+  "difficulty": "Easy",
+  "approaches": [
+    {
+      "id": "optimal",
+      "name": "Two pointers from both ends",
+      "time": "O(n)",
+      "space": "O(1)"
+    }
+  ],
+  "entry": "is_palindrome",
+  "kind": "function"
+}

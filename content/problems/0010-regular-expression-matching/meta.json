@@ -1,0 +1,16 @@
+{
+  "id": "0010-regular-expression-matching",
+  "title": "Regular Expression Matching",
+  "slug": "regular-expression-matching",
+  "difficulty": "Hard",
+  "approaches": [
+    {
+      "id": "optimal",
+      "name": "Bottom-up pattern DP",
+      "time": "O(mn)",
+      "space": "O(mn)"
+    }
+  ],
+  "entry": "is_match",
+  "kind": "function"
+}

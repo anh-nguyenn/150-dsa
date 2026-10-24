@@ -1,0 +1,125 @@
+{
+  "compare": "unordered_deep",
+  "cases": [
+    {
+      "name": "classic groups",
+      "args": [
+        [
+          "eat",
+          "tea",
+          "tan",
+          "ate",
+          "nat",
+          "bat"
+        ]
+      ],
+      "expected": [
+        [
+          "eat",
+          "tea",
+          "ate"
+        ],
+        [
+          "tan",
+          "nat"
+        ],
+        [
+          "bat"
+        ]
+      ]
+    },
+    {
+      "name": "single empty word",
+      "args": [
+        [
+          ""
+        ]
+      ],
+      "expected": [
+        [
+          ""
+        ]
+      ]
+    },
+    {
+      "name": "single word",
+      "args": [
+        [
+          "a"
+        ]
+      ],
+      "expected": [
+        [
+          "a"
+        ]
+      ]
+    },
+    {
+      "name": "two empty words",
+      "args": [
+        [
+          "",
+          ""
+        ]
+      ],
+      "expected": [
+        [
+          "",
+          ""
+        ]
+      ]
+    },
+    {
+      "name": "mixed families",
+      "args": [
+        [
+          "abc",
+          "bca",
+          "cab",
+          "xyz",
+          "zyx",
+          "",
+          ""
+        ]
+      ],
+      "expected": [
+        [
+          "abc",
+          "bca",
+          "cab"
+        ],
+        [
+          "xyz",
+          "zyx"
+        ],
+        [
+          "",
+          ""
+        ]
+      ]
+    },
+    {
+      "name": "short anagrams",
+      "args": [
+        [
+          "ab",
+          "ba",
+          "abc",
+          "cba",
+          "bac"
+        ]
+      ],
+      "expected": [
+        [
+          "ab",
+          "ba"
+        ],
+        [
+          "abc",
+          "cba",
+          "bac"
+        ]
+      ]
+    }
+  ]
+}

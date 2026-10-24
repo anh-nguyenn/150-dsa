@@ -1,0 +1,16 @@
+{
+  "id": "0269-alien-dictionary",
+  "title": "Alien Dictionary",
+  "slug": "alien-dictionary",
+  "difficulty": "Hard",
+  "approaches": [
+    {
+      "id": "optimal",
+      "name": "Topological sort from adjacent words",
+      "time": "O(C + V + E)",
+      "space": "O(V + E)"
+    }
+  ],
+  "entry": "foreign_dictionary",
+  "kind": "function"
+}

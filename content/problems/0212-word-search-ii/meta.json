@@ -1,0 +1,16 @@
+{
+  "id": "0212-word-search-ii",
+  "title": "Word Search II",
+  "slug": "word-search-ii",
+  "difficulty": "Hard",
+  "approaches": [
+    {
+      "id": "optimal",
+      "name": "Trie-guided backtracking",
+      "time": "O(m * n * 4^L) worst case",
+      "space": "O(total characters + L)"
+    }
+  ],
+  "entry": "find_words",
+  "kind": "function"
+}

@@ -1,0 +1,16 @@
+{
+  "id": "0355-design-twitter",
+  "title": "Design Twitter",
+  "slug": "design-twitter",
+  "difficulty": "Medium",
+  "approaches": [
+    {
+      "id": "optimal",
+      "name": "Timestamped tweets with a merge heap",
+      "time": "O(F + 10 log F) per feed, O(1) per post",
+      "space": "O(users + tweets)"
+    }
+  ],
+  "entry": "Twitter",
+  "kind": "class"
+}

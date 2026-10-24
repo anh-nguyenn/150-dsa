@@ -1,0 +1,16 @@
+{
+  "id": "0338-counting-bits",
+  "title": "Counting Bits",
+  "slug": "counting-bits",
+  "difficulty": "Easy",
+  "approaches": [
+    {
+      "id": "optimal",
+      "name": "Dynamic programming on shifted bits",
+      "time": "O(n)",
+      "space": "O(n)"
+    }
+  ],
+  "entry": "count_bits",
+  "kind": "function"
+}

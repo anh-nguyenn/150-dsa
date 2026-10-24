@@ -1,0 +1,16 @@
+{
+  "id": "0004-median-of-two-sorted-arrays",
+  "title": "Median of Two Sorted Arrays",
+  "slug": "median-of-two-sorted-arrays",
+  "difficulty": "Hard",
+  "approaches": [
+    {
+      "id": "optimal",
+      "name": "Partition binary search",
+      "time": "O(log(min(m, n)))",
+      "space": "O(1)"
+    }
+  ],
+  "entry": "find_median_sorted_arrays",
+  "kind": "function"
+}

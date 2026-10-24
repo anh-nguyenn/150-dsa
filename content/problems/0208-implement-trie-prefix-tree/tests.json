@@ -1,0 +1,233 @@
+{
+  "kind": "class",
+  "compare": "exact",
+  "cases": [
+    {
+      "name": "classic trie",
+      "ops": [
+        "Trie",
+        "insert",
+        "search",
+        "search",
+        "startsWith",
+        "insert",
+        "search"
+      ],
+      "args": [
+        [],
+        [
+          "apple"
+        ],
+        [
+          "apple"
+        ],
+        [
+          "app"
+        ],
+        [
+          "app"
+        ],
+        [
+          "app"
+        ],
+        [
+          "app"
+        ]
+      ],
+      "expected": [
+        null,
+        null,
+        true,
+        false,
+        true,
+        null,
+        true
+      ]
+    },
+    {
+      "name": "empty word",
+      "ops": [
+        "Trie",
+        "search",
+        "startsWith",
+        "insert",
+        "search",
+        "startsWith"
+      ],
+      "args": [
+        [],
+        [
+          ""
+        ],
+        [
+          ""
+        ],
+        [
+          ""
+        ],
+        [
+          ""
+        ],
+        [
+          ""
+        ]
+      ],
+      "expected": [
+        null,
+        false,
+        true,
+        null,
+        true,
+        true
+      ]
+    },
+    {
+      "name": "shared prefixes",
+      "ops": [
+        "Trie",
+        "insert",
+        "insert",
+        "insert",
+        "search",
+        "search",
+        "search",
+        "startsWith"
+      ],
+      "args": [
+        [],
+        [
+          "do"
+        ],
+        [
+          "dog"
+        ],
+        [
+          "door"
+        ],
+        [
+          "do"
+        ],
+        [
+          "door"
+        ],
+        [
+          "dorm"
+        ],
+        [
+          "doo"
+        ]
+      ],
+      "expected": [
+        null,
+        null,
+        null,
+        null,
+        true,
+        true,
+        false,
+        true
+      ]
+    },
+    {
+      "name": "case sensitive",
+      "ops": [
+        "Trie",
+        "insert",
+        "search",
+        "search",
+        "search"
+      ],
+      "args": [
+        [],
+        [
+          "Hello"
+        ],
+        [
+          "Hello"
+        ],
+        [
+          "hello"
+        ],
+        [
+          "Hell"
+        ]
+      ],
+      "expected": [
+        null,
+        null,
+        true,
+        false,
+        false
+      ]
+    },
+    {
+      "name": "repeated insert",
+      "ops": [
+        "Trie",
+        "insert",
+        "insert",
+        "search",
+        "startsWith"
+      ],
+      "args": [
+        [],
+        [
+          "a"
+        ],
+        [
+          "a"
+        ],
+        [
+          "a"
+        ],
+        [
+          "a"
+        ]
+      ],
+      "expected": [
+        null,
+        null,
+        null,
+        true,
+        true
+      ]
+    },
+    {
+      "name": "prefix longer than word",
+      "ops": [
+        "Trie",
+        "insert",
+        "search",
+        "startsWith",
+        "search",
+        "startsWith"
+      ],
+      "args": [
+        [],
+        [
+          "cat"
+        ],
+        [
+          "cats"
+        ],
+        [
+          "cats"
+        ],
+        [
+          "ca"
+        ],
+        [
+          "ca"
+        ]
+      ],
+      "expected": [
+        null,
+        null,
+        false,
+        false,
+        false,
+        true
+      ]
+    }
+  ]
+}

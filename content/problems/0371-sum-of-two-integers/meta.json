@@ -1,0 +1,16 @@
+{
+  "id": "0371-sum-of-two-integers",
+  "title": "Sum of Two Integers",
+  "slug": "sum-of-two-integers",
+  "difficulty": "Medium",
+  "approaches": [
+    {
+      "id": "optimal",
+      "name": "Bitwise addition with carries",
+      "time": "O(1)",
+      "space": "O(1)"
+    }
+  ],
+  "entry": "get_sum",
+  "kind": "function"
+}

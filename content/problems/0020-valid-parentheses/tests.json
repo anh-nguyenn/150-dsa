@@ -1,0 +1,61 @@
+{
+  "compare": "exact",
+  "cases": [
+    {
+      "name": "single pair",
+      "args": [
+        "()"
+      ],
+      "expected": true
+    },
+    {
+      "name": "all three types",
+      "args": [
+        "()[]{}"
+      ],
+      "expected": true
+    },
+    {
+      "name": "mismatched type",
+      "args": [
+        "(]"
+      ],
+      "expected": false
+    },
+    {
+      "name": "nested pairs",
+      "args": [
+        "([{}])"
+      ],
+      "expected": true
+    },
+    {
+      "name": "crossed pairs",
+      "args": [
+        "([)]"
+      ],
+      "expected": false
+    },
+    {
+      "name": "unclosed opener",
+      "args": [
+        "("
+      ],
+      "expected": false
+    },
+    {
+      "name": "closer first",
+      "args": [
+        "){"
+      ],
+      "expected": false
+    },
+    {
+      "name": "deep nesting",
+      "args": [
+        "((((()))))"
+      ],
+      "expected": true
+    }
+  ]
+}

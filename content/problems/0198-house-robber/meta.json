@@ -1,0 +1,16 @@
+{
+  "id": "0198-house-robber",
+  "title": "House Robber",
+  "slug": "house-robber",
+  "difficulty": "Medium",
+  "approaches": [
+    {
+      "id": "optimal",
+      "name": "Rolling two-house recurrence",
+      "time": "O(n)",
+      "space": "O(1)"
+    }
+  ],
+  "entry": "rob",
+  "kind": "function"
+}

@@ -1,0 +1,16 @@
+{
+  "id": "0017-letter-combinations-of-a-phone-number",
+  "title": "Letter Combinations of a Phone Number",
+  "slug": "letter-combinations-of-a-phone-number",
+  "difficulty": "Medium",
+  "approaches": [
+    {
+      "id": "optimal",
+      "name": "Digit-by-digit backtracking",
+      "time": "O(4^n * n)",
+      "space": "O(n)"
+    }
+  ],
+  "entry": "letter_combinations",
+  "kind": "function"
+}

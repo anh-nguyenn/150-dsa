@@ -1,0 +1,16 @@
+{
+  "id": "0150-evaluate-reverse-polish-notation",
+  "title": "Evaluate Reverse Polish Notation",
+  "slug": "evaluate-reverse-polish-notation",
+  "difficulty": "Medium",
+  "approaches": [
+    {
+      "id": "optimal",
+      "name": "Single stack evaluation",
+      "time": "O(n)",
+      "space": "O(n)"
+    }
+  ],
+  "entry": "eval_rpn",
+  "kind": "function"
+}

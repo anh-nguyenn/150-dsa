@@ -1,0 +1,16 @@
+{
+  "id": "0074-search-a-2d-matrix",
+  "title": "Search a 2D Matrix",
+  "slug": "search-a-2d-matrix",
+  "difficulty": "Medium",
+  "approaches": [
+    {
+      "id": "optimal",
+      "name": "Flattened binary search",
+      "time": "O(log(m * n))",
+      "space": "O(1)"
+    }
+  ],
+  "entry": "search_matrix",
+  "kind": "function"
+}

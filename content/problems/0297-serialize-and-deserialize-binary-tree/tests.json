@@ -1,0 +1,248 @@
+{
+  "kind": "class",
+  "compare": "exact",
+  "cases": [
+    {
+      "name": "sample round trip",
+      "ops": [
+        "Codec",
+        "serialize",
+        "deserialize"
+      ],
+      "args": [
+        [],
+        [
+          {
+            "tree": [
+              1,
+              2,
+              3,
+              null,
+              null,
+              4,
+              5
+            ]
+          }
+        ],
+        [
+          {
+            "from_op": 1
+          }
+        ]
+      ],
+      "expected": [
+        null,
+        "*",
+        [
+          1,
+          2,
+          3,
+          null,
+          null,
+          4,
+          5
+        ]
+      ],
+      "adapters": [
+        null,
+        null,
+        "tree"
+      ]
+    },
+    {
+      "name": "empty tree round trip",
+      "ops": [
+        "Codec",
+        "serialize",
+        "deserialize"
+      ],
+      "args": [
+        [],
+        [
+          {
+            "tree": []
+          }
+        ],
+        [
+          {
+            "from_op": 1
+          }
+        ]
+      ],
+      "expected": [
+        null,
+        "*",
+        []
+      ],
+      "adapters": [
+        null,
+        null,
+        "tree"
+      ]
+    },
+    {
+      "name": "single node round trip",
+      "ops": [
+        "Codec",
+        "serialize",
+        "deserialize"
+      ],
+      "args": [
+        [],
+        [
+          {
+            "tree": [
+              1
+            ]
+          }
+        ],
+        [
+          {
+            "from_op": 1
+          }
+        ]
+      ],
+      "expected": [
+        null,
+        "*",
+        [
+          1
+        ]
+      ],
+      "adapters": [
+        null,
+        null,
+        "tree"
+      ]
+    },
+    {
+      "name": "balanced tree round trip",
+      "ops": [
+        "Codec",
+        "serialize",
+        "deserialize"
+      ],
+      "args": [
+        [],
+        [
+          {
+            "tree": [
+              5,
+              4,
+              6,
+              3,
+              null,
+              null,
+              7
+            ]
+          }
+        ],
+        [
+          {
+            "from_op": 1
+          }
+        ]
+      ],
+      "expected": [
+        null,
+        "*",
+        [
+          5,
+          4,
+          6,
+          3,
+          null,
+          null,
+          7
+        ]
+      ],
+      "adapters": [
+        null,
+        null,
+        "tree"
+      ]
+    },
+    {
+      "name": "right chain round trip",
+      "ops": [
+        "Codec",
+        "serialize",
+        "deserialize"
+      ],
+      "args": [
+        [],
+        [
+          {
+            "tree": [
+              1,
+              null,
+              2,
+              null,
+              3
+            ]
+          }
+        ],
+        [
+          {
+            "from_op": 1
+          }
+        ]
+      ],
+      "expected": [
+        null,
+        "*",
+        [
+          1,
+          null,
+          2,
+          null,
+          3
+        ]
+      ],
+      "adapters": [
+        null,
+        null,
+        "tree"
+      ]
+    },
+    {
+      "name": "negative values round trip",
+      "ops": [
+        "Codec",
+        "serialize",
+        "deserialize"
+      ],
+      "args": [
+        [],
+        [
+          {
+            "tree": [
+              -1,
+              -2,
+              -3
+            ]
+          }
+        ],
+        [
+          {
+            "from_op": 1
+          }
+        ]
+      ],
+      "expected": [
+        null,
+        "*",
+        [
+          -1,
+          -2,
+          -3
+        ]
+      ],
+      "adapters": [
+        null,
+        null,
+        "tree"
+      ]
+    }
+  ]
+}

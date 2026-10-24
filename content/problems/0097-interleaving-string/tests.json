@@ -1,0 +1,113 @@
+{
+  "compare": "exact",
+  "cases": [
+    {
+      "name": "typical valid",
+      "args": [
+        "aabcc",
+        "dbbca",
+        "aadbbcbcac"
+      ],
+      "expected": true
+    },
+    {
+      "name": "typical invalid",
+      "args": [
+        "aabcc",
+        "dbbca",
+        "aadbbbaccc"
+      ],
+      "expected": false
+    },
+    {
+      "name": "all empty",
+      "args": [
+        "",
+        "",
+        ""
+      ],
+      "expected": true
+    },
+    {
+      "name": "first source only",
+      "args": [
+        "a",
+        "",
+        "a"
+      ],
+      "expected": true
+    },
+    {
+      "name": "second source only",
+      "args": [
+        "",
+        "a",
+        "a"
+      ],
+      "expected": true
+    },
+    {
+      "name": "two single characters",
+      "args": [
+        "a",
+        "b",
+        "ab"
+      ],
+      "expected": true
+    },
+    {
+      "name": "reversed merge",
+      "args": [
+        "a",
+        "b",
+        "ba"
+      ],
+      "expected": true
+    },
+    {
+      "name": "merged prefixes",
+      "args": [
+        "ab",
+        "cd",
+        "abcd"
+      ],
+      "expected": true
+    },
+    {
+      "name": "interleaved prefixes",
+      "args": [
+        "ab",
+        "cd",
+        "acbd"
+      ],
+      "expected": true
+    },
+    {
+      "name": "invalid internal order",
+      "args": [
+        "ab",
+        "cd",
+        "abdc"
+      ],
+      "expected": false
+    },
+    {
+      "name": "three and three",
+      "args": [
+        "abc",
+        "def",
+        "abdecf"
+      ],
+      "expected": true
+    },
+    {
+      "name": "length mismatch",
+      "args": [
+        "a",
+        "b",
+        "abc"
+      ],
+      "expected": false
+    }
+  ]
+}

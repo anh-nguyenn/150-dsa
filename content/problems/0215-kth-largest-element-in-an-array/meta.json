@@ -1,0 +1,16 @@
+{
+  "id": "0215-kth-largest-element-in-an-array",
+  "title": "Kth Largest Element In An Array",
+  "slug": "kth-largest-element-in-an-array",
+  "difficulty": "Medium",
+  "approaches": [
+    {
+      "id": "optimal",
+      "name": "Bounded min-heap",
+      "time": "O(n log k)",
+      "space": "O(k)"
+    }
+  ],
+  "entry": "find_kth_largest",
+  "kind": "function"
+}

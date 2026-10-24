@@ -1,0 +1,16 @@
+{
+  "id": "0134-gas-station",
+  "title": "Gas Station",
+  "slug": "gas-station",
+  "difficulty": "Medium",
+  "approaches": [
+    {
+      "id": "optimal",
+      "name": "Surplus reset scan",
+      "time": "O(n)",
+      "space": "O(1)"
+    }
+  ],
+  "entry": "can_complete_circuit",
+  "kind": "function"
+}

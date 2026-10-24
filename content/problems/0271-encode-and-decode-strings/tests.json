@@ -1,0 +1,219 @@
+{
+  "compare": "exact",
+  "cases": [
+    {
+      "name": "round trip typical",
+      "ops": [
+        "Codec",
+        "encode",
+        "decode"
+      ],
+      "args": [
+        [],
+        [
+          [
+            "lint",
+            "code",
+            "love",
+            "you"
+          ]
+        ],
+        [
+          {
+            "from_op": 1
+          }
+        ]
+      ],
+      "expected": [
+        null,
+        "*",
+        [
+          "lint",
+          "code",
+          "love",
+          "you"
+        ]
+      ]
+    },
+    {
+      "name": "round trip empty list",
+      "ops": [
+        "Codec",
+        "encode",
+        "decode"
+      ],
+      "args": [
+        [],
+        [
+          []
+        ],
+        [
+          {
+            "from_op": 1
+          }
+        ]
+      ],
+      "expected": [
+        null,
+        "*",
+        []
+      ]
+    },
+    {
+      "name": "round trip empty string",
+      "ops": [
+        "Codec",
+        "encode",
+        "decode"
+      ],
+      "args": [
+        [],
+        [
+          [
+            ""
+          ]
+        ],
+        [
+          {
+            "from_op": 1
+          }
+        ]
+      ],
+      "expected": [
+        null,
+        "*",
+        [
+          ""
+        ]
+      ]
+    },
+    {
+      "name": "round trip delimiters",
+      "ops": [
+        "Codec",
+        "encode",
+        "decode"
+      ],
+      "args": [
+        [],
+        [
+          [
+            "a:b",
+            "1:2",
+            "x"
+          ]
+        ],
+        [
+          {
+            "from_op": 1
+          }
+        ]
+      ],
+      "expected": [
+        null,
+        "*",
+        [
+          "a:b",
+          "1:2",
+          "x"
+        ]
+      ]
+    },
+    {
+      "name": "round trip inner empties",
+      "ops": [
+        "Codec",
+        "encode",
+        "decode"
+      ],
+      "args": [
+        [],
+        [
+          [
+            "",
+            "abc",
+            ""
+          ]
+        ],
+        [
+          {
+            "from_op": 1
+          }
+        ]
+      ],
+      "expected": [
+        null,
+        "*",
+        [
+          "",
+          "abc",
+          ""
+        ]
+      ]
+    },
+    {
+      "name": "round trip unicode",
+      "ops": [
+        "Codec",
+        "encode",
+        "decode"
+      ],
+      "args": [
+        [],
+        [
+          [
+            "hello",
+            "w\u00f6rld",
+            "\u4e16\u754c"
+          ]
+        ],
+        [
+          {
+            "from_op": 1
+          }
+        ]
+      ],
+      "expected": [
+        null,
+        "*",
+        [
+          "hello",
+          "w\u00f6rld",
+          "\u4e16\u754c"
+        ]
+      ]
+    },
+    {
+      "name": "round trip duplicates",
+      "ops": [
+        "Codec",
+        "encode",
+        "decode"
+      ],
+      "args": [
+        [],
+        [
+          [
+            "a",
+            "a",
+            "b"
+          ]
+        ],
+        [
+          {
+            "from_op": 1
+          }
+        ]
+      ],
+      "expected": [
+        null,
+        "*",
+        [
+          "a",
+          "a",
+          "b"
+        ]
+      ]
+    }
+  ]
+}

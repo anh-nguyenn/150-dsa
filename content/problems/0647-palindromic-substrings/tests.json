@@ -1,0 +1,61 @@
+{
+  "compare": "exact",
+  "cases": [
+    {
+      "name": "all distinct",
+      "args": [
+        "abc"
+      ],
+      "expected": 3
+    },
+    {
+      "name": "single",
+      "args": [
+        "a"
+      ],
+      "expected": 1
+    },
+    {
+      "name": "three same",
+      "args": [
+        "aaa"
+      ],
+      "expected": 6
+    },
+    {
+      "name": "classic",
+      "args": [
+        "aba"
+      ],
+      "expected": 4
+    },
+    {
+      "name": "mirrored pair",
+      "args": [
+        "abba"
+      ],
+      "expected": 6
+    },
+    {
+      "name": "four same",
+      "args": [
+        "aaaa"
+      ],
+      "expected": 10
+    },
+    {
+      "name": "racecar",
+      "args": [
+        "racecar"
+      ],
+      "expected": 10
+    },
+    {
+      "name": "five palindrome",
+      "args": [
+        "abcba"
+      ],
+      "expected": 7
+    }
+  ]
+}

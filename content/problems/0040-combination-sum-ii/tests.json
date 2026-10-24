@@ -1,0 +1,126 @@
+{
+  "compare": "unordered_deep",
+  "cases": [
+    {
+      "name": "duplicate ones",
+      "args": [
+        [
+          10,
+          1,
+          2,
+          7,
+          6,
+          1,
+          5
+        ],
+        8
+      ],
+      "expected": [
+        [
+          1,
+          1,
+          6
+        ],
+        [
+          1,
+          2,
+          5
+        ],
+        [
+          1,
+          7
+        ],
+        [
+          2,
+          6
+        ]
+      ]
+    },
+    {
+      "name": "three equal twos",
+      "args": [
+        [
+          2,
+          5,
+          2,
+          1,
+          2
+        ],
+        5
+      ],
+      "expected": [
+        [
+          1,
+          2,
+          2
+        ],
+        [
+          5
+        ]
+      ]
+    },
+    {
+      "name": "no solution",
+      "args": [
+        [
+          2
+        ],
+        1
+      ],
+      "expected": []
+    },
+    {
+      "name": "single candidate exactly",
+      "args": [
+        [
+          1
+        ],
+        1
+      ],
+      "expected": [
+        [
+          1
+        ]
+      ]
+    },
+    {
+      "name": "two equal candidates",
+      "args": [
+        [
+          1,
+          1
+        ],
+        2
+      ],
+      "expected": [
+        [
+          1,
+          1
+        ]
+      ]
+    },
+    {
+      "name": "pairs from duplicates",
+      "args": [
+        [
+          1,
+          1,
+          2,
+          2
+        ],
+        4
+      ],
+      "expected": [
+        [
+          1,
+          1,
+          2
+        ],
+        [
+          2,
+          2
+        ]
+      ]
+    }
+  ]
+}

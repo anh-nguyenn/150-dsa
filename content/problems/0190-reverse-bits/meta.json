@@ -1,0 +1,16 @@
+{
+  "id": "0190-reverse-bits",
+  "title": "Reverse Bits",
+  "slug": "reverse-bits",
+  "difficulty": "Easy",
+  "approaches": [
+    {
+      "id": "optimal",
+      "name": "Bit-by-bit reversal",
+      "time": "O(32)",
+      "space": "O(1)"
+    }
+  ],
+  "entry": "reverse_bits",
+  "kind": "function"
+}

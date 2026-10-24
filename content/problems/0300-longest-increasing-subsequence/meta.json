@@ -1,0 +1,16 @@
+{
+  "id": "0300-longest-increasing-subsequence",
+  "title": "Longest Increasing Subsequence",
+  "slug": "longest-increasing-subsequence",
+  "difficulty": "Medium",
+  "approaches": [
+    {
+      "id": "optimal",
+      "name": "Patience sorting with binary search",
+      "time": "O(n log n)",
+      "space": "O(n)"
+    }
+  ],
+  "entry": "length_of_lis",
+  "kind": "function"
+}

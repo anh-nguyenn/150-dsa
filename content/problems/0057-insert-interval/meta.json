@@ -1,0 +1,16 @@
+{
+  "id": "0057-insert-interval",
+  "title": "Insert Interval",
+  "slug": "insert-interval",
+  "difficulty": "Medium",
+  "approaches": [
+    {
+      "id": "optimal",
+      "name": "Three-phase scan",
+      "time": "O(n)",
+      "space": "O(n)"
+    }
+  ],
+  "entry": "insert",
+  "kind": "function"
+}

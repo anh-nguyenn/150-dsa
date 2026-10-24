@@ -1,0 +1,16 @@
+{
+  "id": "0207-course-schedule",
+  "title": "Course Schedule",
+  "slug": "course-schedule",
+  "difficulty": "Medium",
+  "approaches": [
+    {
+      "id": "optimal",
+      "name": "Kahn topological sort",
+      "time": "O(V + E)",
+      "space": "O(V + E)"
+    }
+  ],
+  "entry": "can_finish",
+  "kind": "function"
+}

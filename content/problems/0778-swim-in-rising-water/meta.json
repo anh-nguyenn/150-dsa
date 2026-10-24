@@ -1,0 +1,16 @@
+{
+  "id": "0778-swim-in-rising-water",
+  "title": "Swim In Rising Water",
+  "slug": "swim-in-rising-water",
+  "difficulty": "Hard",
+  "approaches": [
+    {
+      "id": "optimal",
+      "name": "Dijkstra on the bottleneck value",
+      "time": "O(n^2 log n)",
+      "space": "O(n^2)"
+    }
+  ],
+  "entry": "swim_in_water",
+  "kind": "function"
+}

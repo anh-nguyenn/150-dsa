@@ -1,0 +1,16 @@
+{
+  "id": "0003-longest-substring-without-repeating-characters",
+  "title": "Longest Substring Without Repeating Characters",
+  "slug": "longest-substring-without-repeating-characters",
+  "difficulty": "Medium",
+  "approaches": [
+    {
+      "id": "optimal",
+      "name": "Sliding window with last positions",
+      "time": "O(n)",
+      "space": "O(k)"
+    }
+  ],
+  "entry": "length_of_longest_substring",
+  "kind": "function"
+}

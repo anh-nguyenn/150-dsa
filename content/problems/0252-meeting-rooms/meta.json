@@ -1,0 +1,16 @@
+{
+  "id": "0252-meeting-rooms",
+  "title": "Meeting Rooms",
+  "slug": "meeting-rooms",
+  "difficulty": "Easy",
+  "approaches": [
+    {
+      "id": "optimal",
+      "name": "Sort by start time",
+      "time": "O(n log n)",
+      "space": "O(1) extra besides sorting"
+    }
+  ],
+  "entry": "can_attend_meetings",
+  "kind": "function"
+}

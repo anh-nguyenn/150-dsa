@@ -1,0 +1,69 @@
+{
+  "compare": "exact",
+  "cases": [
+    {
+      "name": "single digits",
+      "args": [
+        "2",
+        "3"
+      ],
+      "expected": "6"
+    },
+    {
+      "name": "three digits",
+      "args": [
+        "123",
+        "456"
+      ],
+      "expected": "56088"
+    },
+    {
+      "name": "zero factor",
+      "args": [
+        "0",
+        "52"
+      ],
+      "expected": "0"
+    },
+    {
+      "name": "both zero",
+      "args": [
+        "0",
+        "0"
+      ],
+      "expected": "0"
+    },
+    {
+      "name": "repunit square",
+      "args": [
+        "999",
+        "999"
+      ],
+      "expected": "998001"
+    },
+    {
+      "name": "trailing zeros",
+      "args": [
+        "10",
+        "10"
+      ],
+      "expected": "100"
+    },
+    {
+      "name": "large operands",
+      "args": [
+        "123456789",
+        "987654321"
+      ],
+      "expected": "121932631112635269"
+    },
+    {
+      "name": "four by four",
+      "args": [
+        "1234",
+        "5678"
+      ],
+      "expected": "7006652"
+    }
+  ]
+}

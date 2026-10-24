@@ -1,0 +1,16 @@
+{
+  "id": "0261-graph-valid-tree",
+  "title": "Graph Valid Tree",
+  "slug": "graph-valid-tree",
+  "difficulty": "Medium",
+  "approaches": [
+    {
+      "id": "optimal",
+      "name": "Union-find with edge count",
+      "time": "O(n + E * alpha(n))",
+      "space": "O(n)"
+    }
+  ],
+  "entry": "valid_tree",
+  "kind": "function"
+}

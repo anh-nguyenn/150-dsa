@@ -1,0 +1,131 @@
+{
+  "compare": "exact",
+  "cases": [
+    {
+      "name": "start near the end",
+      "args": [
+        [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        [
+          3,
+          4,
+          5,
+          1,
+          2
+        ]
+      ],
+      "expected": 3
+    },
+    {
+      "name": "not enough total fuel",
+      "args": [
+        [
+          2,
+          3,
+          4
+        ],
+        [
+          3,
+          4,
+          3
+        ]
+      ],
+      "expected": -1
+    },
+    {
+      "name": "single station works",
+      "args": [
+        [
+          5
+        ],
+        [
+          4
+        ]
+      ],
+      "expected": 0
+    },
+    {
+      "name": "single station fails",
+      "args": [
+        [
+          2
+        ],
+        [
+          3
+        ]
+      ],
+      "expected": -1
+    },
+    {
+      "name": "zero total surplus",
+      "args": [
+        [
+          3,
+          1,
+          1
+        ],
+        [
+          1,
+          2,
+          2
+        ]
+      ],
+      "expected": 0
+    },
+    {
+      "name": "short by one unit",
+      "args": [
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          1,
+          2
+        ]
+      ],
+      "expected": -1
+    },
+    {
+      "name": "skip a deficit",
+      "args": [
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "expected": 1
+    },
+    {
+      "name": "every station breaks even",
+      "args": [
+        [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        [
+          1,
+          2,
+          3,
+          4,
+          5
+        ]
+      ],
+      "expected": 0
+    }
+  ]
+}

@@ -1,0 +1,90 @@
+{
+  "compare": "exact",
+  "cases": [
+    {
+      "name": "classic mixed array",
+      "args": [
+        [
+          -2,
+          1,
+          -3,
+          4,
+          -1,
+          2,
+          1,
+          -5,
+          4
+        ]
+      ],
+      "expected": 6
+    },
+    {
+      "name": "single positive",
+      "args": [
+        [
+          1
+        ]
+      ],
+      "expected": 1
+    },
+    {
+      "name": "single negative",
+      "args": [
+        [
+          -5
+        ]
+      ],
+      "expected": -5
+    },
+    {
+      "name": "all negative",
+      "args": [
+        [
+          -3,
+          -1,
+          -2
+        ]
+      ],
+      "expected": -1
+    },
+    {
+      "name": "all positive",
+      "args": [
+        [
+          1,
+          2,
+          3,
+          4
+        ]
+      ],
+      "expected": 10
+    },
+    {
+      "name": "restart after large loss",
+      "args": [
+        [
+          8,
+          -10,
+          2,
+          3
+        ]
+      ],
+      "expected": 8
+    },
+    {
+      "name": "long profitable run",
+      "args": [
+        [
+          1,
+          2,
+          -1,
+          3,
+          4,
+          -2,
+          5
+        ]
+      ],
+      "expected": 12
+    }
+  ]
+}

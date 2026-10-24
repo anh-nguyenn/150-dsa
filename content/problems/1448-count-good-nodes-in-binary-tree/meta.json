@@ -1,0 +1,16 @@
+{
+  "id": "1448-count-good-nodes-in-binary-tree",
+  "title": "Count Good Nodes In Binary Tree",
+  "slug": "count-good-nodes-in-binary-tree",
+  "difficulty": "Medium",
+  "approaches": [
+    {
+      "id": "optimal",
+      "name": "Depth-first maximum tracking",
+      "time": "O(n)",
+      "space": "O(h)"
+    }
+  ],
+  "entry": "good_nodes",
+  "kind": "function"
+}

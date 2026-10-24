@@ -1,0 +1,16 @@
+{
+  "id": "0202-happy-number",
+  "title": "Happy Number",
+  "slug": "happy-number",
+  "difficulty": "Easy",
+  "approaches": [
+    {
+      "id": "optimal",
+      "name": "Floyd cycle detection",
+      "time": "O(log n)",
+      "space": "O(1)"
+    }
+  ],
+  "entry": "is_happy",
+  "kind": "function"
+}

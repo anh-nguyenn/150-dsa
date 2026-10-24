@@ -1,0 +1,69 @@
+{
+  "compare": "unordered",
+  "cases": [
+    {
+      "name": "two digits",
+      "args": [
+        "23"
+      ],
+      "expected": [
+        "ad",
+        "ae",
+        "af",
+        "bd",
+        "be",
+        "bf",
+        "cd",
+        "ce",
+        "cf"
+      ]
+    },
+    {
+      "name": "empty digits",
+      "args": [
+        ""
+      ],
+      "expected": []
+    },
+    {
+      "name": "one digit",
+      "args": [
+        "2"
+      ],
+      "expected": [
+        "a",
+        "b",
+        "c"
+      ]
+    },
+    {
+      "name": "four letters",
+      "args": [
+        "9"
+      ],
+      "expected": [
+        "w",
+        "x",
+        "y",
+        "z"
+      ]
+    },
+    {
+      "name": "three and five",
+      "args": [
+        "35"
+      ],
+      "expected": [
+        "dj",
+        "dk",
+        "dl",
+        "ej",
+        "ek",
+        "el",
+        "fj",
+        "fk",
+        "fl"
+      ]
+    }
+  ]
+}

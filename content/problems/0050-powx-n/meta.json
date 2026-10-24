@@ -1,0 +1,16 @@
+{
+  "id": "0050-powx-n",
+  "title": "Pow(x, n)",
+  "slug": "powx-n",
+  "difficulty": "Medium",
+  "approaches": [
+    {
+      "id": "optimal",
+      "name": "Binary exponentiation",
+      "time": "O(log |n|)",
+      "space": "O(1)"
+    }
+  ],
+  "entry": "my_pow",
+  "kind": "function"
+}

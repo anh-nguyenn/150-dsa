@@ -1,0 +1,16 @@
+{
+  "id": "0143-reorder-list",
+  "title": "Reorder List",
+  "slug": "reorder-list",
+  "difficulty": "Medium",
+  "approaches": [
+    {
+      "id": "optimal",
+      "name": "Split, reverse, and interleave",
+      "time": "O(n)",
+      "space": "O(1)"
+    }
+  ],
+  "entry": "reorder_list",
+  "kind": "function"
+}

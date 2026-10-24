@@ -1,0 +1,16 @@
+{
+  "id": "0055-jump-game",
+  "title": "Jump Game",
+  "slug": "jump-game",
+  "difficulty": "Medium",
+  "approaches": [
+    {
+      "id": "optimal",
+      "name": "Farthest reachable index",
+      "time": "O(n)",
+      "space": "O(1)"
+    }
+  ],
+  "entry": "can_jump",
+  "kind": "function"
+}

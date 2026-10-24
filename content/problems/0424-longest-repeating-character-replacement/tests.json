@@ -1,0 +1,69 @@
+{
+  "compare": "exact",
+  "cases": [
+    {
+      "name": "two letters",
+      "args": [
+        "ABAB",
+        2
+      ],
+      "expected": 4
+    },
+    {
+      "name": "mixed run",
+      "args": [
+        "AABABBA",
+        1
+      ],
+      "expected": 4
+    },
+    {
+      "name": "no changes allowed",
+      "args": [
+        "AAAA",
+        0
+      ],
+      "expected": 4
+    },
+    {
+      "name": "all distinct no budget",
+      "args": [
+        "ABCD",
+        0
+      ],
+      "expected": 1
+    },
+    {
+      "name": "all distinct small budget",
+      "args": [
+        "ABCD",
+        2
+      ],
+      "expected": 3
+    },
+    {
+      "name": "long run no budget",
+      "args": [
+        "AAAAAB",
+        0
+      ],
+      "expected": 5
+    },
+    {
+      "name": "minority at both ends",
+      "args": [
+        "BAAAB",
+        2
+      ],
+      "expected": 5
+    },
+    {
+      "name": "single character",
+      "args": [
+        "A",
+        1
+      ],
+      "expected": 1
+    }
+  ]
+}

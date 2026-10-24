@@ -1,0 +1,16 @@
+{
+  "id": "0045-jump-game-ii",
+  "title": "Jump Game II",
+  "slug": "jump-game-ii",
+  "difficulty": "Medium",
+  "approaches": [
+    {
+      "id": "optimal",
+      "name": "Layered greedy expansion",
+      "time": "O(n)",
+      "space": "O(1)"
+    }
+  ],
+  "entry": "jump",
+  "kind": "function"
+}

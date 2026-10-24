@@ -1,0 +1,16 @@
+{
+  "id": "0070-climbing-stairs",
+  "title": "Climbing Stairs",
+  "slug": "climbing-stairs",
+  "difficulty": "Easy",
+  "approaches": [
+    {
+      "id": "optimal",
+      "name": "Rolling two counts",
+      "time": "O(n)",
+      "space": "O(1)"
+    }
+  ],
+  "entry": "climb_stairs",
+  "kind": "function"
+}

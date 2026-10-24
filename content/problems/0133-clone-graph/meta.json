@@ -1,0 +1,16 @@
+{
+  "id": "0133-clone-graph",
+  "title": "Clone Graph",
+  "slug": "clone-graph",
+  "difficulty": "Medium",
+  "approaches": [
+    {
+      "id": "optimal",
+      "name": "Copy with an old-to-new map",
+      "time": "O(V + E)",
+      "space": "O(V)"
+    }
+  ],
+  "entry": "clone_graph",
+  "kind": "function"
+}

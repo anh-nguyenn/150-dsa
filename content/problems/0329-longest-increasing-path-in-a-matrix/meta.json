@@ -1,0 +1,16 @@
+{
+  "id": "0329-longest-increasing-path-in-a-matrix",
+  "title": "Longest Increasing Path In a Matrix",
+  "slug": "longest-increasing-path-in-a-matrix",
+  "difficulty": "Hard",
+  "approaches": [
+    {
+      "id": "optimal",
+      "name": "Memoized DFS on the grid",
+      "time": "O(mn)",
+      "space": "O(mn)"
+    }
+  ],
+  "entry": "longest_increasing_path",
+  "kind": "function"
+}

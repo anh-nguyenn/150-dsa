@@ -1,0 +1,107 @@
+{
+  "compare": "exact",
+  "result_adapter": "linked_list",
+  "cases": [
+    {
+      "name": "second from end",
+      "args": [
+        {
+          "linked_list": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ]
+        },
+        2
+      ],
+      "expected": [
+        1,
+        2,
+        3,
+        5
+      ]
+    },
+    {
+      "name": "single node",
+      "args": [
+        {
+          "linked_list": [
+            1
+          ]
+        },
+        1
+      ],
+      "expected": []
+    },
+    {
+      "name": "remove tail",
+      "args": [
+        {
+          "linked_list": [
+            1,
+            2
+          ]
+        },
+        1
+      ],
+      "expected": [
+        1
+      ]
+    },
+    {
+      "name": "remove head of two",
+      "args": [
+        {
+          "linked_list": [
+            1,
+            2
+          ]
+        },
+        2
+      ],
+      "expected": [
+        2
+      ]
+    },
+    {
+      "name": "remove head of long list",
+      "args": [
+        {
+          "linked_list": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ]
+        },
+        5
+      ],
+      "expected": [
+        2,
+        3,
+        4,
+        5
+      ]
+    },
+    {
+      "name": "duplicates",
+      "args": [
+        {
+          "linked_list": [
+            1,
+            1,
+            1
+          ]
+        },
+        2
+      ],
+      "expected": [
+        1,
+        1
+      ]
+    }
+  ]
+}

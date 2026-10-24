@@ -1,0 +1,16 @@
+{
+  "id": "0235-lowest-common-ancestor-of-a-binary-search-tree",
+  "title": "Lowest Common Ancestor of a Binary Search Tree",
+  "slug": "lowest-common-ancestor-of-a-binary-search-tree",
+  "difficulty": "Medium",
+  "approaches": [
+    {
+      "id": "optimal",
+      "name": "BST split walk",
+      "time": "O(h)",
+      "space": "O(1)"
+    }
+  ],
+  "entry": "lowest_common_ancestor",
+  "kind": "function"
+}

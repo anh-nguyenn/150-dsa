@@ -1,0 +1,47 @@
+{
+  "compare": "exact",
+  "cases": [
+    {
+      "name": "leetcode example",
+      "args": [
+        43261596
+      ],
+      "expected": 964176192
+    },
+    {
+      "name": "near all ones",
+      "args": [
+        4294967293
+      ],
+      "expected": 3221225471
+    },
+    {
+      "name": "zero",
+      "args": [
+        0
+      ],
+      "expected": 0
+    },
+    {
+      "name": "single low bit",
+      "args": [
+        1
+      ],
+      "expected": 2147483648
+    },
+    {
+      "name": "second low bit",
+      "args": [
+        2
+      ],
+      "expected": 1073741824
+    },
+    {
+      "name": "all ones",
+      "args": [
+        4294967295
+      ],
+      "expected": 4294967295
+    }
+  ]
+}

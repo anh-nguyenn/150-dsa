@@ -1,0 +1,61 @@
+{
+  "compare": "exact",
+  "cases": [
+    {
+      "name": "typical anagram",
+      "args": [
+        "anagram",
+        "nagaram"
+      ],
+      "expected": true
+    },
+    {
+      "name": "different letters",
+      "args": [
+        "rat",
+        "car"
+      ],
+      "expected": false
+    },
+    {
+      "name": "single character",
+      "args": [
+        "a",
+        "a"
+      ],
+      "expected": true
+    },
+    {
+      "name": "length mismatch",
+      "args": [
+        "a",
+        "ab"
+      ],
+      "expected": false
+    },
+    {
+      "name": "same letters reordered",
+      "args": [
+        "listen",
+        "silent"
+      ],
+      "expected": true
+    },
+    {
+      "name": "wrong multiplicity",
+      "args": [
+        "aacc",
+        "ccac"
+      ],
+      "expected": false
+    },
+    {
+      "name": "empty strings",
+      "args": [
+        "",
+        ""
+      ],
+      "expected": true
+    }
+  ]
+}

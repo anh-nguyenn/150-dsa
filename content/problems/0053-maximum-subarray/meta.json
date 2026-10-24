@@ -1,0 +1,16 @@
+{
+  "id": "0053-maximum-subarray",
+  "title": "Maximum Subarray",
+  "slug": "maximum-subarray",
+  "difficulty": "Medium",
+  "approaches": [
+    {
+      "id": "optimal",
+      "name": "Kadane's running best",
+      "time": "O(n)",
+      "space": "O(1)"
+    }
+  ],
+  "entry": "max_sub_array",
+  "kind": "function"
+}

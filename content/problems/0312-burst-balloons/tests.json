@@ -1,0 +1,73 @@
+{
+  "compare": "exact",
+  "cases": [
+    {
+      "name": "classic four",
+      "args": [
+        [
+          3,
+          1,
+          5,
+          8
+        ]
+      ],
+      "expected": 167
+    },
+    {
+      "name": "two balloons",
+      "args": [
+        [
+          1,
+          5
+        ]
+      ],
+      "expected": 10
+    },
+    {
+      "name": "single balloon",
+      "args": [
+        [
+          1
+        ]
+      ],
+      "expected": 1
+    },
+    {
+      "name": "empty list",
+      "args": [
+        []
+      ],
+      "expected": 0
+    },
+    {
+      "name": "single large",
+      "args": [
+        [
+          5
+        ]
+      ],
+      "expected": 5
+    },
+    {
+      "name": "pair ordering",
+      "args": [
+        [
+          2,
+          3
+        ]
+      ],
+      "expected": 9
+    },
+    {
+      "name": "three ascending",
+      "args": [
+        [
+          1,
+          2,
+          3
+        ]
+      ],
+      "expected": 12
+    }
+  ]
+}

@@ -1,0 +1,85 @@
+{
+  "compare": "exact",
+  "cases": [
+    {
+      "name": "classic sequence",
+      "args": [
+        [
+          2,
+          7,
+          4,
+          1,
+          8,
+          1
+        ]
+      ],
+      "expected": 1
+    },
+    {
+      "name": "single stone",
+      "args": [
+        [
+          1
+        ]
+      ],
+      "expected": 1
+    },
+    {
+      "name": "equal pair",
+      "args": [
+        [
+          2,
+          2
+        ]
+      ],
+      "expected": 0
+    },
+    {
+      "name": "three stones",
+      "args": [
+        [
+          3,
+          7,
+          2
+        ]
+      ],
+      "expected": 2
+    },
+    {
+      "name": "equal odd count",
+      "args": [
+        [
+          10,
+          10,
+          10
+        ]
+      ],
+      "expected": 10
+    },
+    {
+      "name": "pairs cancel",
+      "args": [
+        [
+          4,
+          3,
+          4,
+          3,
+          2
+        ]
+      ],
+      "expected": 2
+    },
+    {
+      "name": "everything cancels",
+      "args": [
+        [
+          9,
+          3,
+          2,
+          10
+        ]
+      ],
+      "expected": 0
+    }
+  ]
+}

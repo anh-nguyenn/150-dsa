@@ -1,0 +1,16 @@
+{
+  "id": "0005-longest-palindromic-substring",
+  "title": "Longest Palindromic Substring",
+  "slug": "longest-palindromic-substring",
+  "difficulty": "Medium",
+  "approaches": [
+    {
+      "id": "optimal",
+      "name": "Expand around each center",
+      "time": "O(n^2)",
+      "space": "O(1)"
+    }
+  ],
+  "entry": "longest_palindrome",
+  "kind": "function"
+}

@@ -1,0 +1,16 @@
+{
+  "id": "0213-house-robber-ii",
+  "title": "House Robber II",
+  "slug": "house-robber-ii",
+  "difficulty": "Medium",
+  "approaches": [
+    {
+      "id": "optimal",
+      "name": "Two linear passes",
+      "time": "O(n)",
+      "space": "O(1)"
+    }
+  ],
+  "entry": "rob",
+  "kind": "function"
+}

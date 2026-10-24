@@ -1,0 +1,16 @@
+{
+  "id": "0621-task-scheduler",
+  "title": "Task Scheduler",
+  "slug": "task-scheduler",
+  "difficulty": "Medium",
+  "approaches": [
+    {
+      "id": "optimal",
+      "name": "Frequency-based greedy formula",
+      "time": "O(m)",
+      "space": "O(1)"
+    }
+  ],
+  "entry": "least_interval",
+  "kind": "function"
+}

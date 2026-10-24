@@ -1,0 +1,16 @@
+{
+  "id": "0001-two-sum",
+  "title": "Two Sum",
+  "slug": "two-sum",
+  "difficulty": "Easy",
+  "approaches": [
+    {
+      "id": "optimal",
+      "name": "One-pass hash map",
+      "time": "O(n)",
+      "space": "O(n)"
+    }
+  ],
+  "entry": "two_sum",
+  "kind": "function"
+}

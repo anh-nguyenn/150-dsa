@@ -1,0 +1,16 @@
+{
+  "id": "1046-last-stone-weight",
+  "title": "Last Stone Weight",
+  "slug": "last-stone-weight",
+  "difficulty": "Easy",
+  "approaches": [
+    {
+      "id": "optimal",
+      "name": "Max-heap simulation",
+      "time": "O(n log n)",
+      "space": "O(n)"
+    }
+  ],
+  "entry": "last_stone_weight",
+  "kind": "function"
+}

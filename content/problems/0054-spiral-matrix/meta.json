@@ -1,0 +1,16 @@
+{
+  "id": "0054-spiral-matrix",
+  "title": "Spiral Matrix",
+  "slug": "spiral-matrix",
+  "difficulty": "Medium",
+  "approaches": [
+    {
+      "id": "optimal",
+      "name": "Shrinking boundary walk",
+      "time": "O(m * n)",
+      "space": "O(1)"
+    }
+  ],
+  "entry": "spiral_order",
+  "kind": "function"
+}

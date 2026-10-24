@@ -1,0 +1,16 @@
+{
+  "id": "0743-network-delay-time",
+  "title": "Network Delay Time",
+  "slug": "network-delay-time",
+  "difficulty": "Medium",
+  "approaches": [
+    {
+      "id": "optimal",
+      "name": "Dijkstra's shortest paths",
+      "time": "O(E log V)",
+      "space": "O(V + E)"
+    }
+  ],
+  "entry": "network_delay_time",
+  "kind": "function"
+}

@@ -1,0 +1,117 @@
+{
+  "compare": "unordered",
+  "cases": [
+    {
+      "name": "typical mix",
+      "args": [
+        [
+          -1,
+          0,
+          1,
+          2,
+          -1,
+          -4
+        ]
+      ],
+      "expected": [
+        [
+          -1,
+          -1,
+          2
+        ],
+        [
+          -1,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "name": "no triplet",
+      "args": [
+        [
+          0,
+          1,
+          1
+        ]
+      ],
+      "expected": []
+    },
+    {
+      "name": "three zeros",
+      "args": [
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "expected": [
+        [
+          0,
+          0,
+          0
+        ]
+      ]
+    },
+    {
+      "name": "minimum length",
+      "args": [
+        [
+          -1,
+          0,
+          1
+        ]
+      ],
+      "expected": [
+        [
+          -1,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "name": "repeated partner values",
+      "args": [
+        [
+          -2,
+          0,
+          1,
+          1,
+          2
+        ]
+      ],
+      "expected": [
+        [
+          -2,
+          0,
+          2
+        ],
+        [
+          -2,
+          1,
+          1
+        ]
+      ]
+    },
+    {
+      "name": "duplicate zero with pair",
+      "args": [
+        [
+          -1,
+          0,
+          1,
+          0
+        ]
+      ],
+      "expected": [
+        [
+          -1,
+          0,
+          1
+        ]
+      ]
+    }
+  ]
+}

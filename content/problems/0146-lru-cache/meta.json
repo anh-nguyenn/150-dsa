@@ -1,0 +1,16 @@
+{
+  "id": "0146-lru-cache",
+  "title": "LRU Cache",
+  "slug": "lru-cache",
+  "difficulty": "Medium",
+  "approaches": [
+    {
+      "id": "optimal",
+      "name": "Hash map plus doubly linked list",
+      "time": "O(1) per operation",
+      "space": "O(capacity)"
+    }
+  ],
+  "entry": "LRUCache",
+  "kind": "class"
+}

@@ -1,0 +1,61 @@
+{
+  "compare": "exact",
+  "cases": [
+    {
+      "name": "single character",
+      "args": [
+        "a"
+      ],
+      "expected": "a"
+    },
+    {
+      "name": "double letter",
+      "args": [
+        "bb"
+      ],
+      "expected": "bb"
+    },
+    {
+      "name": "middle pair",
+      "args": [
+        "cbbd"
+      ],
+      "expected": "bb"
+    },
+    {
+      "name": "short tail",
+      "args": [
+        "abb"
+      ],
+      "expected": "bb"
+    },
+    {
+      "name": "whole word",
+      "args": [
+        "racecar"
+      ],
+      "expected": "racecar"
+    },
+    {
+      "name": "long center",
+      "args": [
+        "forgeeksskeegfor"
+      ],
+      "expected": "geeksskeeg"
+    },
+    {
+      "name": "seven letters",
+      "args": [
+        "abacaba"
+      ],
+      "expected": "abacaba"
+    },
+    {
+      "name": "nested",
+      "args": [
+        "abcba"
+      ],
+      "expected": "abcba"
+    }
+  ]
+}

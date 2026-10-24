@@ -1,0 +1,116 @@
+{
+  "compare": "exact",
+  "cases": [
+    {
+      "name": "long meeting overlaps",
+      "args": [
+        [
+          [
+            0,
+            30
+          ],
+          [
+            5,
+            10
+          ],
+          [
+            15,
+            20
+          ]
+        ]
+      ],
+      "expected": false
+    },
+    {
+      "name": "separate meetings",
+      "args": [
+        [
+          [
+            7,
+            10
+          ],
+          [
+            2,
+            4
+          ]
+        ]
+      ],
+      "expected": true
+    },
+    {
+      "name": "touching meetings",
+      "args": [
+        [
+          [
+            1,
+            5
+          ],
+          [
+            5,
+            10
+          ]
+        ]
+      ],
+      "expected": true
+    },
+    {
+      "name": "empty schedule",
+      "args": [
+        []
+      ],
+      "expected": true
+    },
+    {
+      "name": "single meeting",
+      "args": [
+        [
+          [
+            1,
+            5
+          ]
+        ]
+      ],
+      "expected": true
+    },
+    {
+      "name": "three chained",
+      "args": [
+        [
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            3,
+            4
+          ]
+        ]
+      ],
+      "expected": true
+    },
+    {
+      "name": "unsorted conflict",
+      "args": [
+        [
+          [
+            0,
+            5
+          ],
+          [
+            5,
+            10
+          ],
+          [
+            3,
+            7
+          ]
+        ]
+      ],
+      "expected": false
+    }
+  ]
+}

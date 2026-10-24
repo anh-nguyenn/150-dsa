@@ -1,0 +1,101 @@
+{
+  "compare": "exact",
+  "cases": [
+    {
+      "name": "classic four piles",
+      "args": [
+        [
+          3,
+          6,
+          7,
+          11
+        ],
+        8
+      ],
+      "expected": 4
+    },
+    {
+      "name": "tight deadline",
+      "args": [
+        [
+          30,
+          11,
+          23,
+          4,
+          20
+        ],
+        5
+      ],
+      "expected": 30
+    },
+    {
+      "name": "one extra hour",
+      "args": [
+        [
+          30,
+          11,
+          23,
+          4,
+          20
+        ],
+        6
+      ],
+      "expected": 23
+    },
+    {
+      "name": "single banana single hour",
+      "args": [
+        [
+          1
+        ],
+        1
+      ],
+      "expected": 1
+    },
+    {
+      "name": "four equal small piles",
+      "args": [
+        [
+          1,
+          1,
+          1,
+          1
+        ],
+        4
+      ],
+      "expected": 1
+    },
+    {
+      "name": "one pile many hours",
+      "args": [
+        [
+          312884470
+        ],
+        312884470
+      ],
+      "expected": 1
+    },
+    {
+      "name": "huge pile one hour",
+      "args": [
+        [
+          1000000000
+        ],
+        1
+      ],
+      "expected": 1000000000
+    },
+    {
+      "name": "three piles three hours",
+      "args": [
+        [
+          5,
+          5,
+          5
+        ],
+        3
+      ],
+      "expected": 5
+    }
+  ]
+}

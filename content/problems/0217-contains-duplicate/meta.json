@@ -1,0 +1,16 @@
+{
+  "id": "0217-contains-duplicate",
+  "title": "Contains Duplicate",
+  "slug": "contains-duplicate",
+  "difficulty": "Easy",
+  "approaches": [
+    {
+      "id": "optimal",
+      "name": "Hash set while scanning",
+      "time": "O(n)",
+      "space": "O(n)"
+    }
+  ],
+  "entry": "contains_duplicate",
+  "kind": "function"
+}

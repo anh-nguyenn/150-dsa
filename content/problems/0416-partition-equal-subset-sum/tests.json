@@ -1,0 +1,99 @@
+{
+  "compare": "exact",
+  "cases": [
+    {
+      "name": "classic",
+      "args": [
+        [
+          1,
+          5,
+          11,
+          5
+        ]
+      ],
+      "expected": true
+    },
+    {
+      "name": "odd total",
+      "args": [
+        [
+          1,
+          2,
+          3,
+          5
+        ]
+      ],
+      "expected": false
+    },
+    {
+      "name": "missing half",
+      "args": [
+        [
+          1,
+          2,
+          5
+        ]
+      ],
+      "expected": false
+    },
+    {
+      "name": "two equal",
+      "args": [
+        [
+          1,
+          1
+        ]
+      ],
+      "expected": true
+    },
+    {
+      "name": "single element",
+      "args": [
+        [
+          1
+        ]
+      ],
+      "expected": false
+    },
+    {
+      "name": "four twos",
+      "args": [
+        [
+          2,
+          2,
+          2,
+          2
+        ]
+      ],
+      "expected": true
+    },
+    {
+      "name": "seven values",
+      "args": [
+        [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ]
+      ],
+      "expected": true
+    },
+    {
+      "name": "mixed target",
+      "args": [
+        [
+          3,
+          3,
+          3,
+          4,
+          5
+        ]
+      ],
+      "expected": true
+    }
+  ]
+}

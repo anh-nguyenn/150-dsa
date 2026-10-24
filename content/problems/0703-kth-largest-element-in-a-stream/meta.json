@@ -1,0 +1,16 @@
+{
+  "id": "0703-kth-largest-element-in-a-stream",
+  "title": "Kth Largest Element In a Stream",
+  "slug": "kth-largest-element-in-a-stream",
+  "difficulty": "Easy",
+  "approaches": [
+    {
+      "id": "optimal",
+      "name": "Bounded min-heap",
+      "time": "O(n log k) setup, O(log k) per add",
+      "space": "O(k)"
+    }
+  ],
+  "entry": "KthLargest",
+  "kind": "class"
+}

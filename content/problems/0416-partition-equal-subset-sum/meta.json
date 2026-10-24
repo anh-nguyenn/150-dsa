@@ -1,0 +1,16 @@
+{
+  "id": "0416-partition-equal-subset-sum",
+  "title": "Partition Equal Subset Sum",
+  "slug": "partition-equal-subset-sum",
+  "difficulty": "Medium",
+  "approaches": [
+    {
+      "id": "optimal",
+      "name": "0/1 subset-sum DP",
+      "time": "O(n * target)",
+      "space": "O(target)"
+    }
+  ],
+  "entry": "can_partition",
+  "kind": "function"
+}

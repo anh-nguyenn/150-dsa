@@ -1,0 +1,16 @@
+{
+  "id": "0287-find-the-duplicate-number",
+  "title": "Find The Duplicate Number",
+  "slug": "find-the-duplicate-number",
+  "difficulty": "Medium",
+  "approaches": [
+    {
+      "id": "optimal",
+      "name": "Cycle detection on the index graph",
+      "time": "O(n)",
+      "space": "O(1)"
+    }
+  ],
+  "entry": "find_duplicate",
+  "kind": "function"
+}

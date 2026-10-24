@@ -1,0 +1,108 @@
+{
+  "compare": "exact",
+  "cases": [
+    {
+      "name": "simple increment",
+      "args": [
+        [
+          1,
+          2,
+          3
+        ]
+      ],
+      "expected": [
+        1,
+        2,
+        4
+      ]
+    },
+    {
+      "name": "no carry",
+      "args": [
+        [
+          4,
+          3,
+          2,
+          1
+        ]
+      ],
+      "expected": [
+        4,
+        3,
+        2,
+        2
+      ]
+    },
+    {
+      "name": "single nine",
+      "args": [
+        [
+          9
+        ]
+      ],
+      "expected": [
+        1,
+        0
+      ]
+    },
+    {
+      "name": "all nines",
+      "args": [
+        [
+          9,
+          9,
+          9
+        ]
+      ],
+      "expected": [
+        1,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "zero",
+      "args": [
+        [
+          0
+        ]
+      ],
+      "expected": [
+        1
+      ]
+    },
+    {
+      "name": "trailing nines",
+      "args": [
+        [
+          1,
+          9,
+          9
+        ]
+      ],
+      "expected": [
+        2,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "mixed nines",
+      "args": [
+        [
+          8,
+          9,
+          9,
+          9
+        ]
+      ],
+      "expected": [
+        9,
+        0,
+        0,
+        0
+      ]
+    }
+  ]
+}

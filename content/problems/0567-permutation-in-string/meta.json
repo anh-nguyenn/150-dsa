@@ -1,0 +1,16 @@
+{
+  "id": "0567-permutation-in-string",
+  "title": "Permutation In String",
+  "slug": "permutation-in-string",
+  "difficulty": "Medium",
+  "approaches": [
+    {
+      "id": "optimal",
+      "name": "Fixed-size sliding window of counts",
+      "time": "O(n + m)",
+      "space": "O(1)"
+    }
+  ],
+  "entry": "check_inclusion",
+  "kind": "function"
+}

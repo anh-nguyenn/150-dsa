@@ -1,0 +1,16 @@
+{
+  "id": "0763-partition-labels",
+  "title": "Partition Labels",
+  "slug": "partition-labels",
+  "difficulty": "Medium",
+  "approaches": [
+    {
+      "id": "optimal",
+      "name": "Last-occurrence boundary sweep",
+      "time": "O(n)",
+      "space": "O(1)"
+    }
+  ],
+  "entry": "partition_labels",
+  "kind": "function"
+}

@@ -1,0 +1,85 @@
+{
+  "compare": "exact",
+  "cases": [
+    {
+      "name": "typical repeat",
+      "args": [
+        [
+          1,
+          2,
+          3,
+          1
+        ]
+      ],
+      "expected": true
+    },
+    {
+      "name": "all unique",
+      "args": [
+        [
+          1,
+          2,
+          3,
+          4
+        ]
+      ],
+      "expected": false
+    },
+    {
+      "name": "many repeats",
+      "args": [
+        [
+          1,
+          1,
+          1,
+          3,
+          3,
+          4,
+          3,
+          2,
+          4,
+          2
+        ]
+      ],
+      "expected": true
+    },
+    {
+      "name": "negative repeat",
+      "args": [
+        [
+          -3,
+          0,
+          1,
+          -3
+        ]
+      ],
+      "expected": true
+    },
+    {
+      "name": "single value",
+      "args": [
+        [
+          7
+        ]
+      ],
+      "expected": false
+    },
+    {
+      "name": "pair repeated",
+      "args": [
+        [
+          0,
+          0
+        ]
+      ],
+      "expected": true
+    },
+    {
+      "name": "empty list",
+      "args": [
+        []
+      ],
+      "expected": false
+    }
+  ]
+}

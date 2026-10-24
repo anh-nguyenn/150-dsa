@@ -1,0 +1,16 @@
+{
+  "id": "0994-rotting-oranges",
+  "title": "Rotting Oranges",
+  "slug": "rotting-oranges",
+  "difficulty": "Medium",
+  "approaches": [
+    {
+      "id": "optimal",
+      "name": "Multi-source BFS by layers",
+      "time": "O(m * n)",
+      "space": "O(m * n)"
+    }
+  ],
+  "entry": "oranges_rotting",
+  "kind": "function"
+}

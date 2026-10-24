@@ -1,0 +1,16 @@
+{
+  "id": "0046-permutations",
+  "title": "Permutations",
+  "slug": "permutations",
+  "difficulty": "Medium",
+  "approaches": [
+    {
+      "id": "optimal",
+      "name": "Used-array backtracking",
+      "time": "O(n * n!)",
+      "space": "O(n)"
+    }
+  ],
+  "entry": "permute",
+  "kind": "function"
+}

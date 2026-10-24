@@ -1,0 +1,16 @@
+{
+  "id": "0097-interleaving-string",
+  "title": "Interleaving String",
+  "slug": "interleaving-string",
+  "difficulty": "Medium",
+  "approaches": [
+    {
+      "id": "optimal",
+      "name": "Prefix grid with a rolling row",
+      "time": "O(len(s1) * len(s2))",
+      "space": "O(len(s2))"
+    }
+  ],
+  "entry": "is_interleave",
+  "kind": "function"
+}

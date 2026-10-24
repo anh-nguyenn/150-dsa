@@ -1,0 +1,107 @@
+{
+  "compare": "unordered",
+  "cases": [
+    {
+      "name": "three numbers",
+      "args": [
+        [
+          1,
+          2,
+          3
+        ]
+      ],
+      "expected": [
+        [
+          1,
+          2,
+          3
+        ],
+        [
+          1,
+          3,
+          2
+        ],
+        [
+          2,
+          1,
+          3
+        ],
+        [
+          2,
+          3,
+          1
+        ],
+        [
+          3,
+          1,
+          2
+        ],
+        [
+          3,
+          2,
+          1
+        ]
+      ]
+    },
+    {
+      "name": "two numbers",
+      "args": [
+        [
+          0,
+          1
+        ]
+      ],
+      "expected": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          0
+        ]
+      ]
+    },
+    {
+      "name": "single number",
+      "args": [
+        [
+          1
+        ]
+      ],
+      "expected": [
+        [
+          1
+        ]
+      ]
+    },
+    {
+      "name": "empty input",
+      "args": [
+        []
+      ],
+      "expected": [
+        []
+      ]
+    },
+    {
+      "name": "negative and positive",
+      "args": [
+        [
+          -1,
+          2
+        ]
+      ],
+      "expected": [
+        [
+          -1,
+          2
+        ],
+        [
+          2,
+          -1
+        ]
+      ]
+    }
+  ]
+}

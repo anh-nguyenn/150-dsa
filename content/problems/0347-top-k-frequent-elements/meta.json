@@ -1,0 +1,16 @@
+{
+  "id": "0347-top-k-frequent-elements",
+  "title": "Top K Frequent Elements",
+  "slug": "top-k-frequent-elements",
+  "difficulty": "Medium",
+  "approaches": [
+    {
+      "id": "optimal",
+      "name": "Frequency buckets",
+      "time": "O(n)",
+      "space": "O(n)"
+    }
+  ],
+  "entry": "top_k_frequent",
+  "kind": "function"
+}

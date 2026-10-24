@@ -1,0 +1,81 @@
+{
+  "compare": "exact",
+  "cases": [
+    {
+      "name": "middle duplicate",
+      "args": [
+        [
+          1,
+          3,
+          4,
+          2,
+          2
+        ]
+      ],
+      "expected": 2
+    },
+    {
+      "name": "first value duplicate",
+      "args": [
+        [
+          3,
+          1,
+          3,
+          4,
+          2
+        ]
+      ],
+      "expected": 3
+    },
+    {
+      "name": "smallest array",
+      "args": [
+        [
+          1,
+          1
+        ]
+      ],
+      "expected": 1
+    },
+    {
+      "name": "many repeats",
+      "args": [
+        [
+          2,
+          2,
+          2,
+          2,
+          2
+        ]
+      ],
+      "expected": 2
+    },
+    {
+      "name": "duplicate at end",
+      "args": [
+        [
+          1,
+          2,
+          3,
+          4,
+          5,
+          5
+        ]
+      ],
+      "expected": 5
+    },
+    {
+      "name": "duplicate near start",
+      "args": [
+        [
+          1,
+          2,
+          2,
+          3,
+          4
+        ]
+      ],
+      "expected": 2
+    }
+  ]
+}

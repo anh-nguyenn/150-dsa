@@ -1,0 +1,16 @@
+{
+  "id": "0208-implement-trie-prefix-tree",
+  "title": "Implement Trie Prefix Tree",
+  "slug": "implement-trie-prefix-tree",
+  "difficulty": "Medium",
+  "approaches": [
+    {
+      "id": "optimal",
+      "name": "Dictionary-based trie",
+      "time": "O(L) per operation",
+      "space": "O(total characters)"
+    }
+  ],
+  "entry": "Trie",
+  "kind": "class"
+}

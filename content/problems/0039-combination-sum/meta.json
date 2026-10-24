@@ -1,0 +1,16 @@
+{
+  "id": "0039-combination-sum",
+  "title": "Combination Sum",
+  "slug": "combination-sum",
+  "difficulty": "Medium",
+  "approaches": [
+    {
+      "id": "optimal",
+      "name": "Backtracking with reuse",
+      "time": "O(N^(T/M + 1))",
+      "space": "O(T/M)"
+    }
+  ],
+  "entry": "combination_sum",
+  "kind": "function"
+}

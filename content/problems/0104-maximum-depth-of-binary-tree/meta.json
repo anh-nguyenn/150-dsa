@@ -1,0 +1,16 @@
+{
+  "id": "0104-maximum-depth-of-binary-tree",
+  "title": "Maximum Depth of Binary Tree",
+  "slug": "maximum-depth-of-binary-tree",
+  "difficulty": "Easy",
+  "approaches": [
+    {
+      "id": "optimal",
+      "name": "Recursive height",
+      "time": "O(n)",
+      "space": "O(n)"
+    }
+  ],
+  "entry": "max_depth",
+  "kind": "function"
+}

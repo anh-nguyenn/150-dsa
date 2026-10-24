@@ -1,0 +1,16 @@
+{
+  "id": "0033-search-in-rotated-sorted-array",
+  "title": "Search In Rotated Sorted Array",
+  "slug": "search-in-rotated-sorted-array",
+  "difficulty": "Medium",
+  "approaches": [
+    {
+      "id": "optimal",
+      "name": "Binary search with a sorted half",
+      "time": "O(log n)",
+      "space": "O(1)"
+    }
+  ],
+  "entry": "search",
+  "kind": "function"
+}

@@ -1,0 +1,16 @@
+{
+  "id": "0238-product-of-array-except-self",
+  "title": "Product of Array Except Self",
+  "slug": "product-of-array-except-self",
+  "difficulty": "Medium",
+  "approaches": [
+    {
+      "id": "optimal",
+      "name": "Prefix and suffix products",
+      "time": "O(n)",
+      "space": "O(1)"
+    }
+  ],
+  "entry": "product_except_self",
+  "kind": "function"
+}

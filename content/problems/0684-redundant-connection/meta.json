@@ -1,0 +1,16 @@
+{
+  "id": "0684-redundant-connection",
+  "title": "Redundant Connection",
+  "slug": "redundant-connection",
+  "difficulty": "Medium",
+  "approaches": [
+    {
+      "id": "optimal",
+      "name": "Union-find cycle detection",
+      "time": "O(n * alpha(n))",
+      "space": "O(n)"
+    }
+  ],
+  "entry": "find_redundant_connection",
+  "kind": "function"
+}

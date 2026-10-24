@@ -1,0 +1,96 @@
+{
+  "compare": "exact",
+  "cases": [
+    {
+      "name": "can reach the end",
+      "args": [
+        [
+          2,
+          3,
+          1,
+          1,
+          4
+        ]
+      ],
+      "expected": true
+    },
+    {
+      "name": "blocked by zero",
+      "args": [
+        [
+          3,
+          2,
+          1,
+          0,
+          4
+        ]
+      ],
+      "expected": false
+    },
+    {
+      "name": "single position",
+      "args": [
+        [
+          0
+        ]
+      ],
+      "expected": true
+    },
+    {
+      "name": "stuck in the middle",
+      "args": [
+        [
+          1,
+          0,
+          1
+        ]
+      ],
+      "expected": false
+    },
+    {
+      "name": "jump over the zero",
+      "args": [
+        [
+          2,
+          0,
+          0
+        ]
+      ],
+      "expected": true
+    },
+    {
+      "name": "leading zero",
+      "args": [
+        [
+          0,
+          1
+        ]
+      ],
+      "expected": false
+    },
+    {
+      "name": "large first jump",
+      "args": [
+        [
+          5,
+          0,
+          0,
+          0,
+          0
+        ]
+      ],
+      "expected": true
+    },
+    {
+      "name": "steady single steps",
+      "args": [
+        [
+          1,
+          1,
+          1
+        ]
+      ],
+      "expected": true
+    }
+  ]
+}

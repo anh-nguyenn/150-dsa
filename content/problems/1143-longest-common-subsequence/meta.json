@@ -1,0 +1,16 @@
+{
+  "id": "1143-longest-common-subsequence",
+  "title": "Longest Common Subsequence",
+  "slug": "longest-common-subsequence",
+  "difficulty": "Medium",
+  "approaches": [
+    {
+      "id": "optimal",
+      "name": "Two-row prefix dynamic programming",
+      "time": "O(m * n)",
+      "space": "O(min(m, n))"
+    }
+  ],
+  "entry": "longest_common_subsequence",
+  "kind": "function"
+}

@@ -1,0 +1,100 @@
+{
+  "compare": "exact",
+  "result_adapter": "linked_list",
+  "cases": [
+    {
+      "name": "five nodes",
+      "args": [
+        {
+          "linked_list": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ]
+        }
+      ],
+      "expected": [
+        5,
+        4,
+        3,
+        2,
+        1
+      ]
+    },
+    {
+      "name": "two nodes",
+      "args": [
+        {
+          "linked_list": [
+            1,
+            2
+          ]
+        }
+      ],
+      "expected": [
+        2,
+        1
+      ]
+    },
+    {
+      "name": "single node",
+      "args": [
+        {
+          "linked_list": [
+            7
+          ]
+        }
+      ],
+      "expected": [
+        7
+      ]
+    },
+    {
+      "name": "empty list",
+      "args": [
+        {
+          "linked_list": []
+        }
+      ],
+      "expected": []
+    },
+    {
+      "name": "duplicate values",
+      "args": [
+        {
+          "linked_list": [
+            1,
+            1,
+            2,
+            1
+          ]
+        }
+      ],
+      "expected": [
+        1,
+        2,
+        1,
+        1
+      ]
+    },
+    {
+      "name": "negative values",
+      "args": [
+        {
+          "linked_list": [
+            -1,
+            0,
+            3
+          ]
+        }
+      ],
+      "expected": [
+        3,
+        0,
+        -1
+      ]
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "id": "0981-time-based-key-value-store",
+  "title": "Time Based Key Value Store",
+  "slug": "time-based-key-value-store",
+  "difficulty": "Medium",
+  "approaches": [
+    {
+      "id": "optimal",
+      "name": "Per-key timestamp history with binary search",
+      "time": "O(log n) per get, O(1) per set",
+      "space": "O(n)"
+    }
+  ],
+  "entry": "TimeMap",
+  "kind": "class"
+}

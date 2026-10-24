@@ -1,0 +1,16 @@
+{
+  "id": "0253-meeting-rooms-ii",
+  "title": "Meeting Rooms II",
+  "slug": "meeting-rooms-ii",
+  "difficulty": "Medium",
+  "approaches": [
+    {
+      "id": "optimal",
+      "name": "Min-heap of end times",
+      "time": "O(n log n)",
+      "space": "O(n)"
+    }
+  ],
+  "entry": "min_meeting_rooms",
+  "kind": "function"
+}

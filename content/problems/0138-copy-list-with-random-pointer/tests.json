@@ -1,0 +1,190 @@
+{
+  "compare": "exact",
+  "result_adapter": "random_list",
+  "cases": [
+    {
+      "name": "typical",
+      "args": [
+        {
+          "random_list": [
+            [
+              7,
+              null
+            ],
+            [
+              13,
+              0
+            ],
+            [
+              11,
+              4
+            ],
+            [
+              10,
+              2
+            ],
+            [
+              1,
+              0
+            ]
+          ]
+        }
+      ],
+      "expected": [
+        [
+          7,
+          null
+        ],
+        [
+          13,
+          0
+        ],
+        [
+          11,
+          4
+        ],
+        [
+          10,
+          2
+        ],
+        [
+          1,
+          0
+        ]
+      ]
+    },
+    {
+      "name": "empty list",
+      "args": [
+        {
+          "random_list": []
+        }
+      ],
+      "expected": []
+    },
+    {
+      "name": "single node",
+      "args": [
+        {
+          "random_list": [
+            [
+              1,
+              null
+            ]
+          ]
+        }
+      ],
+      "expected": [
+        [
+          1,
+          null
+        ]
+      ]
+    },
+    {
+      "name": "all random null",
+      "args": [
+        {
+          "random_list": [
+            [
+              1,
+              null
+            ],
+            [
+              2,
+              null
+            ],
+            [
+              3,
+              null
+            ]
+          ]
+        }
+      ],
+      "expected": [
+        [
+          1,
+          null
+        ],
+        [
+          2,
+          null
+        ],
+        [
+          3,
+          null
+        ]
+      ]
+    },
+    {
+      "name": "self random",
+      "args": [
+        {
+          "random_list": [
+            [
+              5,
+              0
+            ],
+            [
+              6,
+              1
+            ]
+          ]
+        }
+      ],
+      "expected": [
+        [
+          5,
+          0
+        ],
+        [
+          6,
+          1
+        ]
+      ]
+    },
+    {
+      "name": "all point to last",
+      "args": [
+        {
+          "random_list": [
+            [
+              10,
+              3
+            ],
+            [
+              20,
+              3
+            ],
+            [
+              30,
+              3
+            ],
+            [
+              40,
+              3
+            ]
+          ]
+        }
+      ],
+      "expected": [
+        [
+          10,
+          3
+        ],
+        [
+          20,
+          3
+        ],
+        [
+          30,
+          3
+        ],
+        [
+          40,
+          3
+        ]
+      ]
+    }
+  ]
+}

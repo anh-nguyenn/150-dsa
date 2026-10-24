@@ -1,0 +1,16 @@
+{
+  "id": "0543-diameter-of-binary-tree",
+  "title": "Diameter of Binary Tree",
+  "slug": "diameter-of-binary-tree",
+  "difficulty": "Easy",
+  "approaches": [
+    {
+      "id": "optimal",
+      "name": "Post-order heights",
+      "time": "O(n)",
+      "space": "O(n)"
+    }
+  ],
+  "entry": "diameter_of_binary_tree",
+  "kind": "function"
+}

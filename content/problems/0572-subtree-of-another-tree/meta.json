@@ -1,0 +1,16 @@
+{
+  "id": "0572-subtree-of-another-tree",
+  "title": "Subtree of Another Tree",
+  "slug": "subtree-of-another-tree",
+  "difficulty": "Easy",
+  "approaches": [
+    {
+      "id": "optimal",
+      "name": "Compare at every node",
+      "time": "O(m * n)",
+      "space": "O(n)"
+    }
+  ],
+  "entry": "is_subtree",
+  "kind": "function"
+}

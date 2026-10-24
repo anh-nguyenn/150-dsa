@@ -1,0 +1,16 @@
+{
+  "id": "0124-binary-tree-maximum-path-sum",
+  "title": "Binary Tree Maximum Path Sum",
+  "slug": "binary-tree-maximum-path-sum",
+  "difficulty": "Hard",
+  "approaches": [
+    {
+      "id": "optimal",
+      "name": "Post-order gain with global best",
+      "time": "O(n)",
+      "space": "O(h)"
+    }
+  ],
+  "entry": "max_path_sum",
+  "kind": "function"
+}

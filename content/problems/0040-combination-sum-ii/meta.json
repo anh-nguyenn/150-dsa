@@ -1,0 +1,16 @@
+{
+  "id": "0040-combination-sum-ii",
+  "title": "Combination Sum II",
+  "slug": "combination-sum-ii",
+  "difficulty": "Medium",
+  "approaches": [
+    {
+      "id": "optimal",
+      "name": "Backtracking with duplicate skipping",
+      "time": "O(2^n)",
+      "space": "O(n)"
+    }
+  ],
+  "entry": "combination_sum2",
+  "kind": "function"
+}

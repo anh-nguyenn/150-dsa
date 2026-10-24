@@ -1,0 +1,16 @@
+{
+  "id": "0091-decode-ways",
+  "title": "Decode Ways",
+  "slug": "decode-ways",
+  "difficulty": "Medium",
+  "approaches": [
+    {
+      "id": "optimal",
+      "name": "Rolling dynamic programming",
+      "time": "O(n)",
+      "space": "O(1)"
+    }
+  ],
+  "entry": "num_decodings",
+  "kind": "function"
+}

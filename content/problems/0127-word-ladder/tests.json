@@ -1,0 +1,107 @@
+{
+  "compare": "exact",
+  "cases": [
+    {
+      "name": "classic ladder",
+      "args": [
+        "hit",
+        "cog",
+        [
+          "hot",
+          "dot",
+          "dog",
+          "lot",
+          "log",
+          "cog"
+        ]
+      ],
+      "expected": 5
+    },
+    {
+      "name": "no route",
+      "args": [
+        "hit",
+        "cog",
+        [
+          "hot",
+          "dot",
+          "dog",
+          "lot",
+          "log"
+        ]
+      ],
+      "expected": 0
+    },
+    {
+      "name": "direct neighbor",
+      "args": [
+        "hot",
+        "dot",
+        [
+          "dot"
+        ]
+      ],
+      "expected": 2
+    },
+    {
+      "name": "short chain",
+      "args": [
+        "cat",
+        "dog",
+        [
+          "cat",
+          "cot",
+          "cog",
+          "dog"
+        ]
+      ],
+      "expected": 4
+    },
+    {
+      "name": "forced letter changes",
+      "args": [
+        "abc",
+        "xyz",
+        [
+          "abc",
+          "xbc",
+          "xyc",
+          "xyz"
+        ]
+      ],
+      "expected": 4
+    },
+    {
+      "name": "two-letter chain",
+      "args": [
+        "aa",
+        "cc",
+        [
+          "ab",
+          "bb",
+          "bc",
+          "cc"
+        ]
+      ],
+      "expected": 5
+    },
+    {
+      "name": "detour around dead end",
+      "args": [
+        "red",
+        "tax",
+        [
+          "ted",
+          "tex",
+          "red",
+          "tax",
+          "tad",
+          "den",
+          "rex",
+          "pee"
+        ]
+      ],
+      "expected": 4
+    }
+  ]
+}

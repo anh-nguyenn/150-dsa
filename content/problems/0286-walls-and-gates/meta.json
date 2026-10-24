@@ -1,0 +1,16 @@
+{
+  "id": "0286-walls-and-gates",
+  "title": "Walls And Gates",
+  "slug": "walls-and-gates",
+  "difficulty": "Medium",
+  "approaches": [
+    {
+      "id": "optimal",
+      "name": "Multi-source BFS",
+      "time": "O(m * n)",
+      "space": "O(m * n)"
+    }
+  ],
+  "entry": "walls_and_gates",
+  "kind": "function"
+}

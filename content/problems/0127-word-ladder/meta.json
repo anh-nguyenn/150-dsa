@@ -1,0 +1,16 @@
+{
+  "id": "0127-word-ladder",
+  "title": "Word Ladder",
+  "slug": "word-ladder",
+  "difficulty": "Hard",
+  "approaches": [
+    {
+      "id": "optimal",
+      "name": "Breadth-first search over wildcard patterns",
+      "time": "O(N * L^2)",
+      "space": "O(N * L^2)"
+    }
+  ],
+  "entry": "ladder_length",
+  "kind": "function"
+}

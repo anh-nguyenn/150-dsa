@@ -1,0 +1,3 @@
+def find_order(num_courses: int, prerequisites: list[list[int]]) -> list[int]:
+    # Return a course order that respects every prerequisite.
+    pass

@@ -1,0 +1,16 @@
+{
+  "id": "0011-container-with-most-water",
+  "title": "Container With Most Water",
+  "slug": "container-with-most-water",
+  "difficulty": "Medium",
+  "approaches": [
+    {
+      "id": "optimal",
+      "name": "Two pointers moving the shorter wall",
+      "time": "O(n)",
+      "space": "O(1)"
+    }
+  ],
+  "entry": "max_area",
+  "kind": "function"
+}

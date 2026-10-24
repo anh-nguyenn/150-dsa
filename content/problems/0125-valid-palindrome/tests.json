@@ -1,0 +1,54 @@
+{
+  "compare": "exact",
+  "cases": [
+    {
+      "name": "classic phrase",
+      "args": [
+        "A man, a plan, a canal: Panama"
+      ],
+      "expected": true
+    },
+    {
+      "name": "not a palindrome",
+      "args": [
+        "race a car"
+      ],
+      "expected": false
+    },
+    {
+      "name": "only spaces",
+      "args": [
+        " "
+      ],
+      "expected": true
+    },
+    {
+      "name": "digit versus letter",
+      "args": [
+        "0P"
+      ],
+      "expected": false
+    },
+    {
+      "name": "underscore ignored",
+      "args": [
+        "ab_a"
+      ],
+      "expected": true
+    },
+    {
+      "name": "single character",
+      "args": [
+        "Z"
+      ],
+      "expected": true
+    },
+    {
+      "name": "punctuation only",
+      "args": [
+        ".,;!"
+      ],
+      "expected": true
+    }
+  ]
+}

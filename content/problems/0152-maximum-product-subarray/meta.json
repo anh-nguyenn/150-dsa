@@ -1,0 +1,16 @@
+{
+  "id": "0152-maximum-product-subarray",
+  "title": "Maximum Product Subarray",
+  "slug": "maximum-product-subarray",
+  "difficulty": "Medium",
+  "approaches": [
+    {
+      "id": "optimal",
+      "name": "Track min and max products",
+      "time": "O(n)",
+      "space": "O(1)"
+    }
+  ],
+  "entry": "max_product",
+  "kind": "function"
+}

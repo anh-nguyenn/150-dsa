@@ -1,0 +1,16 @@
+{
+  "id": "0239-sliding-window-maximum",
+  "title": "Sliding Window Maximum",
+  "slug": "sliding-window-maximum",
+  "difficulty": "Hard",
+  "approaches": [
+    {
+      "id": "optimal",
+      "name": "Monotonic deque of indices",
+      "time": "O(n)",
+      "space": "O(k)"
+    }
+  ],
+  "entry": "max_sliding_window",
+  "kind": "function"
+}

@@ -1,0 +1,16 @@
+{
+  "id": "0128-longest-consecutive-sequence",
+  "title": "Longest Consecutive Sequence",
+  "slug": "longest-consecutive-sequence",
+  "difficulty": "Medium",
+  "approaches": [
+    {
+      "id": "optimal",
+      "name": "Hash set of run starts",
+      "time": "O(n)",
+      "space": "O(n)"
+    }
+  ],
+  "entry": "longest_consecutive",
+  "kind": "function"
+}

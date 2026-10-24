@@ -1,0 +1,180 @@
+{
+  "compare": "exact",
+  "cases": [
+    {
+      "name": "four queries",
+      "args": [
+        [
+          [
+            1,
+            4
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            3,
+            6
+          ],
+          [
+            4,
+            4
+          ]
+        ],
+        [
+          2,
+          3,
+          4,
+          5
+        ]
+      ],
+      "expected": [
+        3,
+        3,
+        1,
+        4
+      ]
+    },
+    {
+      "name": "gap and endpoints",
+      "args": [
+        [
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            5
+          ],
+          [
+            1,
+            8
+          ],
+          [
+            20,
+            25
+          ]
+        ],
+        [
+          2,
+          19,
+          5,
+          22
+        ]
+      ],
+      "expected": [
+        2,
+        -1,
+        4,
+        6
+      ]
+    },
+    {
+      "name": "single point interval",
+      "args": [
+        [
+          [
+            1,
+            1
+          ]
+        ],
+        [
+          1
+        ]
+      ],
+      "expected": [
+        1
+      ]
+    },
+    {
+      "name": "no coverage",
+      "args": [
+        [
+          [
+            5,
+            6
+          ]
+        ],
+        [
+          1,
+          10
+        ]
+      ],
+      "expected": [
+        -1,
+        -1
+      ]
+    },
+    {
+      "name": "nested intervals",
+      "args": [
+        [
+          [
+            1,
+            5
+          ],
+          [
+            2,
+            3
+          ]
+        ],
+        [
+          2,
+          4
+        ]
+      ],
+      "expected": [
+        2,
+        5
+      ]
+    },
+    {
+      "name": "endpoints included",
+      "args": [
+        [
+          [
+            1,
+            4
+          ]
+        ],
+        [
+          1,
+          4,
+          0,
+          5
+        ]
+      ],
+      "expected": [
+        4,
+        4,
+        -1,
+        -1
+      ]
+    },
+    {
+      "name": "duplicate queries",
+      "args": [
+        [
+          [
+            1,
+            4
+          ],
+          [
+            2,
+            5
+          ]
+        ],
+        [
+          3,
+          3
+        ]
+      ],
+      "expected": [
+        4,
+        4
+      ]
+    }
+  ]
+}

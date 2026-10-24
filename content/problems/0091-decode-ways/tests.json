@@ -1,0 +1,61 @@
+{
+  "compare": "exact",
+  "cases": [
+    {
+      "name": "two digits",
+      "args": [
+        "12"
+      ],
+      "expected": 2
+    },
+    {
+      "name": "mixed pairs",
+      "args": [
+        "226"
+      ],
+      "expected": 3
+    },
+    {
+      "name": "leading zero",
+      "args": [
+        "06"
+      ],
+      "expected": 0
+    },
+    {
+      "name": "ten only",
+      "args": [
+        "10"
+      ],
+      "expected": 1
+    },
+    {
+      "name": "single zero",
+      "args": [
+        "0"
+      ],
+      "expected": 0
+    },
+    {
+      "name": "long mixed",
+      "args": [
+        "11106"
+      ],
+      "expected": 2
+    },
+    {
+      "name": "pair over limit",
+      "args": [
+        "27"
+      ],
+      "expected": 1
+    },
+    {
+      "name": "zero inside",
+      "args": [
+        "101"
+      ],
+      "expected": 1
+    }
+  ]
+}

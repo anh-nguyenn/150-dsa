@@ -1,0 +1,16 @@
+{
+  "id": "0131-palindrome-partitioning",
+  "title": "Palindrome Partitioning",
+  "slug": "palindrome-partitioning",
+  "difficulty": "Medium",
+  "approaches": [
+    {
+      "id": "optimal",
+      "name": "Backtracking on palindrome cuts",
+      "time": "O(n * 2^n)",
+      "space": "O(n)"
+    }
+  ],
+  "entry": "partition",
+  "kind": "function"
+}

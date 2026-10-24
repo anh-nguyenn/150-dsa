@@ -1,0 +1,16 @@
+{
+  "id": "0139-word-break",
+  "title": "Word Break",
+  "slug": "word-break",
+  "difficulty": "Medium",
+  "approaches": [
+    {
+      "id": "optimal",
+      "name": "Prefix reachability DP",
+      "time": "O(n^2)",
+      "space": "O(n)"
+    }
+  ],
+  "entry": "word_break",
+  "kind": "function"
+}

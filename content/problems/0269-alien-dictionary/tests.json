@@ -1,0 +1,81 @@
+{
+  "compare": "exact",
+  "cases": [
+    {
+      "name": "classic chain",
+      "args": [
+        [
+          "wrt",
+          "wrf",
+          "er",
+          "ett",
+          "rftt"
+        ]
+      ],
+      "expected": "wertf"
+    },
+    {
+      "name": "two letters",
+      "args": [
+        [
+          "z",
+          "x"
+        ]
+      ],
+      "expected": "zx"
+    },
+    {
+      "name": "cycle",
+      "args": [
+        [
+          "z",
+          "x",
+          "z"
+        ]
+      ],
+      "expected": ""
+    },
+    {
+      "name": "prefix conflict",
+      "args": [
+        [
+          "abc",
+          "ab"
+        ]
+      ],
+      "expected": ""
+    },
+    {
+      "name": "single letter",
+      "args": [
+        [
+          "a"
+        ]
+      ],
+      "expected": "a"
+    },
+    {
+      "name": "three in order",
+      "args": [
+        [
+          "a",
+          "b",
+          "c"
+        ]
+      ],
+      "expected": "abc"
+    },
+    {
+      "name": "branching constraints",
+      "args": [
+        [
+          "ba",
+          "bc",
+          "ac",
+          "ca"
+        ]
+      ],
+      "expected": "bac"
+    }
+  ]
+}

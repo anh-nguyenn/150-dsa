@@ -1,0 +1,16 @@
+{
+  "id": "0025-reverse-nodes-in-k-group",
+  "title": "Reverse Nodes In K Group",
+  "slug": "reverse-nodes-in-k-group",
+  "difficulty": "Hard",
+  "approaches": [
+    {
+      "id": "optimal",
+      "name": "Iterative group reversal",
+      "time": "O(n)",
+      "space": "O(1)"
+    }
+  ],
+  "entry": "reverse_k_group",
+  "kind": "function"
+}

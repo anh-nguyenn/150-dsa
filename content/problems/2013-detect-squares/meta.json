@@ -1,0 +1,16 @@
+{
+  "id": "2013-detect-squares",
+  "title": "Detect Squares",
+  "slug": "detect-squares",
+  "difficulty": "Medium",
+  "approaches": [
+    {
+      "id": "optimal",
+      "name": "Point counts with diagonal scan",
+      "time": "O(k) per count",
+      "space": "O(k)"
+    }
+  ],
+  "entry": "DetectSquares",
+  "kind": "class"
+}

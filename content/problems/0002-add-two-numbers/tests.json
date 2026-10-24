@@ -1,0 +1,148 @@
+{
+  "compare": "exact",
+  "result_adapter": "linked_list",
+  "cases": [
+    {
+      "name": "typical",
+      "args": [
+        {
+          "linked_list": [
+            2,
+            4,
+            3
+          ]
+        },
+        {
+          "linked_list": [
+            5,
+            6,
+            4
+          ]
+        }
+      ],
+      "expected": [
+        7,
+        0,
+        8
+      ]
+    },
+    {
+      "name": "both zero",
+      "args": [
+        {
+          "linked_list": [
+            0
+          ]
+        },
+        {
+          "linked_list": [
+            0
+          ]
+        }
+      ],
+      "expected": [
+        0
+      ]
+    },
+    {
+      "name": "long carry chain",
+      "args": [
+        {
+          "linked_list": [
+            9,
+            9,
+            9,
+            9,
+            9,
+            9,
+            9
+          ]
+        },
+        {
+          "linked_list": [
+            9,
+            9,
+            9,
+            9
+          ]
+        }
+      ],
+      "expected": [
+        8,
+        9,
+        9,
+        9,
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "name": "one digit plus zero",
+      "args": [
+        {
+          "linked_list": [
+            1,
+            8
+          ]
+        },
+        {
+          "linked_list": [
+            0
+          ]
+        }
+      ],
+      "expected": [
+        1,
+        8
+      ]
+    },
+    {
+      "name": "single carry",
+      "args": [
+        {
+          "linked_list": [
+            5
+          ]
+        },
+        {
+          "linked_list": [
+            5
+          ]
+        }
+      ],
+      "expected": [
+        0,
+        1
+      ]
+    },
+    {
+      "name": "different lengths",
+      "args": [
+        {
+          "linked_list": [
+            2,
+            4,
+            9
+          ]
+        },
+        {
+          "linked_list": [
+            5,
+            6,
+            4,
+            9
+          ]
+        }
+      ],
+      "expected": [
+        7,
+        0,
+        4,
+        0,
+        1
+      ]
+    }
+  ]
+}

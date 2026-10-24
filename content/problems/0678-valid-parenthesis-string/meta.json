@@ -1,0 +1,16 @@
+{
+  "id": "0678-valid-parenthesis-string",
+  "title": "Valid Parenthesis String",
+  "slug": "valid-parenthesis-string",
+  "difficulty": "Medium",
+  "approaches": [
+    {
+      "id": "optimal",
+      "name": "Open-count range",
+      "time": "O(n)",
+      "space": "O(1)"
+    }
+  ],
+  "entry": "check_valid_string",
+  "kind": "function"
+}

@@ -1,0 +1,129 @@
+{
+  "compare": "exact",
+  "cases": [
+    {
+      "name": "five points",
+      "args": [
+        [
+          [
+            0,
+            0
+          ],
+          [
+            2,
+            2
+          ],
+          [
+            3,
+            10
+          ],
+          [
+            5,
+            2
+          ],
+          [
+            7,
+            0
+          ]
+        ]
+      ],
+      "expected": 20
+    },
+    {
+      "name": "three points",
+      "args": [
+        [
+          [
+            3,
+            12
+          ],
+          [
+            -2,
+            5
+          ],
+          [
+            -4,
+            1
+          ]
+        ]
+      ],
+      "expected": 18
+    },
+    {
+      "name": "single point",
+      "args": [
+        [
+          [
+            0,
+            0
+          ]
+        ]
+      ],
+      "expected": 0
+    },
+    {
+      "name": "two points",
+      "args": [
+        [
+          [
+            0,
+            0
+          ],
+          [
+            1,
+            1
+          ]
+        ]
+      ],
+      "expected": 2
+    },
+    {
+      "name": "collinear",
+      "args": [
+        [
+          [
+            0,
+            0
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            3,
+            0
+          ]
+        ]
+      ],
+      "expected": 3
+    },
+    {
+      "name": "unit square",
+      "args": [
+        [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            1,
+            1
+          ]
+        ]
+      ],
+      "expected": 3
+    }
+  ]
+}

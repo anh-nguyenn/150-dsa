@@ -1,0 +1,16 @@
+{
+  "id": "0853-car-fleet",
+  "title": "Car Fleet",
+  "slug": "car-fleet",
+  "difficulty": "Medium",
+  "approaches": [
+    {
+      "id": "optimal",
+      "name": "Sort by position and scan arrival times",
+      "time": "O(n log n)",
+      "space": "O(n)"
+    }
+  ],
+  "entry": "car_fleet",
+  "kind": "function"
+}

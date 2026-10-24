@@ -1,0 +1,88 @@
+{
+  "compare": "exact",
+  "cases": [
+    {
+      "name": "three steps",
+      "args": [
+        [
+          10,
+          15,
+          20
+        ]
+      ],
+      "expected": 15
+    },
+    {
+      "name": "long staircase",
+      "args": [
+        [
+          1,
+          100,
+          1,
+          1,
+          1,
+          100,
+          1,
+          1,
+          100,
+          1
+        ]
+      ],
+      "expected": 6
+    },
+    {
+      "name": "two free steps",
+      "args": [
+        [
+          0,
+          0
+        ]
+      ],
+      "expected": 0
+    },
+    {
+      "name": "two paid steps",
+      "args": [
+        [
+          1,
+          2
+        ]
+      ],
+      "expected": 1
+    },
+    {
+      "name": "single step",
+      "args": [
+        [
+          5
+        ]
+      ],
+      "expected": 0
+    },
+    {
+      "name": "four steps",
+      "args": [
+        [
+          10,
+          15,
+          20,
+          25
+        ]
+      ],
+      "expected": 30
+    },
+    {
+      "name": "all free",
+      "args": [
+        [
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      ],
+      "expected": 0
+    }
+  ]
+}

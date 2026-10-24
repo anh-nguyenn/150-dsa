@@ -1,0 +1,16 @@
+{
+  "id": "0056-merge-intervals",
+  "title": "Merge Intervals",
+  "slug": "merge-intervals",
+  "difficulty": "Medium",
+  "approaches": [
+    {
+      "id": "optimal",
+      "name": "Sort and sweep",
+      "time": "O(n log n)",
+      "space": "O(n)"
+    }
+  ],
+  "entry": "merge",
+  "kind": "function"
+}

@@ -1,0 +1,16 @@
+{
+  "id": "0200-number-of-islands",
+  "title": "Number of Islands",
+  "slug": "number-of-islands",
+  "difficulty": "Medium",
+  "approaches": [
+    {
+      "id": "optimal",
+      "name": "Flood fill",
+      "time": "O(m * n)",
+      "space": "O(m * n)"
+    }
+  ],
+  "entry": "num_islands",
+  "kind": "function"
+}

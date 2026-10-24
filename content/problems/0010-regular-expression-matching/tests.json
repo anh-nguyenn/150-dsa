@@ -1,0 +1,93 @@
+{
+  "compare": "exact",
+  "cases": [
+    {
+      "name": "missing star",
+      "args": [
+        "aa",
+        "a"
+      ],
+      "expected": false
+    },
+    {
+      "name": "star repeats",
+      "args": [
+        "aa",
+        "a*"
+      ],
+      "expected": true
+    },
+    {
+      "name": "dot star all",
+      "args": [
+        "ab",
+        ".*"
+      ],
+      "expected": true
+    },
+    {
+      "name": "leading zero occurrences",
+      "args": [
+        "aab",
+        "c*a*b"
+      ],
+      "expected": true
+    },
+    {
+      "name": "mississippi",
+      "args": [
+        "mississippi",
+        "mis*is*p*."
+      ],
+      "expected": false
+    },
+    {
+      "name": "both empty",
+      "args": [
+        "",
+        ""
+      ],
+      "expected": true
+    },
+    {
+      "name": "empty matches stars",
+      "args": [
+        "",
+        "a*"
+      ],
+      "expected": true
+    },
+    {
+      "name": "input without pattern",
+      "args": [
+        "a",
+        ""
+      ],
+      "expected": false
+    },
+    {
+      "name": "dot needs a character",
+      "args": [
+        "",
+        "."
+      ],
+      "expected": false
+    },
+    {
+      "name": "star then literal",
+      "args": [
+        "ab",
+        ".*c"
+      ],
+      "expected": false
+    },
+    {
+      "name": "star before final literal",
+      "args": [
+        "aaa",
+        "a*a"
+      ],
+      "expected": true
+    }
+  ]
+}

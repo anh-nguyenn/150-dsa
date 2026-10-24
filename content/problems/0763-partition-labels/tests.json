@@ -1,0 +1,80 @@
+{
+  "compare": "exact",
+  "cases": [
+    {
+      "name": "classic string",
+      "args": [
+        "ababcbacadefegdehijhklij"
+      ],
+      "expected": [
+        9,
+        7,
+        8
+      ]
+    },
+    {
+      "name": "one letter closes the whole string",
+      "args": [
+        "eccbbbbdec"
+      ],
+      "expected": [
+        10
+      ]
+    },
+    {
+      "name": "all distinct letters",
+      "args": [
+        "abc"
+      ],
+      "expected": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "name": "single character",
+      "args": [
+        "a"
+      ],
+      "expected": [
+        1
+      ]
+    },
+    {
+      "name": "all identical letters",
+      "args": [
+        "aaaa"
+      ],
+      "expected": [
+        4
+      ]
+    },
+    {
+      "name": "letter spans two neighbors",
+      "args": [
+        "abac"
+      ],
+      "expected": [
+        3,
+        1
+      ]
+    },
+    {
+      "name": "simple repeated block",
+      "args": [
+        "abab"
+      ],
+      "expected": [
+        4
+      ]
+    },
+    {
+      "name": "empty string",
+      "args": [
+        ""
+      ],
+      "expected": []
+    }
+  ]
+}

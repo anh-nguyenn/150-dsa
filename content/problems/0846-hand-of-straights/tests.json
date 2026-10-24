@@ -1,0 +1,138 @@
+{
+  "compare": "exact",
+  "cases": [
+    {
+      "name": "three valid runs",
+      "args": [
+        [
+          1,
+          2,
+          3,
+          6,
+          2,
+          3,
+          4,
+          7,
+          8
+        ],
+        3
+      ],
+      "expected": true
+    },
+    {
+      "name": "length not divisible",
+      "args": [
+        [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        4
+      ],
+      "expected": false
+    },
+    {
+      "name": "two clean runs",
+      "args": [
+        [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        3
+      ],
+      "expected": true
+    },
+    {
+      "name": "single card group of one",
+      "args": [
+        [
+          1
+        ],
+        1
+      ],
+      "expected": true
+    },
+    {
+      "name": "single card group of two",
+      "args": [
+        [
+          1
+        ],
+        2
+      ],
+      "expected": false
+    },
+    {
+      "name": "gap in values",
+      "args": [
+        [
+          8,
+          10,
+          12
+        ],
+        3
+      ],
+      "expected": false
+    },
+    {
+      "name": "duplicate runs",
+      "args": [
+        [
+          1,
+          1,
+          2,
+          2,
+          3,
+          3
+        ],
+        3
+      ],
+      "expected": true
+    },
+    {
+      "name": "shared boundary",
+      "args": [
+        [
+          1,
+          2,
+          3,
+          3,
+          4,
+          5
+        ],
+        3
+      ],
+      "expected": true
+    },
+    {
+      "name": "missing neighbor",
+      "args": [
+        [
+          1,
+          3,
+          4,
+          5
+        ],
+        2
+      ],
+      "expected": false
+    },
+    {
+      "name": "two-card run",
+      "args": [
+        [
+          2,
+          1
+        ],
+        2
+      ],
+      "expected": true
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "id": "0079-word-search",
+  "title": "Word Search",
+  "slug": "word-search",
+  "difficulty": "Medium",
+  "approaches": [
+    {
+      "id": "optimal",
+      "name": "Depth-first search with in-place marking",
+      "time": "O(m * n * 4^L)",
+      "space": "O(L)"
+    }
+  ],
+  "entry": "exist",
+  "kind": "function"
+}

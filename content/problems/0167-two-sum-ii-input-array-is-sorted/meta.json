@@ -1,0 +1,16 @@
+{
+  "id": "0167-two-sum-ii-input-array-is-sorted",
+  "title": "Two Sum II Input Array Is Sorted",
+  "slug": "two-sum-ii-input-array-is-sorted",
+  "difficulty": "Medium",
+  "approaches": [
+    {
+      "id": "optimal",
+      "name": "Two pointers on a sorted array",
+      "time": "O(n)",
+      "space": "O(1)"
+    }
+  ],
+  "entry": "two_sum",
+  "kind": "function"
+}

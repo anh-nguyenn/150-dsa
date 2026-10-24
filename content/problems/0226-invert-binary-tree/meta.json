@@ -1,0 +1,16 @@
+{
+  "id": "0226-invert-binary-tree",
+  "title": "Invert Binary Tree",
+  "slug": "invert-binary-tree",
+  "difficulty": "Easy",
+  "approaches": [
+    {
+      "id": "optimal",
+      "name": "Recursive mirror",
+      "time": "O(n)",
+      "space": "O(n)"
+    }
+  ],
+  "entry": "invert_tree",
+  "kind": "function"
+}

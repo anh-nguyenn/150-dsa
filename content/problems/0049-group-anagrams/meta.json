@@ -1,0 +1,16 @@
+{
+  "id": "0049-group-anagrams",
+  "title": "Group Anagrams",
+  "slug": "group-anagrams",
+  "difficulty": "Medium",
+  "approaches": [
+    {
+      "id": "optimal",
+      "name": "Sorted word as a key",
+      "time": "O(n * k log k)",
+      "space": "O(n * k)"
+    }
+  ],
+  "entry": "group_anagrams",
+  "kind": "function"
+}

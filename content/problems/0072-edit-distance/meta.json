@@ -1,0 +1,16 @@
+{
+  "id": "0072-edit-distance",
+  "title": "Edit Distance",
+  "slug": "edit-distance",
+  "difficulty": "Medium",
+  "approaches": [
+    {
+      "id": "optimal",
+      "name": "Rolling-row edit distance",
+      "time": "O(mn)",
+      "space": "O(min(m, n))"
+    }
+  ],
+  "entry": "min_distance",
+  "kind": "function"
+}

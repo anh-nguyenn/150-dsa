@@ -1,0 +1,16 @@
+{
+  "id": "0312-burst-balloons",
+  "title": "Burst Balloons",
+  "slug": "burst-balloons",
+  "difficulty": "Hard",
+  "approaches": [
+    {
+      "id": "optimal",
+      "name": "Interval DP over burst order",
+      "time": "O(n^3)",
+      "space": "O(n^2)"
+    }
+  ],
+  "entry": "max_coins",
+  "kind": "function"
+}

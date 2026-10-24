@@ -1,0 +1,16 @@
+{
+  "id": "0141-linked-list-cycle",
+  "title": "Linked List Cycle",
+  "slug": "linked-list-cycle",
+  "difficulty": "Easy",
+  "approaches": [
+    {
+      "id": "optimal",
+      "name": "Floyd's tortoise and hare",
+      "time": "O(n)",
+      "space": "O(1)"
+    }
+  ],
+  "entry": "has_cycle",
+  "kind": "function"
+}

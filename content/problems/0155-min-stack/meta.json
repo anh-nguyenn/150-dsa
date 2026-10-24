@@ -1,0 +1,16 @@
+{
+  "id": "0155-min-stack",
+  "title": "Min Stack",
+  "slug": "min-stack",
+  "difficulty": "Medium",
+  "approaches": [
+    {
+      "id": "optimal",
+      "name": "Parallel minimum stack",
+      "time": "O(1)",
+      "space": "O(n)"
+    }
+  ],
+  "entry": "MinStack",
+  "kind": "class"
+}

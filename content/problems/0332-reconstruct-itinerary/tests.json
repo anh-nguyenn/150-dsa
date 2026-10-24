@@ -1,0 +1,165 @@
+{
+  "compare": "exact",
+  "cases": [
+    {
+      "name": "linear chain",
+      "args": [
+        [
+          [
+            "MUC",
+            "LHR"
+          ],
+          [
+            "JFK",
+            "MUC"
+          ],
+          [
+            "SFO",
+            "SJC"
+          ],
+          [
+            "LHR",
+            "SFO"
+          ]
+        ]
+      ],
+      "expected": [
+        "JFK",
+        "MUC",
+        "LHR",
+        "SFO",
+        "SJC"
+      ]
+    },
+    {
+      "name": "mixed cycle",
+      "args": [
+        [
+          [
+            "JFK",
+            "SFO"
+          ],
+          [
+            "JFK",
+            "ATL"
+          ],
+          [
+            "SFO",
+            "ATL"
+          ],
+          [
+            "ATL",
+            "JFK"
+          ],
+          [
+            "ATL",
+            "SFO"
+          ]
+        ]
+      ],
+      "expected": [
+        "JFK",
+        "ATL",
+        "JFK",
+        "SFO",
+        "ATL",
+        "SFO"
+      ]
+    },
+    {
+      "name": "single ticket",
+      "args": [
+        [
+          [
+            "JFK",
+            "KUL"
+          ]
+        ]
+      ],
+      "expected": [
+        "JFK",
+        "KUL"
+      ]
+    },
+    {
+      "name": "return to start",
+      "args": [
+        [
+          [
+            "JFK",
+            "A"
+          ],
+          [
+            "A",
+            "JFK"
+          ],
+          [
+            "JFK",
+            "B"
+          ]
+        ]
+      ],
+      "expected": [
+        "JFK",
+        "A",
+        "JFK",
+        "B"
+      ]
+    },
+    {
+      "name": "smallest detour first",
+      "args": [
+        [
+          [
+            "JFK",
+            "A"
+          ],
+          [
+            "A",
+            "B"
+          ],
+          [
+            "B",
+            "A"
+          ],
+          [
+            "A",
+            "C"
+          ]
+        ]
+      ],
+      "expected": [
+        "JFK",
+        "A",
+        "B",
+        "A",
+        "C"
+      ]
+    },
+    {
+      "name": "interleaved loop",
+      "args": [
+        [
+          [
+            "JFK",
+            "KUL"
+          ],
+          [
+            "JFK",
+            "NRT"
+          ],
+          [
+            "NRT",
+            "JFK"
+          ]
+        ]
+      ],
+      "expected": [
+        "JFK",
+        "NRT",
+        "JFK",
+        "KUL"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "id": "0136-single-number",
+  "title": "Single Number",
+  "slug": "single-number",
+  "difficulty": "Easy",
+  "approaches": [
+    {
+      "id": "optimal",
+      "name": "XOR cancellation",
+      "time": "O(n)",
+      "space": "O(1)"
+    }
+  ],
+  "entry": "single_number",
+  "kind": "function"
+}

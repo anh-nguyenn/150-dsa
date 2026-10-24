@@ -1,0 +1,16 @@
+{
+  "id": "0322-coin-change",
+  "title": "Coin Change",
+  "slug": "coin-change",
+  "difficulty": "Medium",
+  "approaches": [
+    {
+      "id": "optimal",
+      "name": "Bottom-up coin DP",
+      "time": "O(amount * number of coins)",
+      "space": "O(amount)"
+    }
+  ],
+  "entry": "coin_change",
+  "kind": "function"
+}

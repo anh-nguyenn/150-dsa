@@ -1,0 +1,281 @@
+{
+  "version": 1,
+  "topics": [
+    {
+      "id": "arrays-hashing",
+      "name": "Arrays & Hashing",
+      "tagline": "Map values to positions. Trade a little memory for a single pass.",
+      "problems": [
+        "0217-contains-duplicate",
+        "0242-valid-anagram",
+        "0001-two-sum",
+        "0049-group-anagrams",
+        "0347-top-k-frequent-elements",
+        "0271-encode-and-decode-strings",
+        "0238-product-of-array-except-self",
+        "0036-valid-sudoku",
+        "0128-longest-consecutive-sequence"
+      ]
+    },
+    {
+      "id": "two-pointers",
+      "name": "Two Pointers",
+      "tagline": "Move two indices with a reason, and the nested loop disappears.",
+      "problems": [
+        "0125-valid-palindrome",
+        "0167-two-sum-ii-input-array-is-sorted",
+        "0015-3sum",
+        "0011-container-with-most-water",
+        "0042-trapping-rain-water"
+      ]
+    },
+    {
+      "id": "sliding-window",
+      "name": "Sliding Window",
+      "tagline": "Maintain a running range and adjust only its edges.",
+      "problems": [
+        "0121-best-time-to-buy-and-sell-stock",
+        "0003-longest-substring-without-repeating-characters",
+        "0424-longest-repeating-character-replacement",
+        "0567-permutation-in-string",
+        "0076-minimum-window-substring",
+        "0239-sliding-window-maximum"
+      ]
+    },
+    {
+      "id": "stack",
+      "name": "Stack",
+      "tagline": "Last-in-first-out state for nesting, monotonic runs, and undo.",
+      "problems": [
+        "0020-valid-parentheses",
+        "0155-min-stack",
+        "0150-evaluate-reverse-polish-notation",
+        "0739-daily-temperatures",
+        "0853-car-fleet",
+        "0084-largest-rectangle-in-histogram"
+      ]
+    },
+    {
+      "id": "binary-search",
+      "name": "Binary Search",
+      "tagline": "Halve a sorted or monotone search space on purpose.",
+      "problems": [
+        "0704-binary-search",
+        "0074-search-a-2d-matrix",
+        "0875-koko-eating-bananas",
+        "0153-find-minimum-in-rotated-sorted-array",
+        "0033-search-in-rotated-sorted-array",
+        "0981-time-based-key-value-store",
+        "0004-median-of-two-sorted-arrays"
+      ]
+    },
+    {
+      "id": "linked-list",
+      "name": "Linked List",
+      "tagline": "Pointer surgery when random access is not available.",
+      "problems": [
+        "0206-reverse-linked-list",
+        "0021-merge-two-sorted-lists",
+        "0141-linked-list-cycle",
+        "0143-reorder-list",
+        "0019-remove-nth-node-from-end-of-list",
+        "0138-copy-list-with-random-pointer",
+        "0002-add-two-numbers",
+        "0287-find-the-duplicate-number",
+        "0146-lru-cache",
+        "0023-merge-k-sorted-lists",
+        "0025-reverse-nodes-in-k-group"
+      ]
+    },
+    {
+      "id": "trees",
+      "name": "Trees",
+      "tagline": "Recursive structure: visit, compare, and return a summary.",
+      "problems": [
+        "0226-invert-binary-tree",
+        "0104-maximum-depth-of-binary-tree",
+        "0543-diameter-of-binary-tree",
+        "0110-balanced-binary-tree",
+        "0100-same-tree",
+        "0572-subtree-of-another-tree",
+        "0235-lowest-common-ancestor-of-a-binary-search-tree",
+        "0102-binary-tree-level-order-traversal",
+        "0199-binary-tree-right-side-view",
+        "1448-count-good-nodes-in-binary-tree",
+        "0098-validate-binary-search-tree",
+        "0230-kth-smallest-element-in-a-bst",
+        "0105-construct-binary-tree-from-preorder-and-inorder-traversal",
+        "0124-binary-tree-maximum-path-sum",
+        "0297-serialize-and-deserialize-binary-tree"
+      ]
+    },
+    {
+      "id": "tries",
+      "name": "Tries",
+      "tagline": "Share prefixes so word lookup costs the length of the word.",
+      "problems": [
+        "0208-implement-trie-prefix-tree",
+        "0211-design-add-and-search-words-data-structure",
+        "0212-word-search-ii"
+      ]
+    },
+    {
+      "id": "heap-priority-queue",
+      "name": "Heap / Priority Queue",
+      "tagline": "Keep the best candidates cheaply available.",
+      "problems": [
+        "0703-kth-largest-element-in-a-stream",
+        "1046-last-stone-weight",
+        "0973-k-closest-points-to-origin",
+        "0215-kth-largest-element-in-an-array",
+        "0621-task-scheduler",
+        "0355-design-twitter",
+        "0295-find-median-from-data-stream"
+      ]
+    },
+    {
+      "id": "backtracking",
+      "name": "Backtracking",
+      "tagline": "Explore a choice, undo it, and prune what cannot work.",
+      "problems": [
+        "0078-subsets",
+        "0039-combination-sum",
+        "0040-combination-sum-ii",
+        "0046-permutations",
+        "0090-subsets-ii",
+        "0022-generate-parentheses",
+        "0079-word-search",
+        "0131-palindrome-partitioning",
+        "0017-letter-combinations-of-a-phone-number",
+        "0051-n-queens"
+      ]
+    },
+    {
+      "id": "graphs",
+      "name": "Graphs",
+      "tagline": "Traverse grids and adjacency structures without revisiting.",
+      "problems": [
+        "0200-number-of-islands",
+        "0695-max-area-of-island",
+        "0133-clone-graph",
+        "0286-walls-and-gates",
+        "0994-rotting-oranges",
+        "0417-pacific-atlantic-water-flow",
+        "0130-surrounded-regions",
+        "0207-course-schedule",
+        "0210-course-schedule-ii",
+        "0261-graph-valid-tree",
+        "0323-number-of-connected-components-in-an-undirected-graph",
+        "0684-redundant-connection",
+        "0127-word-ladder"
+      ]
+    },
+    {
+      "id": "advanced-graphs",
+      "name": "Advanced Graphs",
+      "tagline": "Shortest paths, minimum spanning trees, and topological order.",
+      "problems": [
+        "0743-network-delay-time",
+        "0332-reconstruct-itinerary",
+        "1584-min-cost-to-connect-all-points",
+        "0778-swim-in-rising-water",
+        "0269-alien-dictionary",
+        "0787-cheapest-flights-within-k-stops"
+      ]
+    },
+    {
+      "id": "1d-dynamic-programming",
+      "name": "1-D Dynamic Programming",
+      "tagline": "Reuse answers to smaller prefixes instead of recomputing them.",
+      "problems": [
+        "0070-climbing-stairs",
+        "0746-min-cost-climbing-stairs",
+        "0198-house-robber",
+        "0213-house-robber-ii",
+        "0005-longest-palindromic-substring",
+        "0647-palindromic-substrings",
+        "0091-decode-ways",
+        "0322-coin-change",
+        "0152-maximum-product-subarray",
+        "0139-word-break",
+        "0300-longest-increasing-subsequence",
+        "0416-partition-equal-subset-sum"
+      ]
+    },
+    {
+      "id": "2d-dynamic-programming",
+      "name": "2-D Dynamic Programming",
+      "tagline": "Fill a table over two indices or two sequences.",
+      "problems": [
+        "0062-unique-paths",
+        "1143-longest-common-subsequence",
+        "0309-best-time-to-buy-and-sell-stock-with-cooldown",
+        "0518-coin-change-ii",
+        "0494-target-sum",
+        "0097-interleaving-string",
+        "0329-longest-increasing-path-in-a-matrix",
+        "0115-distinct-subsequences",
+        "0072-edit-distance",
+        "0312-burst-balloons",
+        "0010-regular-expression-matching"
+      ]
+    },
+    {
+      "id": "greedy",
+      "name": "Greedy",
+      "tagline": "Take the locally best step that provably survives.",
+      "problems": [
+        "0053-maximum-subarray",
+        "0055-jump-game",
+        "0045-jump-game-ii",
+        "0134-gas-station",
+        "0846-hand-of-straights",
+        "1899-merge-triplets-to-form-target-triplet",
+        "0763-partition-labels",
+        "0678-valid-parenthesis-string"
+      ]
+    },
+    {
+      "id": "intervals",
+      "name": "Intervals",
+      "tagline": "Sort by endpoints, then sweep.",
+      "problems": [
+        "0057-insert-interval",
+        "0056-merge-intervals",
+        "0435-non-overlapping-intervals",
+        "0252-meeting-rooms",
+        "0253-meeting-rooms-ii",
+        "1851-minimum-interval-to-include-each-query"
+      ]
+    },
+    {
+      "id": "math-geometry",
+      "name": "Math & Geometry",
+      "tagline": "Index arithmetic and in-place transforms.",
+      "problems": [
+        "0048-rotate-image",
+        "0054-spiral-matrix",
+        "0073-set-matrix-zeroes",
+        "0202-happy-number",
+        "0066-plus-one",
+        "0050-powx-n",
+        "0043-multiply-strings",
+        "2013-detect-squares"
+      ]
+    },
+    {
+      "id": "bit-manipulation",
+      "name": "Bit Manipulation",
+      "tagline": "Treat an integer as an array of bits.",
+      "problems": [
+        "0136-single-number",
+        "0191-number-of-1-bits",
+        "0338-counting-bits",
+        "0190-reverse-bits",
+        "0268-missing-number",
+        "0371-sum-of-two-integers",
+        "0007-reverse-integer"
+      ]
+    }
+  ]
+}

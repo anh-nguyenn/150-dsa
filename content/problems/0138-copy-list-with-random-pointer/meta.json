@@ -1,0 +1,16 @@
+{
+  "id": "0138-copy-list-with-random-pointer",
+  "title": "Copy List With Random Pointer",
+  "slug": "copy-list-with-random-pointer",
+  "difficulty": "Medium",
+  "approaches": [
+    {
+      "id": "optimal",
+      "name": "Map originals to copies",
+      "time": "O(n)",
+      "space": "O(n)"
+    }
+  ],
+  "entry": "copy_random_list",
+  "kind": "function"
+}

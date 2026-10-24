@@ -1,0 +1,16 @@
+{
+  "id": "0020-valid-parentheses",
+  "title": "Valid Parentheses",
+  "slug": "valid-parentheses",
+  "difficulty": "Easy",
+  "approaches": [
+    {
+      "id": "optimal",
+      "name": "Stack of unmatched openers",
+      "time": "O(n)",
+      "space": "O(n)"
+    }
+  ],
+  "entry": "is_valid",
+  "kind": "function"
+}

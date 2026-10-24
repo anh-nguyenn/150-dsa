@@ -1,0 +1,16 @@
+{
+  "id": "1851-minimum-interval-to-include-each-query",
+  "title": "Minimum Interval to Include Each Query",
+  "slug": "minimum-interval-to-include-each-query",
+  "difficulty": "Hard",
+  "approaches": [
+    {
+      "id": "optimal",
+      "name": "Offline sweep with a length heap",
+      "time": "O((n + q) log n)",
+      "space": "O(n + q)"
+    }
+  ],
+  "entry": "min_interval",
+  "kind": "function"
+}

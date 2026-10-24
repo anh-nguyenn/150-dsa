@@ -1,0 +1,61 @@
+{
+  "compare": "exact",
+  "cases": [
+    {
+      "name": "permutation present",
+      "args": [
+        "ab",
+        "eidbaooo"
+      ],
+      "expected": true
+    },
+    {
+      "name": "permutation absent",
+      "args": [
+        "ab",
+        "eidboaoo"
+      ],
+      "expected": false
+    },
+    {
+      "name": "shifted window",
+      "args": [
+        "adc",
+        "dcda"
+      ],
+      "expected": true
+    },
+    {
+      "name": "single match",
+      "args": [
+        "a",
+        "a"
+      ],
+      "expected": true
+    },
+    {
+      "name": "s1 too long",
+      "args": [
+        "ab",
+        "a"
+      ],
+      "expected": false
+    },
+    {
+      "name": "window at the end",
+      "args": [
+        "abc",
+        "bbbca"
+      ],
+      "expected": true
+    },
+    {
+      "name": "repeated letters",
+      "args": [
+        "aab",
+        "abaa"
+      ],
+      "expected": true
+    }
+  ]
+}

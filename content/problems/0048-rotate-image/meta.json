@@ -1,0 +1,16 @@
+{
+  "id": "0048-rotate-image",
+  "title": "Rotate Image",
+  "slug": "rotate-image",
+  "difficulty": "Medium",
+  "approaches": [
+    {
+      "id": "optimal",
+      "name": "Transpose then reverse rows",
+      "time": "O(n^2)",
+      "space": "O(1)"
+    }
+  ],
+  "entry": "rotate",
+  "kind": "function"
+}

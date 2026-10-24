@@ -1,0 +1,16 @@
+{
+  "id": "0023-merge-k-sorted-lists",
+  "title": "Merge K Sorted Lists",
+  "slug": "merge-k-sorted-lists",
+  "difficulty": "Hard",
+  "approaches": [
+    {
+      "id": "optimal",
+      "name": "Min-heap of current heads",
+      "time": "O(N log k)",
+      "space": "O(k)"
+    }
+  ],
+  "entry": "merge_k_lists",
+  "kind": "function"
+}

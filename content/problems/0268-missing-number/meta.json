@@ -1,0 +1,16 @@
+{
+  "id": "0268-missing-number",
+  "title": "Missing Number",
+  "slug": "missing-number",
+  "difficulty": "Easy",
+  "approaches": [
+    {
+      "id": "optimal",
+      "name": "XOR indices and values",
+      "time": "O(n)",
+      "space": "O(1)"
+    }
+  ],
+  "entry": "missing_number",
+  "kind": "function"
+}

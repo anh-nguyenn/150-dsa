@@ -1,0 +1,16 @@
+{
+  "id": "0875-koko-eating-bananas",
+  "title": "Koko Eating Bananas",
+  "slug": "koko-eating-bananas",
+  "difficulty": "Medium",
+  "approaches": [
+    {
+      "id": "optimal",
+      "name": "Binary search on the answer",
+      "time": "O(n log max(piles))",
+      "space": "O(1)"
+    }
+  ],
+  "entry": "min_eating_speed",
+  "kind": "function"
+}

@@ -1,0 +1,99 @@
+{
+  "compare": "unordered",
+  "cases": [
+    {
+      "name": "two partitions",
+      "args": [
+        "aab"
+      ],
+      "expected": [
+        [
+          "a",
+          "a",
+          "b"
+        ],
+        [
+          "aa",
+          "b"
+        ]
+      ]
+    },
+    {
+      "name": "single character",
+      "args": [
+        "a"
+      ],
+      "expected": [
+        [
+          "a"
+        ]
+      ]
+    },
+    {
+      "name": "double character",
+      "args": [
+        "aa"
+      ],
+      "expected": [
+        [
+          "a",
+          "a"
+        ],
+        [
+          "aa"
+        ]
+      ]
+    },
+    {
+      "name": "palindrome around a middle",
+      "args": [
+        "aba"
+      ],
+      "expected": [
+        [
+          "a",
+          "b",
+          "a"
+        ],
+        [
+          "aba"
+        ]
+      ]
+    },
+    {
+      "name": "no repeated letters",
+      "args": [
+        "abc"
+      ],
+      "expected": [
+        [
+          "a",
+          "b",
+          "c"
+        ]
+      ]
+    },
+    {
+      "name": "even palindrome",
+      "args": [
+        "abba"
+      ],
+      "expected": [
+        [
+          "a",
+          "b",
+          "b",
+          "a"
+        ],
+        [
+          "a",
+          "bb",
+          "a"
+        ],
+        [
+          "abba"
+        ]
+      ]
+    }
+  ]
+}

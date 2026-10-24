@@ -1,0 +1,16 @@
+{
+  "id": "0036-valid-sudoku",
+  "title": "Valid Sudoku",
+  "slug": "valid-sudoku",
+  "difficulty": "Medium",
+  "approaches": [
+    {
+      "id": "optimal",
+      "name": "Sets for rows, columns, and boxes",
+      "time": "O(1)",
+      "space": "O(1)"
+    }
+  ],
+  "entry": "is_valid_sudoku",
+  "kind": "function"
+}

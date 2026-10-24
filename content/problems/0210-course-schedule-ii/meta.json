@@ -1,0 +1,16 @@
+{
+  "id": "0210-course-schedule-ii",
+  "title": "Course Schedule II",
+  "slug": "course-schedule-ii",
+  "difficulty": "Medium",
+  "approaches": [
+    {
+      "id": "optimal",
+      "name": "Kahn topological sort with recorded order",
+      "time": "O(V + E)",
+      "space": "O(V + E)"
+    }
+  ],
+  "entry": "find_order",
+  "kind": "function"
+}

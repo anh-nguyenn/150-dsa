@@ -1,0 +1,69 @@
+{
+  "compare": "exact",
+  "cases": [
+    {
+      "name": "rabbit",
+      "args": [
+        "rabbbit",
+        "rabbit"
+      ],
+      "expected": 3
+    },
+    {
+      "name": "bag",
+      "args": [
+        "babgbag",
+        "bag"
+      ],
+      "expected": 5
+    },
+    {
+      "name": "both empty",
+      "args": [
+        "",
+        ""
+      ],
+      "expected": 1
+    },
+    {
+      "name": "empty target",
+      "args": [
+        "abc",
+        ""
+      ],
+      "expected": 1
+    },
+    {
+      "name": "empty source",
+      "args": [
+        "",
+        "a"
+      ],
+      "expected": 0
+    },
+    {
+      "name": "single match",
+      "args": [
+        "a",
+        "a"
+      ],
+      "expected": 1
+    },
+    {
+      "name": "triple a",
+      "args": [
+        "aaa",
+        "aa"
+      ],
+      "expected": 3
+    },
+    {
+      "name": "target too long",
+      "args": [
+        "abc",
+        "abcd"
+      ],
+      "expected": 0
+    }
+  ]
+}

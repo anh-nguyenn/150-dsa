@@ -1,0 +1,16 @@
+{
+  "id": "0021-merge-two-sorted-lists",
+  "title": "Merge Two Sorted Lists",
+  "slug": "merge-two-sorted-lists",
+  "difficulty": "Easy",
+  "approaches": [
+    {
+      "id": "optimal",
+      "name": "Dummy-node merge",
+      "time": "O(n + m)",
+      "space": "O(1)"
+    }
+  ],
+  "entry": "merge_two_lists",
+  "kind": "function"
+}

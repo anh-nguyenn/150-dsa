@@ -1,0 +1,16 @@
+{
+  "id": "0102-binary-tree-level-order-traversal",
+  "title": "Binary Tree Level Order Traversal",
+  "slug": "binary-tree-level-order-traversal",
+  "difficulty": "Medium",
+  "approaches": [
+    {
+      "id": "optimal",
+      "name": "BFS by level",
+      "time": "O(n)",
+      "space": "O(n)"
+    }
+  ],
+  "entry": "level_order",
+  "kind": "function"
+}

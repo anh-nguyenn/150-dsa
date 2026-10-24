@@ -1,0 +1,16 @@
+{
+  "id": "0846-hand-of-straights",
+  "title": "Hand of Straights",
+  "slug": "hand-of-straights",
+  "difficulty": "Medium",
+  "approaches": [
+    {
+      "id": "optimal",
+      "name": "Greedy smallest-card runs",
+      "time": "O(n log n)",
+      "space": "O(n)"
+    }
+  ],
+  "entry": "is_n_straight_hand",
+  "kind": "function"
+}

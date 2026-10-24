@@ -1,0 +1,141 @@
+{
+  "compare": "unordered",
+  "cases": [
+    {
+      "name": "two most frequent",
+      "args": [
+        [
+          1,
+          1,
+          1,
+          2,
+          2,
+          3
+        ],
+        2
+      ],
+      "expected": [
+        1,
+        2
+      ]
+    },
+    {
+      "name": "single value",
+      "args": [
+        [
+          1
+        ],
+        1
+      ],
+      "expected": [
+        1
+      ]
+    },
+    {
+      "name": "both values",
+      "args": [
+        [
+          1,
+          2
+        ],
+        2
+      ],
+      "expected": [
+        1,
+        2
+      ]
+    },
+    {
+      "name": "negative values",
+      "args": [
+        [
+          4,
+          1,
+          -1,
+          2,
+          -1,
+          2,
+          3
+        ],
+        2
+      ],
+      "expected": [
+        -1,
+        2
+      ]
+    },
+    {
+      "name": "clear ranking",
+      "args": [
+        [
+          -1,
+          -1,
+          -1,
+          0,
+          0,
+          2,
+          2,
+          2,
+          2
+        ],
+        2
+      ],
+      "expected": [
+        2,
+        -1
+      ]
+    },
+    {
+      "name": "all distinct",
+      "args": [
+        [
+          1,
+          2,
+          3,
+          4
+        ],
+        4
+      ],
+      "expected": [
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "name": "one repeated value",
+      "args": [
+        [
+          7,
+          7,
+          7,
+          7
+        ],
+        1
+      ],
+      "expected": [
+        7
+      ]
+    },
+    {
+      "name": "three values",
+      "args": [
+        [
+          1,
+          2,
+          2,
+          3,
+          3,
+          3
+        ],
+        3
+      ],
+      "expected": [
+        1,
+        2,
+        3
+      ]
+    }
+  ]
+}

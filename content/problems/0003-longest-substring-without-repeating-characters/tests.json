@@ -1,0 +1,61 @@
+{
+  "compare": "exact",
+  "cases": [
+    {
+      "name": "repeating cycle",
+      "args": [
+        "abcabcbb"
+      ],
+      "expected": 3
+    },
+    {
+      "name": "all same",
+      "args": [
+        "bbbbb"
+      ],
+      "expected": 1
+    },
+    {
+      "name": "window shifts late",
+      "args": [
+        "pwwkew"
+      ],
+      "expected": 3
+    },
+    {
+      "name": "empty string",
+      "args": [
+        ""
+      ],
+      "expected": 0
+    },
+    {
+      "name": "single space",
+      "args": [
+        " "
+      ],
+      "expected": 1
+    },
+    {
+      "name": "repeat outside window",
+      "args": [
+        "abba"
+      ],
+      "expected": 2
+    },
+    {
+      "name": "restart after repeat",
+      "args": [
+        "dvdf"
+      ],
+      "expected": 3
+    },
+    {
+      "name": "mixed characters",
+      "args": [
+        "tmmzuxt"
+      ],
+      "expected": 5
+    }
+  ]
+}

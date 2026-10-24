@@ -1,0 +1,114 @@
+{
+  "compare": "exact",
+  "cases": [
+    {
+      "name": "spreads in four minutes",
+      "args": [
+        [
+          [
+            2,
+            1,
+            1
+          ],
+          [
+            1,
+            1,
+            0
+          ],
+          [
+            0,
+            1,
+            1
+          ]
+        ]
+      ],
+      "expected": 4
+    },
+    {
+      "name": "unreachable orange",
+      "args": [
+        [
+          [
+            2,
+            1,
+            1
+          ],
+          [
+            0,
+            1,
+            1
+          ],
+          [
+            1,
+            0,
+            1
+          ]
+        ]
+      ],
+      "expected": -1
+    },
+    {
+      "name": "no fresh oranges",
+      "args": [
+        [
+          [
+            0,
+            2
+          ]
+        ]
+      ],
+      "expected": 0
+    },
+    {
+      "name": "single rotten orange",
+      "args": [
+        [
+          [
+            2
+          ]
+        ]
+      ],
+      "expected": 0
+    },
+    {
+      "name": "single fresh orange",
+      "args": [
+        [
+          [
+            1
+          ]
+        ]
+      ],
+      "expected": -1
+    },
+    {
+      "name": "all fresh",
+      "args": [
+        [
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            1
+          ]
+        ]
+      ],
+      "expected": -1
+    },
+    {
+      "name": "wall blocks spread",
+      "args": [
+        [
+          [
+            2,
+            0,
+            1
+          ]
+        ]
+      ],
+      "expected": -1
+    }
+  ]
+}

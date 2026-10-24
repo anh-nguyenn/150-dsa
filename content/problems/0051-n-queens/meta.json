@@ -1,0 +1,16 @@
+{
+  "id": "0051-n-queens",
+  "title": "N Queens",
+  "slug": "n-queens",
+  "difficulty": "Hard",
+  "approaches": [
+    {
+      "id": "optimal",
+      "name": "Row-by-row search with conflict sets",
+      "time": "O(n!)",
+      "space": "O(n)"
+    }
+  ],
+  "entry": "solve_n_queens",
+  "kind": "function"
+}

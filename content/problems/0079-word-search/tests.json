@@ -1,0 +1,123 @@
+{
+  "compare": "exact",
+  "cases": [
+    {
+      "name": "long winding path",
+      "args": [
+        [
+          [
+            "A",
+            "B",
+            "C",
+            "E"
+          ],
+          [
+            "S",
+            "F",
+            "C",
+            "S"
+          ],
+          [
+            "A",
+            "D",
+            "E",
+            "E"
+          ]
+        ],
+        "ABCCED"
+      ],
+      "expected": true
+    },
+    {
+      "name": "short word",
+      "args": [
+        [
+          [
+            "A",
+            "B",
+            "C",
+            "E"
+          ],
+          [
+            "S",
+            "F",
+            "C",
+            "S"
+          ],
+          [
+            "A",
+            "D",
+            "E",
+            "E"
+          ]
+        ],
+        "SEE"
+      ],
+      "expected": true
+    },
+    {
+      "name": "reuse would be needed",
+      "args": [
+        [
+          [
+            "A",
+            "B",
+            "C",
+            "E"
+          ],
+          [
+            "S",
+            "F",
+            "C",
+            "S"
+          ],
+          [
+            "A",
+            "D",
+            "E",
+            "E"
+          ]
+        ],
+        "ABCB"
+      ],
+      "expected": false
+    },
+    {
+      "name": "single cell match",
+      "args": [
+        [
+          [
+            "A"
+          ]
+        ],
+        "A"
+      ],
+      "expected": true
+    },
+    {
+      "name": "single cell miss",
+      "args": [
+        [
+          [
+            "A"
+          ]
+        ],
+        "B"
+      ],
+      "expected": false
+    },
+    {
+      "name": "too many repeated letters",
+      "args": [
+        [
+          [
+            "a",
+            "a"
+          ]
+        ],
+        "aaa"
+      ],
+      "expected": false
+    }
+  ]
+}

@@ -1,0 +1,79 @@
+{
+  "compare": "exact",
+  "cases": [
+    {
+      "name": "cycle in middle",
+      "args": [
+        {
+          "linked_list": [
+            3,
+            2,
+            0,
+            -4
+          ],
+          "cycle": 1
+        }
+      ],
+      "expected": true
+    },
+    {
+      "name": "cycle at head",
+      "args": [
+        {
+          "linked_list": [
+            1,
+            2
+          ],
+          "cycle": 0
+        }
+      ],
+      "expected": true
+    },
+    {
+      "name": "single node no cycle",
+      "args": [
+        {
+          "linked_list": [
+            1
+          ]
+        }
+      ],
+      "expected": false
+    },
+    {
+      "name": "empty list",
+      "args": [
+        {
+          "linked_list": []
+        }
+      ],
+      "expected": false
+    },
+    {
+      "name": "two nodes no cycle",
+      "args": [
+        {
+          "linked_list": [
+            1,
+            2
+          ]
+        }
+      ],
+      "expected": false
+    },
+    {
+      "name": "self loop at tail",
+      "args": [
+        {
+          "linked_list": [
+            1,
+            2,
+            3
+          ],
+          "cycle": 2
+        }
+      ],
+      "expected": true
+    }
+  ]
+}

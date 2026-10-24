@@ -1,0 +1,16 @@
+{
+  "id": "0242-valid-anagram",
+  "title": "Valid Anagram",
+  "slug": "valid-anagram",
+  "difficulty": "Easy",
+  "approaches": [
+    {
+      "id": "optimal",
+      "name": "Letter counts",
+      "time": "O(n)",
+      "space": "O(1)"
+    }
+  ],
+  "entry": "is_anagram",
+  "kind": "function"
+}

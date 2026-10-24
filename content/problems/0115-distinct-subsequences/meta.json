@@ -1,0 +1,16 @@
+{
+  "id": "0115-distinct-subsequences",
+  "title": "Distinct Subsequences",
+  "slug": "distinct-subsequences",
+  "difficulty": "Hard",
+  "approaches": [
+    {
+      "id": "optimal",
+      "name": "One-dimensional subsequence DP",
+      "time": "O(mn)",
+      "space": "O(n)"
+    }
+  ],
+  "entry": "num_distinct",
+  "kind": "function"
+}

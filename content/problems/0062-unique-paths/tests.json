@@ -1,0 +1,61 @@
+{
+  "compare": "exact",
+  "cases": [
+    {
+      "name": "typical 3x7",
+      "args": [
+        3,
+        7
+      ],
+      "expected": 28
+    },
+    {
+      "name": "3x2",
+      "args": [
+        3,
+        2
+      ],
+      "expected": 3
+    },
+    {
+      "name": "3x3",
+      "args": [
+        3,
+        3
+      ],
+      "expected": 6
+    },
+    {
+      "name": "single cell",
+      "args": [
+        1,
+        1
+      ],
+      "expected": 1
+    },
+    {
+      "name": "single row",
+      "args": [
+        1,
+        10
+      ],
+      "expected": 1
+    },
+    {
+      "name": "single column",
+      "args": [
+        10,
+        1
+      ],
+      "expected": 1
+    },
+    {
+      "name": "larger grid",
+      "args": [
+        23,
+        12
+      ],
+      "expected": 193536720
+    }
+  ]
+}

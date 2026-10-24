@@ -1,0 +1,16 @@
+{
+  "id": "0494-target-sum",
+  "title": "Target Sum",
+  "slug": "target-sum",
+  "difficulty": "Medium",
+  "approaches": [
+    {
+      "id": "optimal",
+      "name": "Subset-sum reduction with rolling counts",
+      "time": "O(n * sum(nums))",
+      "space": "O(sum(nums))"
+    }
+  ],
+  "entry": "find_target_sum_ways",
+  "kind": "function"
+}

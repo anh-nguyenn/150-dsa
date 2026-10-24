@@ -1,0 +1,238 @@
+{
+  "kind": "class",
+  "compare": "exact",
+  "cases": [
+    {
+      "name": "classic wildcard",
+      "ops": [
+        "WordDictionary",
+        "addWord",
+        "addWord",
+        "addWord",
+        "search",
+        "search",
+        "search",
+        "search"
+      ],
+      "args": [
+        [],
+        [
+          "bad"
+        ],
+        [
+          "dad"
+        ],
+        [
+          "mad"
+        ],
+        [
+          "pad"
+        ],
+        [
+          "bad"
+        ],
+        [
+          ".ad"
+        ],
+        [
+          "b.."
+        ]
+      ],
+      "expected": [
+        null,
+        null,
+        null,
+        null,
+        false,
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "name": "empty word and pattern",
+      "ops": [
+        "WordDictionary",
+        "search",
+        "addWord",
+        "search",
+        "search"
+      ],
+      "args": [
+        [],
+        [
+          ""
+        ],
+        [
+          ""
+        ],
+        [
+          ""
+        ],
+        [
+          "."
+        ]
+      ],
+      "expected": [
+        null,
+        false,
+        null,
+        true,
+        false
+      ]
+    },
+    {
+      "name": "all dots",
+      "ops": [
+        "WordDictionary",
+        "addWord",
+        "search",
+        "search",
+        "search"
+      ],
+      "args": [
+        [],
+        [
+          "abc"
+        ],
+        [
+          "..."
+        ],
+        [
+          ".."
+        ],
+        [
+          "a.c"
+        ]
+      ],
+      "expected": [
+        null,
+        null,
+        true,
+        false,
+        true
+      ]
+    },
+    {
+      "name": "no matching branch",
+      "ops": [
+        "WordDictionary",
+        "addWord",
+        "addWord",
+        "search",
+        "search",
+        "search"
+      ],
+      "args": [
+        [],
+        [
+          "cat"
+        ],
+        [
+          "dog"
+        ],
+        [
+          "c.t"
+        ],
+        [
+          "c.g"
+        ],
+        [
+          ".o."
+        ]
+      ],
+      "expected": [
+        null,
+        null,
+        null,
+        true,
+        false,
+        true
+      ]
+    },
+    {
+      "name": "longer word with dots",
+      "ops": [
+        "WordDictionary",
+        "addWord",
+        "search",
+        "search",
+        "search",
+        "search"
+      ],
+      "args": [
+        [],
+        [
+          "hello"
+        ],
+        [
+          "h.llo"
+        ],
+        [
+          "h..lo"
+        ],
+        [
+          "....."
+        ],
+        [
+          "......"
+        ]
+      ],
+      "expected": [
+        null,
+        null,
+        true,
+        true,
+        true,
+        false
+      ]
+    },
+    {
+      "name": "dots at both ends",
+      "ops": [
+        "WordDictionary",
+        "addWord",
+        "search",
+        "search",
+        "search",
+        "search",
+        "search",
+        "search"
+      ],
+      "args": [
+        [],
+        [
+          "abc"
+        ],
+        [
+          ".bc"
+        ],
+        [
+          "ab."
+        ],
+        [
+          ".b."
+        ],
+        [
+          "a.."
+        ],
+        [
+          "..."
+        ],
+        [
+          "...."
+        ]
+      ],
+      "expected": [
+        null,
+        null,
+        true,
+        true,
+        true,
+        true,
+        true,
+        false
+      ]
+    }
+  ]
+}

@@ -1,0 +1,54 @@
+{
+  "compare": "exact",
+  "cases": [
+    {
+      "name": "classic happy",
+      "args": [
+        19
+      ],
+      "expected": true
+    },
+    {
+      "name": "classic unhappy",
+      "args": [
+        2
+      ],
+      "expected": false
+    },
+    {
+      "name": "one is happy",
+      "args": [
+        1
+      ],
+      "expected": true
+    },
+    {
+      "name": "seven is happy",
+      "args": [
+        7
+      ],
+      "expected": true
+    },
+    {
+      "name": "four is unhappy",
+      "args": [
+        4
+      ],
+      "expected": false
+    },
+    {
+      "name": "power of ten",
+      "args": [
+        100
+      ],
+      "expected": true
+    },
+    {
+      "name": "ten is happy",
+      "args": [
+        10
+      ],
+      "expected": true
+    }
+  ]
+}

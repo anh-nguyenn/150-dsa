@@ -1,0 +1,16 @@
+{
+  "id": "0230-kth-smallest-element-in-a-bst",
+  "title": "Kth Smallest Element In a Bst",
+  "slug": "kth-smallest-element-in-a-bst",
+  "difficulty": "Medium",
+  "approaches": [
+    {
+      "id": "optimal",
+      "name": "Iterative in-order traversal",
+      "time": "O(n)",
+      "space": "O(h)"
+    }
+  ],
+  "entry": "kth_smallest",
+  "kind": "function"
+}

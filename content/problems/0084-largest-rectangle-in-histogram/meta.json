@@ -1,0 +1,16 @@
+{
+  "id": "0084-largest-rectangle-in-histogram",
+  "title": "Largest Rectangle In Histogram",
+  "slug": "largest-rectangle-in-histogram",
+  "difficulty": "Hard",
+  "approaches": [
+    {
+      "id": "optimal",
+      "name": "Monotonic stack with sentinel",
+      "time": "O(n)",
+      "space": "O(n)"
+    }
+  ],
+  "entry": "largest_rectangle_area",
+  "kind": "function"
+}

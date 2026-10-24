@@ -1,0 +1,106 @@
+{
+  "compare": "exact",
+  "cases": [
+    {
+      "name": "root between two children",
+      "args": [
+        {
+          "tree": [
+            1,
+            2,
+            3
+          ]
+        }
+      ],
+      "expected": 6
+    },
+    {
+      "name": "best path below root",
+      "args": [
+        {
+          "tree": [
+            -10,
+            9,
+            20,
+            null,
+            null,
+            15,
+            7
+          ]
+        }
+      ],
+      "expected": 42
+    },
+    {
+      "name": "single negative node",
+      "args": [
+        {
+          "tree": [
+            -3
+          ]
+        }
+      ],
+      "expected": -3
+    },
+    {
+      "name": "negative child ignored",
+      "args": [
+        {
+          "tree": [
+            2,
+            -1
+          ]
+        }
+      ],
+      "expected": 2
+    },
+    {
+      "name": "all negative two nodes",
+      "args": [
+        {
+          "tree": [
+            -2,
+            -1
+          ]
+        }
+      ],
+      "expected": -1
+    },
+    {
+      "name": "path through root avoids negative left",
+      "args": [
+        {
+          "tree": [
+            1,
+            -2,
+            3
+          ]
+        }
+      ],
+      "expected": 4
+    },
+    {
+      "name": "large mixed tree",
+      "args": [
+        {
+          "tree": [
+            5,
+            4,
+            8,
+            11,
+            null,
+            13,
+            4,
+            7,
+            2,
+            null,
+            null,
+            null,
+            1
+          ]
+        }
+      ],
+      "expected": 48
+    }
+  ]
+}

@@ -1,0 +1,68 @@
+{
+  "compare": "exact",
+  "cases": [
+    {
+      "name": "empty string",
+      "args": [
+        ""
+      ],
+      "expected": true
+    },
+    {
+      "name": "single star",
+      "args": [
+        "*"
+      ],
+      "expected": true
+    },
+    {
+      "name": "single open",
+      "args": [
+        "("
+      ],
+      "expected": false
+    },
+    {
+      "name": "single close",
+      "args": [
+        ")"
+      ],
+      "expected": false
+    },
+    {
+      "name": "plain pair",
+      "args": [
+        "()"
+      ],
+      "expected": true
+    },
+    {
+      "name": "star closes",
+      "args": [
+        "(*))"
+      ],
+      "expected": true
+    },
+    {
+      "name": "too many opens",
+      "args": [
+        "(((*"
+      ],
+      "expected": false
+    },
+    {
+      "name": "star closes one open",
+      "args": [
+        "(*"
+      ],
+      "expected": true
+    },
+    {
+      "name": "star cannot save the prefix",
+      "args": [
+        "**("
+      ],
+      "expected": false
+    }
+  ]
+}

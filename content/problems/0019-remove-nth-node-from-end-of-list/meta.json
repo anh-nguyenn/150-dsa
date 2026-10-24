@@ -1,0 +1,16 @@
+{
+  "id": "0019-remove-nth-node-from-end-of-list",
+  "title": "Remove Nth Node From End of List",
+  "slug": "remove-nth-node-from-end-of-list",
+  "difficulty": "Medium",
+  "approaches": [
+    {
+      "id": "optimal",
+      "name": "Two pointers with a fixed gap",
+      "time": "O(L)",
+      "space": "O(1)"
+    }
+  ],
+  "entry": "remove_nth_from_end",
+  "kind": "function"
+}

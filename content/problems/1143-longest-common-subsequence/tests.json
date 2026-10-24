@@ -1,0 +1,77 @@
+{
+  "compare": "exact",
+  "cases": [
+    {
+      "name": "typical",
+      "args": [
+        "abcde",
+        "ace"
+      ],
+      "expected": 3
+    },
+    {
+      "name": "identical",
+      "args": [
+        "abc",
+        "abc"
+      ],
+      "expected": 3
+    },
+    {
+      "name": "no common character",
+      "args": [
+        "abc",
+        "def"
+      ],
+      "expected": 0
+    },
+    {
+      "name": "empty first string",
+      "args": [
+        "",
+        "abc"
+      ],
+      "expected": 0
+    },
+    {
+      "name": "empty second string",
+      "args": [
+        "abc",
+        ""
+      ],
+      "expected": 0
+    },
+    {
+      "name": "single matching character",
+      "args": [
+        "a",
+        "a"
+      ],
+      "expected": 1
+    },
+    {
+      "name": "reordered pair",
+      "args": [
+        "ab",
+        "ba"
+      ],
+      "expected": 1
+    },
+    {
+      "name": "shared letter with gaps",
+      "args": [
+        "bl",
+        "yby"
+      ],
+      "expected": 1
+    },
+    {
+      "name": "longer wrapper",
+      "args": [
+        "abcba",
+        "abcbcba"
+      ],
+      "expected": 5
+    }
+  ]
+}

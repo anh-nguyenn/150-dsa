@@ -1,0 +1,90 @@
+{
+  "compare": "exact",
+  "cases": [
+    {
+      "name": "four houses",
+      "args": [
+        [
+          1,
+          2,
+          3,
+          1
+        ]
+      ],
+      "expected": 4
+    },
+    {
+      "name": "five houses",
+      "args": [
+        [
+          2,
+          7,
+          9,
+          3,
+          1
+        ]
+      ],
+      "expected": 12
+    },
+    {
+      "name": "single house",
+      "args": [
+        [
+          5
+        ]
+      ],
+      "expected": 5
+    },
+    {
+      "name": "all empty",
+      "args": [
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "expected": 0
+    },
+    {
+      "name": "skip pattern",
+      "args": [
+        [
+          2,
+          1,
+          1,
+          2
+        ]
+      ],
+      "expected": 4
+    },
+    {
+      "name": "large last house",
+      "args": [
+        [
+          1,
+          3,
+          1,
+          3,
+          100
+        ]
+      ],
+      "expected": 103
+    },
+    {
+      "name": "seven houses",
+      "args": [
+        [
+          2,
+          7,
+          9,
+          3,
+          1,
+          4,
+          2
+        ]
+      ],
+      "expected": 15
+    }
+  ]
+}

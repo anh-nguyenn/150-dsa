@@ -1,0 +1,16 @@
+{
+  "id": "0002-add-two-numbers",
+  "title": "Add Two Numbers",
+  "slug": "add-two-numbers",
+  "difficulty": "Medium",
+  "approaches": [
+    {
+      "id": "optimal",
+      "name": "Digit-by-digit addition with carry",
+      "time": "O(max(m, n))",
+      "space": "O(1) extra"
+    }
+  ],
+  "entry": "add_two_numbers",
+  "kind": "function"
+}

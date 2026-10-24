@@ -1,0 +1,16 @@
+{
+  "id": "0066-plus-one",
+  "title": "Plus One",
+  "slug": "plus-one",
+  "difficulty": "Easy",
+  "approaches": [
+    {
+      "id": "optimal",
+      "name": "Carry from the right",
+      "time": "O(n)",
+      "space": "O(1)"
+    }
+  ],
+  "entry": "plus_one",
+  "kind": "function"
+}

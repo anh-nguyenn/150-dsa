@@ -1,0 +1,16 @@
+{
+  "id": "0746-min-cost-climbing-stairs",
+  "title": "Min Cost Climbing Stairs",
+  "slug": "min-cost-climbing-stairs",
+  "difficulty": "Easy",
+  "approaches": [
+    {
+      "id": "optimal",
+      "name": "Rolling minimum arrival cost",
+      "time": "O(n)",
+      "space": "O(1)"
+    }
+  ],
+  "entry": "min_cost_climbing_stairs",
+  "kind": "function"
+}

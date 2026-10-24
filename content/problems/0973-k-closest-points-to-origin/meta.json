@@ -1,0 +1,16 @@
+{
+  "id": "0973-k-closest-points-to-origin",
+  "title": "K Closest Points to Origin",
+  "slug": "k-closest-points-to-origin",
+  "difficulty": "Medium",
+  "approaches": [
+    {
+      "id": "optimal",
+      "name": "Bounded max-heap",
+      "time": "O(n log k)",
+      "space": "O(k)"
+    }
+  ],
+  "entry": "k_closest",
+  "kind": "function"
+}

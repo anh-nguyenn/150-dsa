@@ -1,0 +1,89 @@
+{
+  "compare": "exact",
+  "cases": [
+    {
+      "name": "sample tree",
+      "args": [
+        {
+          "tree": [
+            3,
+            1,
+            4,
+            3,
+            null,
+            1,
+            5
+          ]
+        }
+      ],
+      "expected": 4
+    },
+    {
+      "name": "ties along a branch",
+      "args": [
+        {
+          "tree": [
+            3,
+            3,
+            null,
+            4,
+            2
+          ]
+        }
+      ],
+      "expected": 3
+    },
+    {
+      "name": "single node",
+      "args": [
+        {
+          "tree": [
+            1
+          ]
+        }
+      ],
+      "expected": 1
+    },
+    {
+      "name": "all nodes improve",
+      "args": [
+        {
+          "tree": [
+            2,
+            null,
+            4,
+            10,
+            8
+          ]
+        }
+      ],
+      "expected": 4
+    },
+    {
+      "name": "children smaller than root",
+      "args": [
+        {
+          "tree": [
+            9,
+            3,
+            6
+          ]
+        }
+      ],
+      "expected": 1
+    },
+    {
+      "name": "all negative",
+      "args": [
+        {
+          "tree": [
+            -1,
+            -2,
+            -3
+          ]
+        }
+      ],
+      "expected": 1
+    }
+  ]
+}

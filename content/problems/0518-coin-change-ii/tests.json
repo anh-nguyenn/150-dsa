@@ -1,0 +1,104 @@
+{
+  "compare": "exact",
+  "cases": [
+    {
+      "name": "typical",
+      "args": [
+        5,
+        [
+          1,
+          2,
+          5
+        ]
+      ],
+      "expected": 4
+    },
+    {
+      "name": "impossible with one coin",
+      "args": [
+        3,
+        [
+          2
+        ]
+      ],
+      "expected": 0
+    },
+    {
+      "name": "exact single coin",
+      "args": [
+        10,
+        [
+          10
+        ]
+      ],
+      "expected": 1
+    },
+    {
+      "name": "zero amount",
+      "args": [
+        0,
+        [
+          7
+        ]
+      ],
+      "expected": 1
+    },
+    {
+      "name": "smallest amount",
+      "args": [
+        1,
+        [
+          1
+        ]
+      ],
+      "expected": 1
+    },
+    {
+      "name": "three denominations",
+      "args": [
+        5,
+        [
+          1,
+          2,
+          3
+        ]
+      ],
+      "expected": 5
+    },
+    {
+      "name": "one denomination matches",
+      "args": [
+        5,
+        [
+          5
+        ]
+      ],
+      "expected": 1
+    },
+    {
+      "name": "four denominations to ten",
+      "args": [
+        10,
+        [
+          1,
+          5,
+          10,
+          25
+        ]
+      ],
+      "expected": 4
+    },
+    {
+      "name": "small mixed set",
+      "args": [
+        4,
+        [
+          1,
+          2,
+          3
+        ]
+      ],
+      "expected": 4
+    }
+  ]
+}

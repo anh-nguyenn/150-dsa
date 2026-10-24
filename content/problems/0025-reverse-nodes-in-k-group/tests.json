@@ -1,0 +1,140 @@
+{
+  "compare": "exact",
+  "result_adapter": "linked_list",
+  "cases": [
+    {
+      "name": "k equals two",
+      "args": [
+        {
+          "linked_list": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ]
+        },
+        2
+      ],
+      "expected": [
+        2,
+        1,
+        4,
+        3,
+        5
+      ]
+    },
+    {
+      "name": "k equals three with tail",
+      "args": [
+        {
+          "linked_list": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ]
+        },
+        3
+      ],
+      "expected": [
+        3,
+        2,
+        1,
+        4,
+        5
+      ]
+    },
+    {
+      "name": "k equals one",
+      "args": [
+        {
+          "linked_list": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ]
+        },
+        1
+      ],
+      "expected": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
+    },
+    {
+      "name": "exact multiple",
+      "args": [
+        {
+          "linked_list": [
+            1,
+            2,
+            3,
+            4
+          ]
+        },
+        2
+      ],
+      "expected": [
+        2,
+        1,
+        4,
+        3
+      ]
+    },
+    {
+      "name": "two full groups of three",
+      "args": [
+        {
+          "linked_list": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ]
+        },
+        3
+      ],
+      "expected": [
+        3,
+        2,
+        1,
+        6,
+        5,
+        4
+      ]
+    },
+    {
+      "name": "single node",
+      "args": [
+        {
+          "linked_list": [
+            1
+          ]
+        },
+        1
+      ],
+      "expected": [
+        1
+      ]
+    },
+    {
+      "name": "empty list",
+      "args": [
+        {
+          "linked_list": []
+        },
+        2
+      ],
+      "expected": []
+    }
+  ]
+}

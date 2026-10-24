@@ -1,0 +1,16 @@
+{
+  "id": "0739-daily-temperatures",
+  "title": "Daily Temperatures",
+  "slug": "daily-temperatures",
+  "difficulty": "Medium",
+  "approaches": [
+    {
+      "id": "optimal",
+      "name": "Monotonic decreasing stack",
+      "time": "O(n)",
+      "space": "O(n)"
+    }
+  ],
+  "entry": "daily_temperatures",
+  "kind": "function"
+}

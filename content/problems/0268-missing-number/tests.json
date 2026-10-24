@@ -1,0 +1,82 @@
+{
+  "compare": "exact",
+  "cases": [
+    {
+      "name": "small range",
+      "args": [
+        [
+          3,
+          0,
+          1
+        ]
+      ],
+      "expected": 2
+    },
+    {
+      "name": "missing largest",
+      "args": [
+        [
+          0,
+          1
+        ]
+      ],
+      "expected": 2
+    },
+    {
+      "name": "shuffled range",
+      "args": [
+        [
+          9,
+          6,
+          4,
+          2,
+          3,
+          5,
+          7,
+          0,
+          1
+        ]
+      ],
+      "expected": 8
+    },
+    {
+      "name": "single zero",
+      "args": [
+        [
+          0
+        ]
+      ],
+      "expected": 1
+    },
+    {
+      "name": "single one",
+      "args": [
+        [
+          1
+        ]
+      ],
+      "expected": 0
+    },
+    {
+      "name": "missing middle",
+      "args": [
+        [
+          0,
+          2
+        ]
+      ],
+      "expected": 1
+    },
+    {
+      "name": "missing zero",
+      "args": [
+        [
+          1,
+          2,
+          3
+        ]
+      ],
+      "expected": 0
+    }
+  ]
+}

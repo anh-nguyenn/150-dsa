@@ -1,0 +1,16 @@
+{
+  "id": "1584-min-cost-to-connect-all-points",
+  "title": "Min Cost to Connect All Points",
+  "slug": "min-cost-to-connect-all-points",
+  "difficulty": "Medium",
+  "approaches": [
+    {
+      "id": "optimal",
+      "name": "Prim's algorithm on a dense graph",
+      "time": "O(n^2)",
+      "space": "O(n)"
+    }
+  ],
+  "entry": "min_cost_connect_points",
+  "kind": "function"
+}

@@ -1,0 +1,16 @@
+{
+  "id": "0130-surrounded-regions",
+  "title": "Surrounded Regions",
+  "slug": "surrounded-regions",
+  "difficulty": "Medium",
+  "approaches": [
+    {
+      "id": "optimal",
+      "name": "Border flood fill",
+      "time": "O(m * n)",
+      "space": "O(m * n)"
+    }
+  ],
+  "entry": "solve",
+  "kind": "function"
+}

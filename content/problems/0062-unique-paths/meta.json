@@ -1,0 +1,16 @@
+{
+  "id": "0062-unique-paths",
+  "title": "Unique Paths",
+  "slug": "unique-paths",
+  "difficulty": "Medium",
+  "approaches": [
+    {
+      "id": "optimal",
+      "name": "Row-by-row grid dynamic programming",
+      "time": "O(m * n)",
+      "space": "O(n)"
+    }
+  ],
+  "entry": "unique_paths",
+  "kind": "function"
+}

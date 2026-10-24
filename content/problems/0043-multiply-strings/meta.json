@@ -1,0 +1,16 @@
+{
+  "id": "0043-multiply-strings",
+  "title": "Multiply Strings",
+  "slug": "multiply-strings",
+  "difficulty": "Medium",
+  "approaches": [
+    {
+      "id": "optimal",
+      "name": "Grade-school digit product",
+      "time": "O(m * n)",
+      "space": "O(m + n)"
+    }
+  ],
+  "entry": "multiply",
+  "kind": "function"
+}

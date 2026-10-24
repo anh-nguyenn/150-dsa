@@ -1,0 +1,16 @@
+{
+  "id": "0518-coin-change-ii",
+  "title": "Coin Change II",
+  "slug": "coin-change-ii",
+  "difficulty": "Medium",
+  "approaches": [
+    {
+      "id": "optimal",
+      "name": "Denomination-by-denomination counting",
+      "time": "O(amount * len(coins))",
+      "space": "O(amount)"
+    }
+  ],
+  "entry": "change",
+  "kind": "function"
+}

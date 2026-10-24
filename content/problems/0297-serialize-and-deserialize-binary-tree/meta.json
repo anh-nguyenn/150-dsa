@@ -1,0 +1,16 @@
+{
+  "id": "0297-serialize-and-deserialize-binary-tree",
+  "title": "Serialize And Deserialize Binary Tree",
+  "slug": "serialize-and-deserialize-binary-tree",
+  "difficulty": "Hard",
+  "approaches": [
+    {
+      "id": "optimal",
+      "name": "Pre-order tokens with null markers",
+      "time": "O(n)",
+      "space": "O(n)"
+    }
+  ],
+  "entry": "Codec",
+  "kind": "class"
+}

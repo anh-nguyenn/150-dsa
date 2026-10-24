@@ -1,0 +1,16 @@
+{
+  "id": "0332-reconstruct-itinerary",
+  "title": "Reconstruct Itinerary",
+  "slug": "reconstruct-itinerary",
+  "difficulty": "Hard",
+  "approaches": [
+    {
+      "id": "optimal",
+      "name": "Hierholzer with a min-heap",
+      "time": "O(E log E)",
+      "space": "O(E)"
+    }
+  ],
+  "entry": "find_itinerary",
+  "kind": "function"
+}

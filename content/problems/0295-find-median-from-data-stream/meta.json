@@ -1,0 +1,16 @@
+{
+  "id": "0295-find-median-from-data-stream",
+  "title": "Find Median From Data Stream",
+  "slug": "find-median-from-data-stream",
+  "difficulty": "Hard",
+  "approaches": [
+    {
+      "id": "optimal",
+      "name": "Two balanced heaps",
+      "time": "O(log n) per add, O(1) per median",
+      "space": "O(n)"
+    }
+  ],
+  "entry": "MedianFinder",
+  "kind": "class"
+}

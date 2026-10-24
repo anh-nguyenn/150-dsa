@@ -1,0 +1,125 @@
+{
+  "compare": "exact",
+  "cases": [
+    {
+      "name": "mixed grid",
+      "args": [
+        [
+          [
+            9,
+            9,
+            4
+          ],
+          [
+            6,
+            6,
+            8
+          ],
+          [
+            2,
+            1,
+            1
+          ]
+        ]
+      ],
+      "expected": 4
+    },
+    {
+      "name": "increasing valley",
+      "args": [
+        [
+          [
+            3,
+            4,
+            5
+          ],
+          [
+            3,
+            2,
+            6
+          ],
+          [
+            2,
+            2,
+            1
+          ]
+        ]
+      ],
+      "expected": 4
+    },
+    {
+      "name": "single cell",
+      "args": [
+        [
+          [
+            1
+          ]
+        ]
+      ],
+      "expected": 1
+    },
+    {
+      "name": "one row",
+      "args": [
+        [
+          [
+            1,
+            2,
+            3,
+            4
+          ]
+        ]
+      ],
+      "expected": 4
+    },
+    {
+      "name": "one column",
+      "args": [
+        [
+          [
+            1
+          ],
+          [
+            2
+          ],
+          [
+            3
+          ]
+        ]
+      ],
+      "expected": 3
+    },
+    {
+      "name": "flat grid",
+      "args": [
+        [
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            1
+          ]
+        ]
+      ],
+      "expected": 1
+    },
+    {
+      "name": "reverse staircase",
+      "args": [
+        [
+          [
+            7,
+            6
+          ],
+          [
+            5,
+            4
+          ]
+        ]
+      ],
+      "expected": 3
+    }
+  ]
+}

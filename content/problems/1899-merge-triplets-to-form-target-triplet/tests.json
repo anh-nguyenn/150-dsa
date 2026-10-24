@@ -1,0 +1,207 @@
+{
+  "compare": "exact",
+  "cases": [
+    {
+      "name": "merge two usable triplets",
+      "args": [
+        [
+          [
+            2,
+            5,
+            3
+          ],
+          [
+            1,
+            8,
+            4
+          ],
+          [
+            1,
+            7,
+            5
+          ]
+        ],
+        [
+          2,
+          7,
+          5
+        ]
+      ],
+      "expected": true
+    },
+    {
+      "name": "oversized coordinate blocks",
+      "args": [
+        [
+          [
+            3,
+            4,
+            5
+          ],
+          [
+            4,
+            5,
+            6
+          ]
+        ],
+        [
+          3,
+          2,
+          5
+        ]
+      ],
+      "expected": false
+    },
+    {
+      "name": "all coordinates covered",
+      "args": [
+        [
+          [
+            2,
+            5,
+            3
+          ],
+          [
+            2,
+            3,
+            4
+          ],
+          [
+            1,
+            2,
+            5
+          ],
+          [
+            5,
+            2,
+            3
+          ]
+        ],
+        [
+          5,
+          5,
+          5
+        ]
+      ],
+      "expected": true
+    },
+    {
+      "name": "exact single triplet",
+      "args": [
+        [
+          [
+            1,
+            1,
+            1
+          ]
+        ],
+        [
+          1,
+          1,
+          1
+        ]
+      ],
+      "expected": true
+    },
+    {
+      "name": "overshoot by one",
+      "args": [
+        [
+          [
+            1,
+            1,
+            2
+          ]
+        ],
+        [
+          1,
+          1,
+          1
+        ]
+      ],
+      "expected": false
+    },
+    {
+      "name": "single triplet matches",
+      "args": [
+        [
+          [
+            2,
+            3,
+            4
+          ]
+        ],
+        [
+          2,
+          3,
+          4
+        ]
+      ],
+      "expected": true
+    },
+    {
+      "name": "missing target value",
+      "args": [
+        [
+          [
+            2,
+            2,
+            2
+          ]
+        ],
+        [
+          2,
+          2,
+          3
+        ]
+      ],
+      "expected": false
+    },
+    {
+      "name": "usable pieces plus a bad one",
+      "args": [
+        [
+          [
+            1,
+            4,
+            1
+          ],
+          [
+            1,
+            1,
+            1
+          ]
+        ],
+        [
+          1,
+          3,
+          1
+        ]
+      ],
+      "expected": false
+    },
+    {
+      "name": "repeated target triplet",
+      "args": [
+        [
+          [
+            3,
+            3,
+            3
+          ],
+          [
+            3,
+            3,
+            3
+          ]
+        ],
+        [
+          3,
+          3,
+          3
+        ]
+      ],
+      "expected": true
+    }
+  ]
+}

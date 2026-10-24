@@ -1,0 +1,114 @@
+{
+  "compare": "exact",
+  "cases": [
+    {
+      "name": "classic cooldown",
+      "args": [
+        [
+          "A",
+          "A",
+          "A",
+          "B",
+          "B",
+          "B"
+        ],
+        2
+      ],
+      "expected": 8
+    },
+    {
+      "name": "no cooldown",
+      "args": [
+        [
+          "A",
+          "A",
+          "A",
+          "B",
+          "B",
+          "B"
+        ],
+        0
+      ],
+      "expected": 6
+    },
+    {
+      "name": "one dominant task",
+      "args": [
+        [
+          "A",
+          "A",
+          "A",
+          "A",
+          "A",
+          "A",
+          "B",
+          "C",
+          "D",
+          "E",
+          "F",
+          "G"
+        ],
+        2
+      ],
+      "expected": 16
+    },
+    {
+      "name": "mixed frequencies",
+      "args": [
+        [
+          "A",
+          "C",
+          "A",
+          "B",
+          "D",
+          "B"
+        ],
+        1
+      ],
+      "expected": 6
+    },
+    {
+      "name": "four tied tasks",
+      "args": [
+        [
+          "A",
+          "A",
+          "A",
+          "B",
+          "B",
+          "B",
+          "C",
+          "C",
+          "C",
+          "D",
+          "D",
+          "D"
+        ],
+        3
+      ],
+      "expected": 12
+    },
+    {
+      "name": "single task long cooldown",
+      "args": [
+        [
+          "A"
+        ],
+        100
+      ],
+      "expected": 1
+    },
+    {
+      "name": "idle gap needed",
+      "args": [
+        [
+          "A",
+          "A",
+          "B"
+        ],
+        2
+      ],
+      "expected": 4
+    }
+  ]
+}

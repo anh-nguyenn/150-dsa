@@ -1,0 +1,16 @@
+{
+  "id": "0323-number-of-connected-components-in-an-undirected-graph",
+  "title": "Number of Connected Components In An Undirected Graph",
+  "slug": "number-of-connected-components-in-an-undirected-graph",
+  "difficulty": "Medium",
+  "approaches": [
+    {
+      "id": "optimal",
+      "name": "Union-find component counting",
+      "time": "O(n + E * alpha(n))",
+      "space": "O(n)"
+    }
+  ],
+  "entry": "count_components",
+  "kind": "function"
+}

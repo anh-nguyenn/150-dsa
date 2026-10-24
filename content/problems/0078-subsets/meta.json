@@ -1,0 +1,16 @@
+{
+  "id": "0078-subsets",
+  "title": "Subsets",
+  "slug": "subsets",
+  "difficulty": "Medium",
+  "approaches": [
+    {
+      "id": "optimal",
+      "name": "Backtracking with include and skip",
+      "time": "O(n * 2^n)",
+      "space": "O(n) auxiliary"
+    }
+  ],
+  "entry": "subsets",
+  "kind": "function"
+}

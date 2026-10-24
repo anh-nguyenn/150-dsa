@@ -1,0 +1,178 @@
+{
+  "compare": "exact",
+  "cases": [
+    {
+      "name": "values in different subtrees",
+      "args": [
+        {
+          "tree": [
+            6,
+            2,
+            8,
+            0,
+            4,
+            7,
+            9,
+            null,
+            null,
+            3,
+            5
+          ]
+        },
+        2,
+        8
+      ],
+      "expected": 6
+    },
+    {
+      "name": "ancestor and descendant",
+      "args": [
+        {
+          "tree": [
+            6,
+            2,
+            8,
+            0,
+            4,
+            7,
+            9,
+            null,
+            null,
+            3,
+            5
+          ]
+        },
+        2,
+        4
+      ],
+      "expected": 2
+    },
+    {
+      "name": "siblings under four",
+      "args": [
+        {
+          "tree": [
+            6,
+            2,
+            8,
+            0,
+            4,
+            7,
+            9,
+            null,
+            null,
+            3,
+            5
+          ]
+        },
+        3,
+        5
+      ],
+      "expected": 4
+    },
+    {
+      "name": "right subtree split",
+      "args": [
+        {
+          "tree": [
+            6,
+            2,
+            8,
+            0,
+            4,
+            7,
+            9,
+            null,
+            null,
+            3,
+            5
+          ]
+        },
+        7,
+        9
+      ],
+      "expected": 8
+    },
+    {
+      "name": "across left subtree",
+      "args": [
+        {
+          "tree": [
+            6,
+            2,
+            8,
+            0,
+            4,
+            7,
+            9,
+            null,
+            null,
+            3,
+            5
+          ]
+        },
+        0,
+        5
+      ],
+      "expected": 2
+    },
+    {
+      "name": "parent and child values",
+      "args": [
+        {
+          "tree": [
+            6,
+            2,
+            8,
+            0,
+            4,
+            7,
+            9,
+            null,
+            null,
+            3,
+            5
+          ]
+        },
+        3,
+        4
+      ],
+      "expected": 4
+    },
+    {
+      "name": "small balanced BST",
+      "args": [
+        {
+          "tree": [
+            2,
+            1,
+            3
+          ]
+        },
+        1,
+        3
+      ],
+      "expected": 2
+    },
+    {
+      "name": "deep left chain",
+      "args": [
+        {
+          "tree": [
+            5,
+            3,
+            6,
+            2,
+            4,
+            null,
+            null,
+            1
+          ]
+        },
+        1,
+        4
+      ],
+      "expected": 3
+    }
+  ]
+}

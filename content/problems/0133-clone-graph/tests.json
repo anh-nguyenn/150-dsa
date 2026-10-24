@@ -1,0 +1,168 @@
+{
+  "compare": "exact",
+  "result_adapter": "graph_adj",
+  "cases": [
+    {
+      "name": "four node cycle",
+      "args": [
+        {
+          "graph_adj": [
+            [
+              2,
+              4
+            ],
+            [
+              1,
+              3
+            ],
+            [
+              2,
+              4
+            ],
+            [
+              1,
+              3
+            ]
+          ]
+        }
+      ],
+      "expected": [
+        [
+          2,
+          4
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          1,
+          3
+        ]
+      ]
+    },
+    {
+      "name": "single node",
+      "args": [
+        {
+          "graph_adj": [
+            []
+          ]
+        }
+      ],
+      "expected": [
+        []
+      ]
+    },
+    {
+      "name": "empty graph",
+      "args": [
+        {
+          "graph_adj": []
+        }
+      ],
+      "expected": []
+    },
+    {
+      "name": "two connected nodes",
+      "args": [
+        {
+          "graph_adj": [
+            [
+              2
+            ],
+            [
+              1
+            ]
+          ]
+        }
+      ],
+      "expected": [
+        [
+          2
+        ],
+        [
+          1
+        ]
+      ]
+    },
+    {
+      "name": "triangle",
+      "args": [
+        {
+          "graph_adj": [
+            [
+              2,
+              3
+            ],
+            [
+              1,
+              3
+            ],
+            [
+              1,
+              2
+            ]
+          ]
+        }
+      ],
+      "expected": [
+        [
+          2,
+          3
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          2
+        ]
+      ]
+    },
+    {
+      "name": "four node path",
+      "args": [
+        {
+          "graph_adj": [
+            [
+              2
+            ],
+            [
+              1,
+              3
+            ],
+            [
+              2,
+              4
+            ],
+            [
+              3
+            ]
+          ]
+        }
+      ],
+      "expected": [
+        [
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          3
+        ]
+      ]
+    }
+  ]
+}

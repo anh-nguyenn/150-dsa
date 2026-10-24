@@ -1,0 +1,95 @@
+{
+  "compare": "exact",
+  "cases": [
+    {
+      "name": "two jumps",
+      "args": [
+        [
+          2,
+          3,
+          1,
+          1,
+          4
+        ]
+      ],
+      "expected": 2
+    },
+    {
+      "name": "zero in the middle",
+      "args": [
+        [
+          2,
+          3,
+          0,
+          1,
+          4
+        ]
+      ],
+      "expected": 2
+    },
+    {
+      "name": "single element",
+      "args": [
+        [
+          1
+        ]
+      ],
+      "expected": 0
+    },
+    {
+      "name": "single zero",
+      "args": [
+        [
+          0
+        ]
+      ],
+      "expected": 0
+    },
+    {
+      "name": "steady single steps",
+      "args": [
+        [
+          1,
+          1,
+          1,
+          1
+        ]
+      ],
+      "expected": 3
+    },
+    {
+      "name": "one big jump",
+      "args": [
+        [
+          5,
+          0,
+          0,
+          0,
+          0
+        ]
+      ],
+      "expected": 1
+    },
+    {
+      "name": "two positions",
+      "args": [
+        [
+          2,
+          1
+        ]
+      ],
+      "expected": 1
+    },
+    {
+      "name": "last jump overshoots",
+      "args": [
+        [
+          1,
+          2,
+          3
+        ]
+      ],
+      "expected": 2
+    }
+  ]
+}

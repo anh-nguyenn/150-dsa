@@ -1,0 +1,92 @@
+{
+  "compare": "exact",
+  "cases": [
+    {
+      "name": "typical valley",
+      "args": [
+        [
+          0,
+          1,
+          0,
+          2,
+          1,
+          0,
+          1,
+          3,
+          2,
+          1,
+          2,
+          1
+        ]
+      ],
+      "expected": 6
+    },
+    {
+      "name": "deep basin",
+      "args": [
+        [
+          4,
+          2,
+          0,
+          3,
+          2,
+          5
+        ]
+      ],
+      "expected": 9
+    },
+    {
+      "name": "increasing",
+      "args": [
+        [
+          1,
+          2,
+          3
+        ]
+      ],
+      "expected": 0
+    },
+    {
+      "name": "decreasing",
+      "args": [
+        [
+          3,
+          2,
+          1
+        ]
+      ],
+      "expected": 0
+    },
+    {
+      "name": "one dip",
+      "args": [
+        [
+          2,
+          0,
+          2
+        ]
+      ],
+      "expected": 2
+    },
+    {
+      "name": "single bar",
+      "args": [
+        [
+          5
+        ]
+      ],
+      "expected": 0
+    },
+    {
+      "name": "small pool",
+      "args": [
+        [
+          1,
+          0,
+          1
+        ]
+      ],
+      "expected": 1
+    }
+  ]
+}

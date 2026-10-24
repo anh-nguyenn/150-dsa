@@ -1,0 +1,16 @@
+{
+  "id": "0105-construct-binary-tree-from-preorder-and-inorder-traversal",
+  "title": "Construct Binary Tree From Preorder And Inorder Traversal",
+  "slug": "construct-binary-tree-from-preorder-and-inorder-traversal",
+  "difficulty": "Medium",
+  "approaches": [
+    {
+      "id": "optimal",
+      "name": "Recursive split with index map",
+      "time": "O(n)",
+      "space": "O(n)"
+    }
+  ],
+  "entry": "build_tree",
+  "kind": "function"
+}

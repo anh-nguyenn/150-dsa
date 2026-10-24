@@ -1,0 +1,96 @@
+{
+  "compare": "exact",
+  "cases": [
+    {
+      "name": "three in a circle",
+      "args": [
+        [
+          2,
+          3,
+          2
+        ]
+      ],
+      "expected": 3
+    },
+    {
+      "name": "four houses",
+      "args": [
+        [
+          1,
+          2,
+          3,
+          1
+        ]
+      ],
+      "expected": 4
+    },
+    {
+      "name": "three rising",
+      "args": [
+        [
+          1,
+          2,
+          3
+        ]
+      ],
+      "expected": 3
+    },
+    {
+      "name": "single house",
+      "args": [
+        [
+          0
+        ]
+      ],
+      "expected": 0
+    },
+    {
+      "name": "two houses",
+      "args": [
+        [
+          1,
+          2
+        ]
+      ],
+      "expected": 2
+    },
+    {
+      "name": "five houses",
+      "args": [
+        [
+          1,
+          2,
+          3,
+          4,
+          5
+        ]
+      ],
+      "expected": 8
+    },
+    {
+      "name": "wrap around",
+      "args": [
+        [
+          1,
+          3,
+          1,
+          3,
+          100
+        ]
+      ],
+      "expected": 103
+    },
+    {
+      "name": "four equal",
+      "args": [
+        [
+          2,
+          2,
+          2,
+          2
+        ]
+      ],
+      "expected": 4
+    }
+  ]
+}

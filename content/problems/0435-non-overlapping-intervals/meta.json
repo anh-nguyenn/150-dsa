@@ -1,0 +1,16 @@
+{
+  "id": "0435-non-overlapping-intervals",
+  "title": "Non Overlapping Intervals",
+  "slug": "non-overlapping-intervals",
+  "difficulty": "Medium",
+  "approaches": [
+    {
+      "id": "optimal",
+      "name": "Greedy by earliest finish",
+      "time": "O(n log n)",
+      "space": "O(1) extra besides sorting"
+    }
+  ],
+  "entry": "erase_overlap_intervals",
+  "kind": "function"
+}

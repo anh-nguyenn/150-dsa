@@ -1,0 +1,16 @@
+{
+  "id": "0647-palindromic-substrings",
+  "title": "Palindromic Substrings",
+  "slug": "palindromic-substrings",
+  "difficulty": "Medium",
+  "approaches": [
+    {
+      "id": "optimal",
+      "name": "Count palindromes at each center",
+      "time": "O(n^2)",
+      "space": "O(1)"
+    }
+  ],
+  "entry": "count_substrings",
+  "kind": "function"
+}

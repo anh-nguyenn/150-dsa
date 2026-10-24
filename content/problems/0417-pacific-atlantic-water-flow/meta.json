@@ -1,0 +1,16 @@
+{
+  "id": "0417-pacific-atlantic-water-flow",
+  "title": "Pacific Atlantic Water Flow",
+  "slug": "pacific-atlantic-water-flow",
+  "difficulty": "Medium",
+  "approaches": [
+    {
+      "id": "optimal",
+      "name": "Reverse search from both oceans",
+      "time": "O(m * n)",
+      "space": "O(m * n)"
+    }
+  ],
+  "entry": "pacific_atlantic",
+  "kind": "function"
+}

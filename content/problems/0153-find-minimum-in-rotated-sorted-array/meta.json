@@ -1,0 +1,16 @@
+{
+  "id": "0153-find-minimum-in-rotated-sorted-array",
+  "title": "Find Minimum In Rotated Sorted Array",
+  "slug": "find-minimum-in-rotated-sorted-array",
+  "difficulty": "Medium",
+  "approaches": [
+    {
+      "id": "optimal",
+      "name": "Binary search against the right edge",
+      "time": "O(log n)",
+      "space": "O(1)"
+    }
+  ],
+  "entry": "find_min",
+  "kind": "function"
+}

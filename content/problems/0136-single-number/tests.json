@@ -1,0 +1,82 @@
+{
+  "compare": "exact",
+  "cases": [
+    {
+      "name": "three elements",
+      "args": [
+        [
+          2,
+          2,
+          1
+        ]
+      ],
+      "expected": 1
+    },
+    {
+      "name": "repeated pair around lone",
+      "args": [
+        [
+          4,
+          1,
+          2,
+          1,
+          2
+        ]
+      ],
+      "expected": 4
+    },
+    {
+      "name": "single element",
+      "args": [
+        [
+          7
+        ]
+      ],
+      "expected": 7
+    },
+    {
+      "name": "lone zero",
+      "args": [
+        [
+          0,
+          5,
+          5
+        ]
+      ],
+      "expected": 0
+    },
+    {
+      "name": "negative lone value",
+      "args": [
+        [
+          -3,
+          -1,
+          -1
+        ]
+      ],
+      "expected": -3
+    },
+    {
+      "name": "zero among a pair",
+      "args": [
+        [
+          1,
+          0,
+          1
+        ]
+      ],
+      "expected": 0
+    },
+    {
+      "name": "value extremes",
+      "args": [
+        [
+          30000,
+          30000,
+          -30000
+        ]
+      ],
+      "expected": -30000
+    }
+  ]
+}

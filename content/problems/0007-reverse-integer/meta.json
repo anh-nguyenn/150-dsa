@@ -1,0 +1,16 @@
+{
+  "id": "0007-reverse-integer",
+  "title": "Reverse Integer",
+  "slug": "reverse-integer",
+  "difficulty": "Medium",
+  "approaches": [
+    {
+      "id": "optimal",
+      "name": "Digit extraction with range check",
+      "time": "O(log |x|)",
+      "space": "O(1)"
+    }
+  ],
+  "entry": "reverse",
+  "kind": "function"
+}

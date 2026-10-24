@@ -1,0 +1,16 @@
+{
+  "id": "0206-reverse-linked-list",
+  "title": "Reverse Linked List",
+  "slug": "reverse-linked-list",
+  "difficulty": "Easy",
+  "approaches": [
+    {
+      "id": "optimal",
+      "name": "Iterative pointer reversal",
+      "time": "O(n)",
+      "space": "O(1)"
+    }
+  ],
+  "entry": "reverse_list",
+  "kind": "function"
+}

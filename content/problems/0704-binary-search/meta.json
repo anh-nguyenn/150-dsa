@@ -1,0 +1,16 @@
+{
+  "id": "0704-binary-search",
+  "title": "Binary Search",
+  "slug": "binary-search",
+  "difficulty": "Easy",
+  "approaches": [
+    {
+      "id": "optimal",
+      "name": "Half-open binary search",
+      "time": "O(log n)",
+      "space": "O(1)"
+    }
+  ],
+  "entry": "search",
+  "kind": "function"
+}

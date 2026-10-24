@@ -1,0 +1,16 @@
+{
+  "id": "0042-trapping-rain-water",
+  "title": "Trapping Rain Water",
+  "slug": "trapping-rain-water",
+  "difficulty": "Hard",
+  "approaches": [
+    {
+      "id": "optimal",
+      "name": "Two pointers with running maxima",
+      "time": "O(n)",
+      "space": "O(1)"
+    }
+  ],
+  "entry": "trap",
+  "kind": "function"
+}

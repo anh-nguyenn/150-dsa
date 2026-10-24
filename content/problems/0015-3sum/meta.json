@@ -1,0 +1,16 @@
+{
+  "id": "0015-3sum",
+  "title": "3Sum",
+  "slug": "3sum",
+  "difficulty": "Medium",
+  "approaches": [
+    {
+      "id": "optimal",
+      "name": "Sort then fix one value with two pointers",
+      "time": "O(n^2)",
+      "space": "O(n)"
+    }
+  ],
+  "entry": "three_sum",
+  "kind": "function"
+}

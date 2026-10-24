@@ -1,0 +1,16 @@
+{
+  "id": "0695-max-area-of-island",
+  "title": "Max Area of Island",
+  "slug": "max-area-of-island",
+  "difficulty": "Medium",
+  "approaches": [
+    {
+      "id": "optimal",
+      "name": "Flood fill with area count",
+      "time": "O(m * n)",
+      "space": "O(m * n)"
+    }
+  ],
+  "entry": "max_area_of_island",
+  "kind": "function"
+}

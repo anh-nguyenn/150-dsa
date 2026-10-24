@@ -1,0 +1,16 @@
+{
+  "id": "0073-set-matrix-zeroes",
+  "title": "Set Matrix Zeroes",
+  "slug": "set-matrix-zeroes",
+  "difficulty": "Medium",
+  "approaches": [
+    {
+      "id": "optimal",
+      "name": "First row and column as markers",
+      "time": "O(m * n)",
+      "space": "O(1)"
+    }
+  ],
+  "entry": "set_zeroes",
+  "kind": "function"
+}

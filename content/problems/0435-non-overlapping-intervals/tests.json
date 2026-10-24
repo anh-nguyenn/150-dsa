@@ -1,0 +1,108 @@
+{
+  "compare": "exact",
+  "cases": [
+    {
+      "name": "one bad interval",
+      "args": [
+        [
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            1,
+            3
+          ]
+        ]
+      ],
+      "expected": 1
+    },
+    {
+      "name": "three copies",
+      "args": [
+        [
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            2
+          ]
+        ]
+      ],
+      "expected": 2
+    },
+    {
+      "name": "touching pair",
+      "args": [
+        [
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            3
+          ]
+        ]
+      ],
+      "expected": 0
+    },
+    {
+      "name": "single interval",
+      "args": [
+        [
+          [
+            1,
+            2
+          ]
+        ]
+      ],
+      "expected": 0
+    },
+    {
+      "name": "empty",
+      "args": [
+        []
+      ],
+      "expected": 0
+    },
+    {
+      "name": "two removals",
+      "args": [
+        [
+          [
+            1,
+            100
+          ],
+          [
+            11,
+            22
+          ],
+          [
+            1,
+            11
+          ],
+          [
+            2,
+            12
+          ]
+        ]
+      ],
+      "expected": 2
+    }
+  ]
+}
