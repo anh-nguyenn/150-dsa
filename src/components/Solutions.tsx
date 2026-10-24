@@ -1,8 +1,8 @@
 import { useRef, type KeyboardEvent } from 'react'
 import { useSearchParams } from 'react-router-dom'
 import type { Problem } from '../lib/content'
-import { CodeBlock } from './CodeBlock'
 import { Markdown } from './Markdown'
+import { Visualizer } from './Visualizer'
 
 export function Solutions({ problem }: { problem: Problem }) {
   const [searchParams, setSearchParams] = useSearchParams()
@@ -74,18 +74,11 @@ export function Solutions({ problem }: { problem: Problem }) {
 
         {approach.notes && <Markdown className="approach-notes">{approach.notes}</Markdown>}
 
-        <CodeBlock
+        <Visualizer
+          problemId={problem.meta.id}
           code={approach.code}
-          label={`${String(selected + 1).padStart(2, '0')}-${approach.meta.id}.py`}
+          filename={`${String(selected + 1).padStart(2, '0')}-${approach.meta.id}.py`}
         />
-
-        <div className="player-note">
-          <span>Visualization</span>
-          <p>
-            The frame-by-frame player is not authored for this lesson yet. The code above is the single source the
-            player will instrument.
-          </p>
-        </div>
       </div>
     </div>
   )
