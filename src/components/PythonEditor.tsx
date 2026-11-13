@@ -3,7 +3,6 @@ import { basicSetup } from 'codemirror'
 import { EditorState } from '@codemirror/state'
 import { EditorView, keymap } from '@codemirror/view'
 import { python } from '@codemirror/lang-python'
-import { oneDark } from '@codemirror/theme-one-dark'
 
 interface PythonEditorProps {
   value: string
@@ -15,13 +14,13 @@ const theme = EditorView.theme(
   {
     '&': {
       backgroundColor: 'transparent',
-      color: '#d7d3ca',
+      color: 'var(--text)',
       fontSize: '13px',
     },
     '.cm-content': {
       fontFamily: 'var(--mono)',
       padding: '12px 0',
-      caretColor: '#d6b477',
+      caretColor: 'var(--accent)',
     },
     '.cm-scroller': {
       fontFamily: 'var(--mono)',
@@ -29,24 +28,24 @@ const theme = EditorView.theme(
     },
     '.cm-gutters': {
       backgroundColor: 'transparent',
-      borderRight: '1px solid #24282d',
-      color: '#4f575e',
+      borderRight: '1px solid var(--border)',
+      color: 'var(--muted)',
     },
     '.cm-activeLine': {
-      backgroundColor: 'rgba(255, 255, 255, 0.022)',
+      backgroundColor: 'var(--bg-hover)',
     },
     '.cm-activeLineGutter': {
       backgroundColor: 'transparent',
-      color: '#99a1a9',
+      color: 'var(--muted)',
     },
     '.cm-selectionBackground, ::selection': {
-      backgroundColor: 'rgba(214, 180, 119, 0.2) !important',
+      backgroundColor: 'var(--accent-dim) !important',
     },
     '&.cm-focused': {
       outline: 'none',
     },
   },
-  { dark: true },
+  { dark: false },
 )
 
 export function PythonEditor({ value, onChange, onRun }: PythonEditorProps) {
@@ -71,7 +70,6 @@ export function PythonEditor({ value, onChange, onRun }: PythonEditorProps) {
         extensions: [
           basicSetup,
           python(),
-          oneDark,
           theme,
           EditorView.lineWrapping,
           EditorView.contentAttributes.of({ 'aria-label': 'Python solution editor', spellcheck: 'false' }),

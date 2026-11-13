@@ -1,6 +1,7 @@
 import { useEffect } from 'react'
 import { Link, Outlet, useLocation } from 'react-router-dom'
 import { problems } from '../lib/content'
+import { ProblemSearch } from './ProblemSearch'
 import { isStorageAvailable, solvedCount, useProgress } from '../lib/progress'
 
 function ScrollToTop() {
@@ -40,6 +41,7 @@ export function Layout() {
             <span className="wordmark-rule" aria-hidden="true" />
             <span className="wordmark-label">algorithm study</span>
           </Link>
+          <ProblemSearch />
           <div className="header-meta">
             <span className="header-count">
               <span className="header-count-value">{solved}</span>
