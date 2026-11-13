@@ -344,59 +344,6 @@ main {
   padding-bottom: 104px;
 }
 
-.next-up {
-  padding-bottom: 56px;
-  border-bottom: 1px solid var(--border);
-}
-
-.next-topic {
-  margin: 0 0 10px;
-  font-family: var(--mono);
-  font-size: 11px;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: var(--muted);
-}
-
-.next-up h1 {
-  margin: 0 0 18px;
-  max-width: 20ch;
-  font-family: var(--serif);
-  font-size: clamp(46px, 7.5vw, 78px);
-  font-weight: 500;
-  line-height: 1.02;
-  letter-spacing: -0.025em;
-}
-
-.next-copy {
-  margin: 0 0 18px;
-  max-width: 54ch;
-  font-family: var(--serif);
-  font-size: 18px;
-  line-height: 1.6;
-  color: var(--text-soft);
-}
-
-.next-meta {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 20px;
-  font-family: var(--mono);
-  font-size: 10px;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  color: var(--faint);
-}
-
-.next-actions {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 20px;
-  margin-top: 28px;
-}
-
 .btn {
   display: inline-flex;
   align-items: center;
@@ -1572,10 +1519,6 @@ pre.code {
     padding-top: 40px;
   }
 
-  .next-up h1 {
-    font-size: clamp(40px, 11vw, 58px);
-  }
-
   .topic-row {
     grid-template-columns: 2rem minmax(0, 1fr) auto;
     gap: 12px;
@@ -1754,10 +1697,6 @@ pre.code {
 }
 
 @media (max-width: 520px) {
-  .next-meta {
-    gap: 12px 16px;
-  }
-
   .progress-notes {
     gap: 6px 14px;
   }
